@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git://jeremykid.github.io/tags/index.html</loc>
+    
+    <lastmod>2016-07-21T21:03:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git://jeremykid.github.io/2016/07/18/Algorithm/</loc>
     
     <lastmod>2016-07-21T07:12:33.000Z</lastmod>
