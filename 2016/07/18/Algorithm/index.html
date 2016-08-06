@@ -156,7 +156,7 @@ euler_trivial.py">
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
@@ -253,6 +253,16 @@ euler_trivial.py">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
           </a>
         </li>
       
@@ -357,7 +367,7 @@ euler_trivial.py">
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="/2016/07/18/Algorithm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/18/Algorithm/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/18/Algorithm/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -843,8 +853,9 @@ Miller-Rabin is only judge the prime not find the factors.
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/18/Algorithm/"
-           data-title="Algorithm - Weijie Sun" data-url="git://jeremykid.github.io/2016/07/18/Algorithm/">
+      <div class="fb-comments"
+           data-href="git://jeremykid.github.io/2016/07/18/Algorithm/"
+           data-numposts="10">
       </div>
     
   </div>
@@ -884,7 +895,7 @@ Miller-Rabin is only judge the prime not find the factors.
                src="http://www.swshipin.com/uploads/allimg/160704/103Q94615-0.jpg"
                alt="Weijie Sun" />
           <p class="site-author-name" itemprop="name">Weijie Sun</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">To Learn To Share</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -906,7 +917,7 @@ Miller-Rabin is only judge the prime not find the factors.
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -988,7 +999,7 @@ Miller-Rabin is only judge the prime not find the factors.
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
@@ -1075,42 +1086,41 @@ Miller-Rabin is only judge the prime not find the factors.
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"jeremykidgithub"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
 
 
   
+
+    <script type="text/javascript">
+      var disqus_shortname = 'weijiesun';
+      var disqus_identifier = '2016/07/18/Algorithm/';
+      var disqus_title = "Algorithm - Weijie Sun";
+      
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
   
 
+
+
+
+  
   
 
   
 
   
-  <script id="dsq-count-scr" src="//weijiesun.disqus.com/count.js" async></script>
+
+  
+
 </body>
 </html>
