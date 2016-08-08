@@ -278,6 +278,118 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/06/Learn-PyMOL-for-Biology-Research-1/" itemprop="url">
+                  Learn-PyMOL-for-Biology-Research-1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-06T16:37:41-06:00" content="2016-08-06">
+              2016-08-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/06/Learn-PyMOL-for-Biology-Research-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/06/Learn-PyMOL-for-Biology-Research-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PyMOL"><a href="#PyMOL" class="headerlink" title="PyMOL"></a>PyMOL</h2><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
+<p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
+<h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
+<p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="external">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pymol</div></pre></td></tr></table></figure></p>
+<p>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
+<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="external">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
+<p>Try this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo port install tcl -corefoundation</div><div class="line">sudo port install tk -quartz</div><div class="line"></div><div class="line">sudo port install pymol</div></pre></td></tr></table></figure></p>
+<p>The other issue make me so annoying is that<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</div><div class="line">    import pymol</div><div class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</div><div class="line">    import pymol._cmd</div><div class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</div><div class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</div><div class="line">  Reason: image not found</div></pre></td></tr></table></figure></p>
+<p>I in my<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/opt/glew/lib</div></pre></td></tr></table></figure></p>
+<p>It only has these following files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</div><div class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</div><div class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</div></pre></td></tr></table></figure></p>
+<p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
+<p>See you tomorrow. Hopefully, I could setup the environment.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/" itemprop="url">
                   Machine Learning Project[1]-Weijie Sun
                 </a>
@@ -1240,7 +1352,7 @@ Miller-Rabin is only judge the prime not find the factors.
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1257,7 +1369,7 @@ Miller-Rabin is only judge the prime not find the factors.
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1302,7 +1414,7 @@ Miller-Rabin is only judge the prime not find the factors.
 
         
         
-
+        
       </section>
 
       

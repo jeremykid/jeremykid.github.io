@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Research," />
 
 
 
@@ -87,19 +87,16 @@
 
 
 
-<meta name="description" content="HIV virus’s protine order like hexagon.In the previous research, they working on the 2 dimension. However, in 3 dimension, the protine fills spherical surface.
-This prgramming project is used to help">
+<meta name="description" content="PyMOLAbstract:This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HIV_project - Weijie Sun">
-<meta property="og:url" content="git://jeremykid.github.io/2016/07/18/HIV-project/index.html">
+<meta property="og:title" content="Learn-PyMOL-for-Biology-Research-1">
+<meta property="og:url" content="git://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:description" content="HIV virus’s protine order like hexagon.In the previous research, they working on the 2 dimension. However, in 3 dimension, the protine fills spherical surface.
-This prgramming project is used to help">
-<meta property="og:updated_time" content="2016-07-19T23:37:49.000Z">
+<meta property="og:description" content="PyMOLAbstract:This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This">
+<meta property="og:updated_time" content="2016-08-08T08:23:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HIV_project - Weijie Sun">
-<meta name="twitter:description" content="HIV virus’s protine order like hexagon.In the previous research, they working on the 2 dimension. However, in 3 dimension, the protine fills spherical surface.
-This prgramming project is used to help">
+<meta name="twitter:title" content="Learn-PyMOL-for-Biology-Research-1">
+<meta name="twitter:description" content="PyMOLAbstract:This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This">
 
 
 
@@ -120,9 +117,9 @@ This prgramming project is used to help">
 
 
 
-  <link rel="canonical" href="git://jeremykid.github.io/2016/07/18/HIV-project/"/>
+  <link rel="canonical" href="git://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/"/>
 
-  <title> HIV_project - Weijie Sun | Weijie Sun Blog </title>
+  <title> Learn-PyMOL-for-Biology-Research-1 | Weijie Sun Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -279,7 +276,7 @@ This prgramming project is used to help">
             
             
               
-                HIV_project - Weijie Sun
+                Learn-PyMOL-for-Biology-Research-1
               
             
           </h1>
@@ -291,8 +288,8 @@ This prgramming project is used to help">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-18T15:32:18-06:00" content="2016-07-18">
-              2016-07-18
+            <time itemprop="dateCreated" datetime="2016-08-06T16:37:41-06:00" content="2016-08-06">
+              2016-08-06
             </time>
           </span>
 
@@ -302,8 +299,8 @@ This prgramming project is used to help">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/18/HIV-project/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/18/HIV-project/" itemprop="commentsCount"></span>
+                <a href="/2016/08/06/Learn-PyMOL-for-Biology-Research-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/06/Learn-PyMOL-for-Biology-Research-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -329,12 +326,18 @@ This prgramming project is used to help">
       
 
       
-        <p>HIV virus’s protine order like hexagon.<br>In the previous research, they working on the 2 dimension. However, in 3 dimension, the protine fills spherical surface.</p>
-<p>This prgramming project is used to help the biology researcher to plot the HIV virus and get a list of all surface protine coordinations by setting the different radius.</p>
-<h2 id="The-main-structure"><a href="#The-main-structure" class="headerlink" title="The main structure."></a>The main structure.</h2><p>If the point B rotated point A and get point C, I named points A is the father or root of B and C. As I mentioned that HIV virus’s surfaces protines order like a hexagen, protine will rotated 120 degree to get another protine. </p>
-<p>There are a K_keepers list of points which generated and a Pivot list of points.</p>
-<p>Use a Queue push in the points generated by the other 2 points, and push out the points which is already generated 2 points. When the distance is less than the protine’s radius, then the protines should not be placed at that coordination.</p>
-<p>Reference:<br><a href="https://en.wikipedia.org/wiki/Rotation_matrix" target="_blank" rel="external">https://en.wikipedia.org/wiki/Rotation_matrix</a></p>
+        <h2 id="PyMOL"><a href="#PyMOL" class="headerlink" title="PyMOL"></a>PyMOL</h2><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
+<p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
+<h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
+<p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="external">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pymol</div></pre></td></tr></table></figure></p>
+<p>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
+<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="external">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
+<p>Try this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo port install tcl -corefoundation</div><div class="line">sudo port install tk -quartz</div><div class="line"></div><div class="line">sudo port install pymol</div></pre></td></tr></table></figure></p>
+<p>The other issue make me so annoying is that<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</div><div class="line">    import pymol</div><div class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</div><div class="line">    import pymol._cmd</div><div class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</div><div class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</div><div class="line">  Reason: image not found</div></pre></td></tr></table></figure></p>
+<p>I in my<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/opt/glew/lib</div></pre></td></tr></table></figure></p>
+<p>It only has these following files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</div><div class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</div><div class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</div></pre></td></tr></table></figure></p>
+<p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
+<p>See you tomorrow. Hopefully, I could setup the environment.</p>
 
       
     </div>
@@ -357,7 +360,7 @@ This prgramming project is used to help">
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
+            <a href="/tags/Research/" rel="tag">#Research</a>
           
         </div>
       
@@ -366,17 +369,13 @@ This prgramming project is used to help">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/15/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/" rel="next" title="Machine Learning Project[1]-Weijie Sun">
+                <i class="fa fa-chevron-left"></i> Machine Learning Project[1]-Weijie Sun
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/18/Algorithm/" rel="prev" title="Algorithm - Weijie Sun">
-                Algorithm - Weijie Sun <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -523,7 +522,7 @@ This prgramming project is used to help">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-main-structure"><span class="nav-number">1.</span> <span class="nav-text">The main structure.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PyMOL"><span class="nav-number">1.</span> <span class="nav-text">PyMOL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number"></span> <span class="nav-text">Abstract:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setup-Environment"><span class="nav-number"></span> <span class="nav-text">Setup Environment.</span></a></div>
             
           </div>
         </section>
@@ -643,8 +642,8 @@ This prgramming project is used to help">
 
     <script type="text/javascript">
       var disqus_shortname = 'weijiesun';
-      var disqus_identifier = '2016/07/18/HIV-project/';
-      var disqus_title = "HIV_project - Weijie Sun";
+      var disqus_identifier = '2016/08/06/Learn-PyMOL-for-Biology-Research-1/';
+      var disqus_title = "Learn-PyMOL-for-Biology-Research-1";
       
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
