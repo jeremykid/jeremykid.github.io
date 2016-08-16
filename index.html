@@ -329,7 +329,13 @@
       
         
           
-            <h2 id="PyMOL"><a href="#PyMOL" class="headerlink" title="PyMOL"></a>PyMOL</h2><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
+            <h2 id="PyMOL"><a href="#PyMOL" class="headerlink" title="PyMOL"></a>PyMOL</h2><h1 id="Updated-in-Aug-15-2016"><a href="#Updated-in-Aug-15-2016" class="headerlink" title="Updated in Aug/15/2016"></a>Updated in Aug/15/2016</h1><p>Here I will teach How to set the environment in Mac</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo port install pymol</div></pre></td></tr></table></figure>
+<p>And following the tips in the warning to install the python</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find ~/ -type f -name &quot;_cmd.so&quot;</div></pre></td></tr></table></figure>
+<p>eg: return<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</div></pre></td></tr></table></figure></p>
+<p>Try to add the path of folder of pymol in the PYTHONPATH<br>eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</div><div class="line">export PYTHONPATH</div></pre></td></tr></table></figure></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
 <p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
 <h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
 <p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="external">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pymol</div></pre></td></tr></table></figure></p>
@@ -341,6 +347,7 @@
 <p>It only has these following files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</div><div class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</div><div class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</div></pre></td></tr></table></figure></p>
 <p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
 <p>See you tomorrow. Hopefully, I could setup the environment.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="external">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="external">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
 
           
         
