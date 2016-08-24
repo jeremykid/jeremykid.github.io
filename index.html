@@ -278,6 +278,113 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/19/Some-tips-about-Python-Script/" itemprop="url">
+                  Some tips about Python Script
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-19T22:16:37-06:00" content="2016-08-19">
+              2016-08-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/19/Some-tips-about-Python-Script/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/19/Some-tips-about-Python-Script/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>Some tips should be know by new Python Programmer.</p>
+<h3 id="1-usr-bin-python"><a href="#1-usr-bin-python" class="headerlink" title="1 #!/usr/bin/python"></a>1 <strong>#!/usr/bin/python</strong></h3><p>This line usually in the first line of Python Script, which means this Script use the python as a tool by the environment path /usr/bin.</p>
+<h3 id="2-coding-utf-8"><a href="#2-coding-utf-8" class="headerlink" title="2 # -- coding: utf-8 --"></a>2 <strong># -<em>- coding: utf-8 -</em>-</strong></h3><p>This Script uses utf-8 as the encode method to encode file.<br>Here is a link <a href="http://www.tbray.org/ongoing/When/200x/2003/04/26/UTF" target="_blank" rel="external">why use utf-8</a></p>
+<h3 id="3-if-name-‘main‘"><a href="#3-if-name-‘main‘" class="headerlink" title="3 if name == ‘main‘:"></a>3 <strong>if <strong>name</strong> == ‘<strong>main</strong>‘:</strong></h3><p>When this file run as a main file, it will run under the <figure class="highlight plain"><figcaption><span>__name__ == '__main__':```.</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if this file run as a source file, it will return under the  ```else:</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">	main()</div><div class="line">	print &apos;run in main file&apos;</div><div class="line">else:</div><div class="line">	print &apos;run in import file&apos;</div></pre></td></tr></table></figure>
+<h3 id="4-read-and-write-the-file-by-import-csv"><a href="#4-read-and-write-the-file-by-import-csv" class="headerlink" title="4 read and write the file by import csv"></a>4 read and write the file by <code>import csv</code></h3><p>To be continue…</p>
+<h3 id="5-plot-the-graph-by-matplotlib"><a href="#5-plot-the-graph-by-matplotlib" class="headerlink" title="5 plot the graph by matplotlib"></a>5 plot the graph by matplotlib</h3><p>To be continue…</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/06/Learn-PyMOL-for-Biology-Research-1/" itemprop="url">
                   Learn-PyMOL-for-Biology-Research-1
                 </a>
@@ -329,12 +436,23 @@
       
         
           
-            <h1 id="Updated-in-Aug-15-2016"><a href="#Updated-in-Aug-15-2016" class="headerlink" title="Updated in Aug/15/2016"></a>Updated in Aug/15/2016</h1><p>Here I will teach How to set the environment in Mac</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo port install pymol</div></pre></td></tr></table></figure>
-<p>And following the tips in the warning to install the python</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find ~/ -type f -name &quot;_cmd.so&quot;</div></pre></td></tr></table></figure>
-<p>eg: return<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</div></pre></td></tr></table></figure></p>
-<p>Try to add the path of folder of pymol in the PYTHONPATH<br>eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</div><div class="line">export PYTHONPATH</div></pre></td></tr></table></figure></p>
+            <h1 id="Updated-in-Aug-22-2016"><a href="#Updated-in-Aug-22-2016" class="headerlink" title="Updated in Aug/22/2016"></a>Updated in Aug/22/2016</h1><p>Here I will teach How to set the environment in Mac</p>
+<ol>
+<li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="external">http://railsapps.github.io/xcode-command-line-tools.html</a>]</p>
+</li>
+<li><p>(install the MacPort)[<a href="https://www.macports.org/install.php" target="_blank" rel="external">https://www.macports.org/install.php</a>]<br> update MacPort by this command</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo port -v selfupdate</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tried to install PyMOL by MacPort</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo port install pymol</div></pre></td></tr></table></figure>
+<p> And following the tips in the warning to install the python</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find ~/ -type f -name &quot;_cmd.so&quot;</div></pre></td></tr></table></figure>
+<p> eg: return </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</div></pre></td></tr></table></figure>
+<p> Try to add the path of folder of pymol in the PYTHONPATH<br> eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</div><div class="line">export PYTHONPATH</div></pre></td></tr></table></figure>
+</li>
+</ol>
 <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
 <p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
 <h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
@@ -1144,7 +1262,7 @@ Miller-Rabin is only judge the prime not find the factors.
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
