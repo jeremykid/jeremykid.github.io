@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git://jeremykid.github.io/2016/10/12/Y%E5%8F%A4%E9%A3%8E%E9%9F%B3%E4%B9%90Y/</loc>
+    
+    <lastmod>2016-10-12T06:21:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>git://jeremykid.github.io/%E5%8F%A4%E9%A3%8E%E9%9F%B3%E4%B9%90/index.html</loc>
+    
+    <lastmod>2016-10-12T06:13:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git://jeremykid.github.io/2016/08/31/Study-Notes-for-Weijie-Sun/</loc>
     
-    <lastmod>2016-09-01T03:10:24.000Z</lastmod>
+    <lastmod>2016-09-02T22:12:25.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>git://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/</loc>
     
-    <lastmod>2016-08-27T22:13:01.000Z</lastmod>
+    <lastmod>2016-09-01T03:18:53.000Z</lastmod>
     
   </url>
   
