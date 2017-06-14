@@ -2,51 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>git://jeremykid.github.io/2016/10/12/Y%E5%8F%A4%E9%A3%8E%E9%9F%B3%E4%B9%90Y/</loc>
+    <loc>git://jeremykid.github.io/2017/06/13/Docker-Notes/</loc>
     
-    <lastmod>2016-10-16T08:32:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>git://jeremykid.github.io/%E5%8F%A4%E9%A3%8E%E9%9F%B3%E4%B9%90/index.html</loc>
-    
-    <lastmod>2016-10-12T06:13:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>git://jeremykid.github.io/2016/08/31/Study-Notes-for-Weijie-Sun/</loc>
-    
-    <lastmod>2016-09-02T22:12:25.000Z</lastmod>
+    <lastmod>2017-06-14T05:12:03.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>git://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/</loc>
     
-    <lastmod>2016-09-01T03:18:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>git://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/</loc>
-    
-    <lastmod>2016-08-24T06:36:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>git://jeremykid.github.io/2016/08/19/Some-tips-about-Python-Script/</loc>
-    
-    <lastmod>2016-08-24T06:29:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>git://jeremykid.github.io/about/index.html</loc>
-    
-    <lastmod>2016-08-16T06:37:41.000Z</lastmod>
+    <lastmod>2016-08-02T22:14:45.000Z</lastmod>
     
   </url>
   
@@ -68,6 +33,20 @@
     <loc>git://jeremykid.github.io/2016/07/18/Algorithm/</loc>
     
     <lastmod>2016-07-21T07:12:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>git://jeremykid.github.io/2016/07/18/HIV-project/</loc>
+    
+    <lastmod>2016-07-19T23:37:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>git://jeremykid.github.io/2016/07/15/hello-world/</loc>
+    
+    <lastmod>2016-07-15T22:43:52.000Z</lastmod>
     
   </url>
   

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>git://jeremykid.github.io/2017/06/13/Docker-Notes/</loc>
+    <lastmod>2017-06-14T05:12:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>Docker Notes</title>
+        <pubTime>2017-06-14T04:40:16.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>git://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/</loc>
+    <lastmod>2016-08-02T22:14:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>Machine Learning Project[1]-Weijie Sun</title>
+        <pubTime>2016-08-02T21:37:01.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+        <tag>Machine-Learning</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>git://jeremykid.github.io/2016/07/27/My%20Ionic-Hybrid%20Experience%5B1%5D/</loc>
+    <lastmod>2016-07-28T19:04:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>My Ionic-Hybrid Experience[1]</title>
+        <pubTime>2016-07-27T19:26:54.000Z</pubTime>
+        
+        <tag>Web, Mobile</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>git://jeremykid.github.io/2016/07/18/Algorithm/</loc>
+    <lastmod>2016-07-21T07:12:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>Algorithm - Weijie Sun</title>
+        <pubTime>2016-07-18T22:54:34.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="Algorithm" url="git://jeremykid.github.io/categories/Algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>git://jeremykid.github.io/2016/07/18/HIV-project/</loc>
+    <lastmod>2016-07-19T23:37:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>HIV_project - Weijie Sun</title>
+        <pubTime>2016-07-18T21:32:18.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>git://jeremykid.github.io/2016/07/15/hello-world/</loc>
+    <lastmod>2016-07-15T22:43:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-07-15T22:43:52.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
