@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git://jeremykid.github.io/2018/05/21/cs231n-note-2/</loc>
+    
+    <lastmod>2018-05-21T22:22:17.398Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>git://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/</loc>
+    
+    <lastmod>2018-05-21T22:13:10.208Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>git://jeremykid.github.io/2018/05/20/cs231n-note-1/</loc>
+    
+    <lastmod>2018-05-21T22:13:07.482Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git://jeremykid.github.io/2017/06/13/Docker-Notes/</loc>
     
     <lastmod>2017-06-14T05:12:03.000Z</lastmod>

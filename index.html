@@ -245,6 +245,245 @@
             
               
                 
+                <a class="post-title-link" href="/2018/05/21/cs231n-note-2/" itemprop="url">
+                  cs231n note - 2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2018-05-21T14:56:48-06:00" content="2018-05-21">
+              2018-05-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/05/21/cs231n-note-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/21/cs231n-note-2/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Reference:</p>
+<p><a href="https://zhuanlan.zhihu.com/p/20918580" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20918580</a></p>
+<h1 id="Linear-Classification"><a href="#Linear-Classification" class="headerlink" title="Linear Classification"></a>Linear Classification</h1><h2 id="score-function-评分函数"><a href="#score-function-评分函数" class="headerlink" title="score function (评分函数)"></a>score function (评分函数)</h2><p>原始图片到各个类别的评分情况， 分越高越接近</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+f%28x_i%2CW%2Cb%29%3DWx_i%2Bb" alt=""></p>
+<p>每个图像都是 [D x 1] D = pixel X pixel X 3(RGB)</p>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>权重</p>
+<p>W (weight) = [k X D] k是样本数 </p>
+<p>在维度空间里 做旋转变换</p>
+<p>偏差向量</p>
+<p>b (bias vector) = [k x 1]</p>
+<p>在维度空间里 做平移变化</p>
+<h3 id="图像数据预处理"><a href="#图像数据预处理" class="headerlink" title="图像数据预处理"></a>图像数据预处理</h3><p>最常见的就是 normalization</p>
+<p>零均值的中心化 把 [0-255] -&gt; [-127-127] -&gt; [-1,1]</p>
+<h2 id="loss-function-损失函数"><a href="#loss-function-损失函数" class="headerlink" title="loss function (损失函数)"></a>loss function (损失函数)</h2><p>量化分类label 与真实label 之间的一致性 也叫 代价函数Cost Function或目标函数Objective</p>
+<p>当 score function 与真实结果相差越大，Cost Function输出越大 </p>
+<h3 id="多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><a href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss" class="headerlink" title="多类支持向量机损失 Multiclass Support Vector Machine Loss"></a>多类支持向量机损失 Multiclass Support Vector Machine Loss</h3><p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cs_j-s_%7By_i%7D%2B%5CDelta%29" alt=""></p>
+<p>eg: 有三个分类 score 是 s = [13, -7, 11] \delta = 10, 第一个label 是真实正确的</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3Dmax%280%2C-7-13%2B10%29%2Bmax%280%2C11-13%2B10%29" alt=""></p>
+<p>因为 -20 大于 \delta 边界值， 所以最后的损失值为8</p>
+<p>线性评分函数 的损失函数公式：</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cw%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B%5CDelta%29" alt=""></p>
+<h3 id="折叶损失（hinge-loss）-max-0"><a href="#折叶损失（hinge-loss）-max-0" class="headerlink" title="折叶损失（hinge loss）: max (0, -)"></a>折叶损失（hinge loss）: max (0, -)</h3><h3 id="平方折叶损失SVM（即L2-SVM）：-max-0-2"><a href="#平方折叶损失SVM（即L2-SVM）：-max-0-2" class="headerlink" title="平方折叶损失SVM（即L2-SVM）： max (0, -) ^2"></a>平方折叶损失SVM（即L2-SVM）： max (0, -) ^2</h3><p><img src="https://pic4.zhimg.com/80/f254bd8d072128f1088c8cc47c3dff58_hd.jpg" alt=""></p>
+<p>目的是想要正确类别进入红色区域， 如果其他类别进入红色区域甚至更高的时候，计算loss， 我们的目的是找权重W</p>
+<h2 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/05/20/cs231n-note-1/" itemprop="url">
+                  cs231n note - 1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2018-05-20T17:26:44-06:00" content="2018-05-20">
+              2018-05-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/05/20/cs231n-note-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/20/cs231n-note-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Reference：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/20894041" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20894041</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/20900216" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20900216</a> </p>
+<h1 id="图像分类"><a href="#图像分类" class="headerlink" title="图像分类"></a>图像分类</h1><p>颜色channel 有三个 red green blue， RGB</p>
+<p>流程就是 输入 -&gt; 学习 -&gt; 评价</p>
+<h1 id="K-Nearest-Neighbor-分类器"><a href="#K-Nearest-Neighbor-分类器" class="headerlink" title="K Nearest Neighbor 分类器"></a>K Nearest Neighbor 分类器</h1><p>k 越高 generalization 能力越好</p>
+<h2 id="用距离来分类"><a href="#用距离来分类" class="headerlink" title="用距离来分类"></a>用距离来分类</h2><p>L1范数 和 L2范数 </p>
+<p>L1 </p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+d_1%28I_1%2CI_2%29%3D%5Csum_p%7CI%5Ep_1-I%5Ep_2%7C" alt=""></p>
+<p>L2</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+d_2%28I_1%2CI_2%29%3D%5Csqrt%7B+%5Csum_p%28I%5Ep_1-I%5Ep_2%29%5E2%7D" alt=""></p>
+<p><code>distances = np.sqrt(np.sum(np.square(self.Xtr - X[i,:]), axis = 1))</code></p>
+<p>L1和L2比较。。在面对两个向量之间的差异时，L2比L1更加不能容忍这些差异。也就是说，相对于1个巨大的差异，L2距离更倾向于接受多个中等程度的差异。L1和L2都是在p-norm常用的特殊形式。</p>
+<h2 id="hyperparameter-超参数，需要去测试调整"><a href="#hyperparameter-超参数，需要去测试调整" class="headerlink" title="hyperparameter: 超参数，需要去测试调整"></a>hyperparameter: 超参数，需要去测试调整</h2><h2 id="validation-set-测试集-只能使用一次"><a href="#validation-set-测试集-只能使用一次" class="headerlink" title="validation set: 测试集 只能使用一次"></a>validation set: 测试集 只能使用一次</h2><h2 id="Cross-validation-train-lt-gt-test"><a href="#Cross-validation-train-lt-gt-test" class="headerlink" title="Cross validation: train &lt;-&gt; test"></a>Cross validation: train &lt;-&gt; test</h2><p>##k Nearest Neighbor 优缺点:</p>
+<p>Advantange:易于理解，实现简单。</p>
+<p>Disadvantage: 算法的训练不需要花时间，因为其训练过程只是将训练集数据存储起来。然而测试要花费大量时间计算，因为每个测试图像需要和所有存储的训练图像进行比较，这显然是一个缺点。在实际应用中，我们关注测试效率远远高于训练效率</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/05/20/Machine-Learning-Notes-1/" itemprop="url">
                   Machine Learning Notes - 1
                 </a>
@@ -1432,7 +1671,7 @@ Miller-Rabin is only judge the prime not find the factors.
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

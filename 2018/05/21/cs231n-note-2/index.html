@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Algorithm,Machine-Learning," />
+  <meta name="keywords" content="Machine_Learning," />
 
 
 
@@ -84,21 +84,24 @@
 
 
 
-<meta name="description" content="IntroductionI have taken a Machine Learning Course at the University of Alberta. Our professor is Russell Greiner. We need to make a project and do some researches by Machine Learning method with our">
-<meta name="keywords" content="Algorithm,Machine-Learning">
+<meta name="description" content="Reference: https://zhuanlan.zhihu.com/p/20918580 Linear Classificationscore function (评分函数)原始图片到各个类别的评分情况， 分越高越接近  每个图像都是 [D x 1] D = pixel X pixel X 3(RGB) 参数权重 W (weight) = [k X D] k是样本数  在维度空间里 做旋转">
+<meta name="keywords" content="Machine_Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learning Project[1]-Weijie Sun">
-<meta property="og:url" content="git://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/index.html">
+<meta property="og:title" content="cs231n note - 2">
+<meta property="og:url" content="git://jeremykid.github.io/2018/05/21/cs231n-note-2/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:description" content="IntroductionI have taken a Machine Learning Course at the University of Alberta. Our professor is Russell Greiner. We need to make a project and do some researches by Machine Learning method with our">
+<meta property="og:description" content="Reference: https://zhuanlan.zhihu.com/p/20918580 Linear Classificationscore function (评分函数)原始图片到各个类别的评分情况， 分越高越接近  每个图像都是 [D x 1] D = pixel X pixel X 3(RGB) 参数权重 W (weight) = [k X D] k是样本数  在维度空间里 做旋转">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="git:///images/MachineLearning-data2.png">
-<meta property="og:image" content="git:///images/MachineLearning-data1.png">
-<meta property="og:updated_time" content="2016-08-02T22:14:45.000Z">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+f%28x_i%2CW%2Cb%29%3DWx_i%2Bb">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cs_j-s_%7By_i%7D%2B%5CDelta%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3Dmax%280%2C-7-13%2B10%29%2Bmax%280%2C11-13%2B10%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cw%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B%5CDelta%29">
+<meta property="og:image" content="https://pic4.zhimg.com/80/f254bd8d072128f1088c8cc47c3dff58_hd.jpg">
+<meta property="og:updated_time" content="2018-05-21T22:22:17.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learning Project[1]-Weijie Sun">
-<meta name="twitter:description" content="IntroductionI have taken a Machine Learning Course at the University of Alberta. Our professor is Russell Greiner. We need to make a project and do some researches by Machine Learning method with our">
-<meta name="twitter:image" content="git:///images/MachineLearning-data2.png">
+<meta name="twitter:title" content="cs231n note - 2">
+<meta name="twitter:description" content="Reference: https://zhuanlan.zhihu.com/p/20918580 Linear Classificationscore function (评分函数)原始图片到各个类别的评分情况， 分越高越接近  每个图像都是 [D x 1] D = pixel X pixel X 3(RGB) 参数权重 W (weight) = [k X D] k是样本数  在维度空间里 做旋转">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+f%28x_i%2CW%2Cb%29%3DWx_i%2Bb">
 
 
 
@@ -119,9 +122,9 @@
 
 
 
-  <link rel="canonical" href="git://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/"/>
+  <link rel="canonical" href="git://jeremykid.github.io/2018/05/21/cs231n-note-2/"/>
 
-  <title> Machine Learning Project[1]-Weijie Sun | Weijie Sun Blog </title>
+  <title> cs231n note - 2 | Weijie Sun Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -250,7 +253,7 @@
             
             
               
-                Machine Learning Project[1]-Weijie Sun
+                cs231n note - 2
               
             
           </h1>
@@ -262,8 +265,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-02T15:37:01-06:00" content="2016-08-02">
-              2016-08-02
+            <time itemprop="dateCreated" datetime="2018-05-21T14:56:48-06:00" content="2018-05-21">
+              2018-05-21
             </time>
           </span>
 
@@ -273,8 +276,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/02/Machine-Learning-Project-1-Weijie-Sun/" itemprop="commentsCount"></span>
+                <a href="/2018/05/21/cs231n-note-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/21/cs231n-note-2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,16 +300,30 @@
       
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I have taken a Machine Learning Course at the University of Alberta. Our professor is <a href="https://en.wikipedia.org/wiki/Russell_Greiner" target="_blank" rel="noopener">Russell Greiner</a>. We need to make a project and do some researches by Machine Learning method with our coach <a href="https://sites.ualberta.ca/~golmoham/" target="_blank" rel="noopener">Koosha Golmohammadi</a>. Since this is my first Machine Learning project. Soooo, this is not as good as some projects made by Machine Learning experts. However, we achieve a result is 90% accuracy which is closed to some the U.S agency in Boston.</p>
-<h1 id="1-Scraping-Data"><a href="#1-Scraping-Data" class="headerlink" title="1 Scraping Data."></a>1 Scraping Data.</h1><p>We scraped some real estate data from real estate data website from Edmonton and marked in Edmonton Map.</p>
-<p><img src="/images/MachineLearning-data2.png" alt=""></p>
-<h1 id="2-Matching-Data"><a href="#2-Matching-Data" class="headerlink" title="2 Matching Data"></a>2 Matching Data</h1><p>Then we tried to match the real estate data with over 110 features in <a href="https://data.edmonton.ca/" target="_blank" rel="noopener">Open City Edmonton Data</a></p>
-<p>It is a tough work there are different names for an address which is easier for the human to understand than a machine. After a little of the algorithm in nature language process(very basic). </p>
-<p>we got the following useful data.<br><img src="/images/MachineLearning-data1.png" alt=""></p>
-<p>This is our first step for collating data and scraping data.</p>
-<p>I will keep updating for Machine learning.<br>See you next time.</p>
-<p><a href="https://github.com/koosha/property_values" target="_blank" rel="noopener">Our code resource</a></p>
-
+        <p>Reference:</p>
+<p><a href="https://zhuanlan.zhihu.com/p/20918580" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20918580</a></p>
+<h1 id="Linear-Classification"><a href="#Linear-Classification" class="headerlink" title="Linear Classification"></a>Linear Classification</h1><h2 id="score-function-评分函数"><a href="#score-function-评分函数" class="headerlink" title="score function (评分函数)"></a>score function (评分函数)</h2><p>原始图片到各个类别的评分情况， 分越高越接近</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+f%28x_i%2CW%2Cb%29%3DWx_i%2Bb" alt=""></p>
+<p>每个图像都是 [D x 1] D = pixel X pixel X 3(RGB)</p>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>权重</p>
+<p>W (weight) = [k X D] k是样本数 </p>
+<p>在维度空间里 做旋转变换</p>
+<p>偏差向量</p>
+<p>b (bias vector) = [k x 1]</p>
+<p>在维度空间里 做平移变化</p>
+<h3 id="图像数据预处理"><a href="#图像数据预处理" class="headerlink" title="图像数据预处理"></a>图像数据预处理</h3><p>最常见的就是 normalization</p>
+<p>零均值的中心化 把 [0-255] -&gt; [-127-127] -&gt; [-1,1]</p>
+<h2 id="loss-function-损失函数"><a href="#loss-function-损失函数" class="headerlink" title="loss function (损失函数)"></a>loss function (损失函数)</h2><p>量化分类label 与真实label 之间的一致性 也叫 代价函数Cost Function或目标函数Objective</p>
+<p>当 score function 与真实结果相差越大，Cost Function输出越大 </p>
+<h3 id="多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><a href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss" class="headerlink" title="多类支持向量机损失 Multiclass Support Vector Machine Loss"></a>多类支持向量机损失 Multiclass Support Vector Machine Loss</h3><p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cs_j-s_%7By_i%7D%2B%5CDelta%29" alt=""></p>
+<p>eg: 有三个分类 score 是 s = [13, -7, 11] \delta = 10, 第一个label 是真实正确的</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3Dmax%280%2C-7-13%2B10%29%2Bmax%280%2C11-13%2B10%29" alt=""></p>
+<p>因为 -20 大于 \delta 边界值， 所以最后的损失值为8</p>
+<p>线性评分函数 的损失函数公式：</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cw%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B%5CDelta%29" alt=""></p>
+<h3 id="折叶损失（hinge-loss）-max-0"><a href="#折叶损失（hinge-loss）-max-0" class="headerlink" title="折叶损失（hinge loss）: max (0, -)"></a>折叶损失（hinge loss）: max (0, -)</h3><h3 id="平方折叶损失SVM（即L2-SVM）：-max-0-2"><a href="#平方折叶损失SVM（即L2-SVM）：-max-0-2" class="headerlink" title="平方折叶损失SVM（即L2-SVM）： max (0, -) ^2"></a>平方折叶损失SVM（即L2-SVM）： max (0, -) ^2</h3><p><img src="https://pic4.zhimg.com/80/f254bd8d072128f1088c8cc47c3dff58_hd.jpg" alt=""></p>
+<p>目的是想要正确类别进入红色区域， 如果其他类别进入红色区域甚至更高的时候，计算loss， 我们的目的是找权重W</p>
+<h2 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h2>
       
     </div>
 
@@ -328,9 +345,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
-          
-            <a href="/tags/Machine-Learning/" rel="tag">#Machine-Learning</a>
+            <a href="/tags/Machine-Learning/" rel="tag">#Machine_Learning</a>
           
         </div>
       
@@ -339,17 +354,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/27/My Ionic-Hybrid Experience[1]/" rel="next" title="My Ionic-Hybrid Experience[1]">
-                <i class="fa fa-chevron-left"></i> My Ionic-Hybrid Experience[1]
+              <a href="/2018/05/20/cs231n-note-1/" rel="next" title="cs231n note - 1">
+                <i class="fa fa-chevron-left"></i> cs231n note - 1
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/13/Docker-Notes/" rel="prev" title="Docker Notes">
-                Docker Notes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -496,7 +507,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Scraping-Data"><span class="nav-number"></span> <span class="nav-text">1 Scraping Data.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Matching-Data"><span class="nav-number"></span> <span class="nav-text">2 Matching Data</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linear-Classification"><span class="nav-number">1.</span> <span class="nav-text">Linear Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#score-function-评分函数"><span class="nav-number">1.1.</span> <span class="nav-text">score function (评分函数)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">1.1.1.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像数据预处理"><span class="nav-number">1.1.2.</span> <span class="nav-text">图像数据预处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss-function-损失函数"><span class="nav-number">1.2.</span> <span class="nav-text">loss function (损失函数)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><span class="nav-number">1.2.1.</span> <span class="nav-text">多类支持向量机损失 Multiclass Support Vector Machine Loss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折叶损失（hinge-loss）-max-0"><span class="nav-number">1.2.2.</span> <span class="nav-text">折叶损失（hinge loss）: max (0, -)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平方折叶损失SVM（即L2-SVM）：-max-0-2"><span class="nav-number">1.2.3.</span> <span class="nav-text">平方折叶损失SVM（即L2-SVM）： max (0, -) ^2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Regularization"><span class="nav-number">1.3.</span> <span class="nav-text">Regularization</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -616,8 +627,8 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'weijiesun';
-      var disqus_identifier = '2016/08/02/Machine-Learning-Project-1-Weijie-Sun/';
-      var disqus_title = "Machine Learning Project[1]-Weijie Sun";
+      var disqus_identifier = '2018/05/21/cs231n-note-2/';
+      var disqus_title = "cs231n note - 2";
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
