@@ -319,7 +319,15 @@
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cw%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B%5CDelta%29" alt=""></p>
 <h3 id="折叶损失（hinge-loss）-max-0"><a href="#折叶损失（hinge-loss）-max-0" class="headerlink" title="折叶损失（hinge loss）: max (0, -)"></a>折叶损失（hinge loss）: max (0, -)</h3><h3 id="平方折叶损失SVM（即L2-SVM）：-max-0-2"><a href="#平方折叶损失SVM（即L2-SVM）：-max-0-2" class="headerlink" title="平方折叶损失SVM（即L2-SVM）： max (0, -) ^2"></a>平方折叶损失SVM（即L2-SVM）： max (0, -) ^2</h3><p><img src="https://pic4.zhimg.com/80/f254bd8d072128f1088c8cc47c3dff58_hd.jpg" alt=""></p>
 <p>目的是想要正确类别进入红色区域， 如果其他类别进入红色区域甚至更高的时候，计算loss， 我们的目的是找权重W</p>
-<h2 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h2>
+<h2 id="Regularization-正则化"><a href="#Regularization-正则化" class="headerlink" title="Regularization 正则化"></a>Regularization 正则化</h2><p>假设有一个数据集和一个权重集W能够正确地分类每个数据， 可能有很多相似的W都能正确地分类所有的数据</p>
+<p>比如有一个权重W 调整系数可以改变Loss score。 我们希望給W添加一些偏好</p>
+<p>向损失函数增加一个正则化惩罚</p>
+<h3 id="egularization-penalty-正则化惩罚-R-W"><a href="#egularization-penalty-正则化惩罚-R-W" class="headerlink" title="egularization penalty 正则化惩罚 R(W)"></a>egularization penalty 正则化惩罚 R(W)</h3><p><img src="https://www.zhihu.com/equation?tex=R%28W%29%3D%5Csum_k+%5Csum_l+W%5E2_%7Bk%2Cl%7D" alt=""></p>
+<p>多类SVM损失函数 L = 数据损失（data loss），即所有样例的的平均损失L_i + 正则化损失（regularization loss）</p>
+<p><img src="https://www.zhihu.com/equation?tex=L%3D%5Cdisplaystyle+%5Cunderbrace%7B+%5Cfrac%7B1%7D%7BN%7D%5Csum_i+L_i%7D_%7Bdata+%5C++loss%7D%2B%5Cunderbrace%7B%5Clambda+R%28W%29%7D_%7Bregularization+%5C+loss%7D" alt=""></p>
+<p>展开公式</p>
+<p><img src="https://www.zhihu.com/equation?tex=L%3D%5Cfrac%7B1%7D%7BN%7D%5Csum_i%5Csum_%7Bj%5Cnot%3Dy_i%7D%5Bmax%280%2Cf%28x_i%3BW%29_j-f%28x_i%3BW%29_%7By_i%7D%2B%5CDelta%29%5D%2B%5Clambda+%5Csum_k+%5Csum_l+W%5E2_%7Bk%2Cl%7D" alt=""></p>
+
           
         
       
@@ -549,6 +557,14 @@
 <li><p>[ ] - 04 - Data Preparation -p63</p>
 </li>
 </ul>
+<p>Prepare data is time consuming </p>
+<p>several methods to deal with missing data and outliers</p>
+<p>normalize Data</p>
+<p>Data binning 分级</p>
+<p>Reduce Data, Clean Data</p>
+<p>Feature Engineering: 从raw data 提取出 feature</p>
+<p>Feature Selection: Filter/Wrapper/Embedded method</p>
+<p>p99</p>
 
           
         
