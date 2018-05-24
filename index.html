@@ -298,6 +298,8 @@
           
             <p>Reference:</p>
 <p><a href="https://zhuanlan.zhihu.com/p/20918580" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20918580</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/20945670" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20945670</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21102293" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/21102293</a></p>
 <h1 id="Linear-Classification"><a href="#Linear-Classification" class="headerlink" title="Linear Classification"></a>Linear Classification</h1><h2 id="score-function-评分函数"><a href="#score-function-评分函数" class="headerlink" title="score function (评分函数)"></a>score function (评分函数)</h2><p>原始图片到各个类别的评分情况， 分越高越接近</p>
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+f%28x_i%2CW%2Cb%29%3DWx_i%2Bb" alt=""></p>
 <p>每个图像都是 [D x 1] D = pixel X pixel X 3(RGB)</p>
@@ -327,6 +329,62 @@
 <p><img src="https://www.zhihu.com/equation?tex=L%3D%5Cdisplaystyle+%5Cunderbrace%7B+%5Cfrac%7B1%7D%7BN%7D%5Csum_i+L_i%7D_%7Bdata+%5C++loss%7D%2B%5Cunderbrace%7B%5Clambda+R%28W%29%7D_%7Bregularization+%5C+loss%7D" alt=""></p>
 <p>展开公式</p>
 <p><img src="https://www.zhihu.com/equation?tex=L%3D%5Cfrac%7B1%7D%7BN%7D%5Csum_i%5Csum_%7Bj%5Cnot%3Dy_i%7D%5Bmax%280%2Cf%28x_i%3BW%29_j-f%28x_i%3BW%29_%7By_i%7D%2B%5CDelta%29%5D%2B%5Clambda+%5Csum_k+%5Csum_l+W%5E2_%7Bk%2Cl%7D" alt=""></p>
+<p>Code:</p>
+<pre><code>def L_i(x, y, W):
+  &quot;&quot;&quot;
+  unvectorized version. Compute the multiclass svm loss for a single example (x,y)
+  - x is a column vector representing an image (e.g. 3073 x 1 in CIFAR-10)
+    with an appended bias dimension in the 3073-rd position (i.e. bias trick)
+  - y is an integer giving index of correct class (e.g. between 0 and 9 in CIFAR-10)
+  - W is the weight matrix (e.g. 10 x 3073 in CIFAR-10)
+  &quot;&quot;&quot;
+  delta = 1.0 # see notes about delta later in this section
+  scores = W.dot(x) # scores becomes of size 10 x 1, the scores for each class
+  correct_class_score = scores[y]
+  D = W.shape[0] # number of classes, e.g. 10
+  loss_i = 0.0
+  for j in xrange(D): # iterate over all wrong classes
+    if j == y:
+      # skip for the true class to only loop over incorrect classes
+      continue
+    # accumulate loss for the i-th example
+    loss_i += max(0, scores[j] - correct_class_score + delta)
+  return loss_i
+
+def L_i_vectorized(x, y, W):
+  &quot;&quot;&quot;
+  A faster half-vectorized implementation. half-vectorized
+  refers to the fact that for a single example the implementation contains
+  no for loops, but there is still one loop over the examples (outside this function)
+  &quot;&quot;&quot;
+  delta = 1.0
+  scores = W.dot(x)
+  # compute the margins for all classes in one vector operation
+  margins = np.maximum(0, scores - scores[y] + delta)
+  # on y-th position scores[y] - scores[y] canceled and gave delta. We want
+  # to ignore the y-th position and only consider margin on max wrong class
+  margins[y] = 0
+  loss_i = np.sum(margins)
+  return loss_i
+
+def L(X, y, W):
+  &quot;&quot;&quot;
+  fully-vectorized implementation :
+  - X holds all the training examples as columns (e.g. 3073 x 50,000 in CIFAR-10)
+  - y is array of integers specifying correct class (e.g. 50,000-D array)
+  - W are weights (e.g. 10 x 3073)
+  &quot;&quot;&quot;
+  # evaluate loss over all examples in X without using any for loops
+  # left as exercise to reader in the assignment
+    delta = 1.0
+    score_matrix = W.dot(X)
+    correct_score = score_matrix[y]
+    #Todo, correct_score_matrix = correct_core * 50
+    #Todo, delta_matrx repeat delta
+    loss_matrix = score_matrix - correct_score_matrix + delta_matrx
+    result = np.sum(loss_matrix, axis=1)
+  return loss_matrix
+</code></pre><h3 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h3><p>TODO</p>
 
           
         
@@ -544,7 +602,7 @@
         
           
             <p>Reference: <a href="https://zhuanlan.zhihu.com/p/36287950" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/36287950</a></p>
-<ul>
+<h1 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h1><ul>
 <li>[X] - 01 - Overview<br>P1-15 Machine learning background and flow</li>
 </ul>
 <p>P16-42  Machine learning flow</p>
@@ -563,8 +621,11 @@
 <p>Data binning 分级</p>
 <p>Reduce Data, Clean Data</p>
 <p>Feature Engineering: 从raw data 提取出 feature</p>
-<p>Feature Selection: Filter/Wrapper/Embedded method</p>
-<p>p99</p>
+<h3 id="Feature-Selection-Filter-Wrapper-Embedded-method"><a href="#Feature-Selection-Filter-Wrapper-Embedded-method" class="headerlink" title="Feature Selection: Filter/Wrapper/Embedded method"></a>Feature Selection: Filter/Wrapper/Embedded method</h3><p>Traditional approaches 传统方法</p>
+<h4 id="Forward-selection"><a href="#Forward-selection" class="headerlink" title="Forward selection"></a>Forward selection</h4><p>一开始模型里面没有variable， 然后往里面加入variable，直到accuracy 没有任何的增长</p>
+<h4 id="Backward-elimination"><a href="#Backward-elimination" class="headerlink" title="Backward elimination"></a>Backward elimination</h4><p>和前一种相反，一开始有所有的variable, 然后去除，直到accuracy 有明显的下降</p>
+<h4 id="Stepwise-regression"><a href="#Stepwise-regression" class="headerlink" title="Stepwise regression"></a>Stepwise regression</h4><p>这种是用在选k-best feature， 一开始有k个，然后加入更好的，并且去除最差的，直到经历过所有的feature</p>
+<p>P100</p>
 
           
         
