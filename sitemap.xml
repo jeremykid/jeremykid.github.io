@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git://jeremykid.github.io/about/index.html</loc>
+    
+    <lastmod>2018-05-25T02:14:04.579Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/</loc>
     
     <lastmod>2018-05-24T07:07:22.969Z</lastmod>
