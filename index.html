@@ -16,7 +16,7 @@
 
 <html class="theme-next muse use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -176,7 +176,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -187,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
 
@@ -306,6 +306,190 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2018/05/24/Install-pyenv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/Install-pyenv/" itemprop="url">
+                  Install pyenv
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-24 23:01:30" itemprop="dateCreated datePublished" datetime="2018-05-24T23:01:30-06:00">2018-05-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-26 16:17:56" itemprop="dateModified" datetime="2018-05-26T16:17:56-06:00">2018-05-26</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/24/Install-pyenv/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/24/Install-pyenv/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>因为之前用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> node 的版本管理器</p>
+<p>所以pyenv 应该也是python 的版本管理器</p>
+<p>运行 curl -L <a href="https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer" target="_blank" rel="noopener">https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer</a> | bash</p>
+<p>然后打开 vim ~/.bash_profile </p>
+<p>添加了三行</p>
+<pre><code>export PATH=&quot;~/.pyenv/bin:$PATH&quot;
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+</code></pre><p>我原来的是</p>
+<pre><code>export XAMPP_HOME=/Applications/xampp/xamppfiles
+export PATH=${XAMPP_HOME}/bin:${PATH}
+</code></pre><p>最后变成</p>
+<pre><code>export XAMPP_HOME=/Applications/xampp/xamppfiles
+export PATH=/Users/weijiesun/.pyenv/bin:${PATH}:${XAMPP_HOME}/bin
+
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+</code></pre><p>然后有个坑踩了好久，就是XAMPP_HOME=/Applications/xampp/xamppfiles 要放在path 的最后一位，不然就是疯狂在找http url 的端口</p>
+<p>然后运行 </p>
+<pre><code>source ~/.bash_profile     
+</code></pre><p>就好了</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2018/05/21/cs231n-note-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -369,7 +553,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-24 00:56:42" itemprop="dateModified" datetime="2018-05-24T00:56:42-06:00">2018-05-24</time>
+                <time title="Modified: 2018-05-24 21:47:14" itemprop="dateModified" datetime="2018-05-24T21:47:14-06:00">2018-05-24</time>
               
             
           </span>
@@ -504,7 +688,10 @@ def L(X, y, W):
     loss_matrix = score_matrix - correct_score_matrix + delta_matrx
     result = np.sum(loss_matrix, axis=1)
   return loss_matrix
-</code></pre><h3 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h3><p>TODO</p>
+</code></pre><h3 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h3><p>逻辑回归分类器面对多个分类的一般化归纳</p>
+<p>公式：$L_{i} = -\log\frac{b}{a}$</p>
+<p>$$<br>a+b=c<br>$$</p>
+<p>TODO</p>
 
           
         
@@ -2347,7 +2534,7 @@ Miller-Rabin is only judge the prime not find the factors.
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2385,7 +2572,9 @@ Miller-Rabin is only judge the prime not find the factors.
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2618,6 +2807,10 @@ Miller-Rabin is only judge the prime not find the factors.
       
     
       
+        
+      
+    
+      
     
       
     
@@ -2635,6 +2828,47 @@ Miller-Rabin is only judge the prime not find the factors.
     
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    
   
 
 

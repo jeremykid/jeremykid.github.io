@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git://jeremykid.github.io/2018/05/24/Install-pyenv/</loc>
+    
+    <lastmod>2018-05-26T22:17:56.493Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>git://jeremykid.github.io/2018/05/21/cs231n-note-2/</loc>
+    
+    <lastmod>2018-05-25T03:47:14.282Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git://jeremykid.github.io/about/index.html</loc>
     
     <lastmod>2018-05-25T02:14:04.579Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>git://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/</loc>
     
     <lastmod>2018-05-24T07:07:22.969Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>git://jeremykid.github.io/2018/05/21/cs231n-note-2/</loc>
-    
-    <lastmod>2018-05-24T06:56:42.181Z</lastmod>
     
   </url>
   
