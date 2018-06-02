@@ -369,7 +369,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-26 16:17:56" itemprop="dateModified" datetime="2018-05-26T16:17:56-06:00">2018-05-26</time>
+                <time title="Modified: 2018-05-27 20:25:29" itemprop="dateModified" datetime="2018-05-27T20:25:29-06:00">2018-05-27</time>
               
             
           </span>
@@ -553,7 +553,7 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-24 21:47:14" itemprop="dateModified" datetime="2018-05-24T21:47:14-06:00">2018-05-24</time>
+                <time title="Modified: 2018-06-02 01:51:33" itemprop="dateModified" datetime="2018-06-02T01:51:33-06:00">2018-06-02</time>
               
             
           </span>
@@ -689,7 +689,26 @@ def L(X, y, W):
     result = np.sum(loss_matrix, axis=1)
   return loss_matrix
 </code></pre><h3 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h3><p>逻辑回归分类器面对多个分类的一般化归纳</p>
-<p>公式：$L_{i} = -\log\frac{b}{a}$</p>
+<p>公式：</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3D-log%28%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D%29" alt=""> </p>
+<p>或者</p>
+<p><img src="https://www.zhihu.com/equation?tex=L_i%3D-f_%7By_i%7D%2Blog%28%5Csum_je%5E%7Bf_j%7D%29" alt=""></p>
+<p>score_function</p>
+<p>所有的函数转换成 $$e^z$$</p>
+<p>score function =&gt; <img src="https://www.zhihu.com/equation?tex=f_j%28z%29%3D%5Cfrac%7Be%5E%7Bz_j%7D%7D%7B%5Csum_ke%5E%7Bz_k%7D%7D" alt=""></p>
+<p>softmax 函数, 每个元素都在0-1之间并且和为1</p>
+<p>概率解释:</p>
+<p><img src="https://www.zhihu.com/equation?tex=P%28y_i%7Cx_i%2CW%29%3D%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D" alt=""></p>
+<p>我们就是在最小化正确分类的负对数概率，这可以看做是在进行最大似然估计（MLE）</p>
+<p>实现softmax函数计算的时候技巧可以用常数C， 通常$$\log C = -maxf_j$$ </p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D%3D%5Cfrac%7BCe%5E%7Bf_%7By_i%7D%7D%7D%7BC%5Csum_je%5E%7Bf_j%7D%7D%3D%5Cfrac%7Be%5E%7Bf_%7By_i%7D%2BlogC%7D%7D%7B%5Csum_je%5E%7Bf_j%2BlogC%7D%7D" alt=""></p>
+<p>折叶损失（hinge loss）替换为交叉熵损失（cross-entropy loss）</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+H%28p%2Cq%29%3D-%5Csum_xp%28x%29+logq%28x%29" alt=""></p>
+<h3 id="SVM和Softmax的比较"><a href="#SVM和Softmax的比较" class="headerlink" title="SVM和Softmax的比较"></a>SVM和Softmax的比较</h3><p>Softmax </p>
+<p>—-sad—-<br>Test Mathjax, 但是公式实在太复杂。</p>
+<p>$$<br>L<em>{i}=f</em>{y<em>i}+\log (\sum</em>{j} e^{f_j})<br>$$</p>
+<p>$L_{i} = -\log \frac {e^{f_y}} {e^{f_j}}$</p>
+<p>$\sum_{j=0}$</p>
 <p>$$<br>a+b=c<br>$$</p>
 <p>TODO</p>
 
