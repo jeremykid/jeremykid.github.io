@@ -306,6 +306,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2018/06/04/cs231n-note-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/04/cs231n-note-3/" itemprop="url">
+                  cs231n-note-3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-06-04 00:38:22 / Modified: 00:45:35" itemprop="dateCreated datePublished" datetime="2018-06-04T00:38:22-06:00">2018-06-04</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/04/cs231n-note-3/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/04/cs231n-note-3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://zhuanlan.zhihu.com/p/21360434" target="_blank" rel="noopener">最优化上</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21387326" target="_blank" rel="noopener">最优化下</a></p>
+<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><ul>
+<li><p>基于参数的评分函数。该函数将原始图像像素映射为分类评分值。</p>
+</li>
+<li><p>损失函数。该函数能够根据分类评分和训练集图像数据实际分类的一致性，衡量某个具体参数集的质量好坏。损失函数有多种版本和不同的实现方式（例如：Softmax或SVM）。 <em>Softmax 和 SVM 不应该包括了score function 和 lost function</em></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2018/05/24/Install-pyenv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -553,7 +712,7 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-02 01:51:33" itemprop="dateModified" datetime="2018-06-02T01:51:33-06:00">2018-06-02</time>
+                <time title="Modified: 2018-06-04 00:43:39" itemprop="dateModified" datetime="2018-06-04T00:43:39-06:00">2018-06-04</time>
               
             
           </span>
@@ -615,8 +774,8 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 <p>在维度空间里 做平移变化</p>
 <h3 id="图像数据预处理"><a href="#图像数据预处理" class="headerlink" title="图像数据预处理"></a>图像数据预处理</h3><p>最常见的就是 normalization</p>
 <p>零均值的中心化 把 [0-255] -&gt; [-127-127] -&gt; [-1,1]</p>
-<h2 id="loss-function-损失函数"><a href="#loss-function-损失函数" class="headerlink" title="loss function (损失函数)"></a>loss function (损失函数)</h2><p>量化分类label 与真实label 之间的一致性 也叫 代价函数Cost Function或目标函数Objective</p>
-<p>当 score function 与真实结果相差越大，Cost Function输出越大 </p>
+<h2 id="Loss-Function-损失函数"><a href="#Loss-Function-损失函数" class="headerlink" title="Loss Function (损失函数)"></a>Loss Function (损失函数)</h2><p>量化分类label 与真实label 之间的一致性 也叫 代价函数Cost Function或目标函数Objective</p>
+<p>当 Score Function 与真实结果相差越大，Cost Function输出越大 </p>
 <h3 id="多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><a href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss" class="headerlink" title="多类支持向量机损失 Multiclass Support Vector Machine Loss"></a>多类支持向量机损失 Multiclass Support Vector Machine Loss</h3><p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+L_i%3D%5Csum_%7Bj%5Cnot%3Dy_i%7Dmax%280%2Cs_j-s_%7By_i%7D%2B%5CDelta%29" alt=""></p>
 <p>eg: 有三个分类 score 是 s = [13, -7, 11] \delta = 10, 第一个label 是真实正确的</p>
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3Dmax%280%2C-7-13%2B10%29%2Bmax%280%2C11-13%2B10%29" alt=""></p>
@@ -693,7 +852,6 @@ def L(X, y, W):
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3D-log%28%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D%29" alt=""> </p>
 <p>或者</p>
 <p><img src="https://www.zhihu.com/equation?tex=L_i%3D-f_%7By_i%7D%2Blog%28%5Csum_je%5E%7Bf_j%7D%29" alt=""></p>
-<p>score_function</p>
 <p>所有的函数转换成 $$e^z$$</p>
 <p>score function =&gt; <img src="https://www.zhihu.com/equation?tex=f_j%28z%29%3D%5Cfrac%7Be%5E%7Bz_j%7D%7D%7B%5Csum_ke%5E%7Bz_k%7D%7D" alt=""></p>
 <p>softmax 函数, 每个元素都在0-1之间并且和为1</p>
@@ -702,9 +860,21 @@ def L(X, y, W):
 <p>我们就是在最小化正确分类的负对数概率，这可以看做是在进行最大似然估计（MLE）</p>
 <p>实现softmax函数计算的时候技巧可以用常数C， 通常$$\log C = -maxf_j$$ </p>
 <p><img src="https://www.zhihu.com/equation?tex=%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D%3D%5Cfrac%7BCe%5E%7Bf_%7By_i%7D%7D%7D%7BC%5Csum_je%5E%7Bf_j%7D%7D%3D%5Cfrac%7Be%5E%7Bf_%7By_i%7D%2BlogC%7D%7D%7B%5Csum_je%5E%7Bf_j%2BlogC%7D%7D" alt=""></p>
-<p>折叶损失（hinge loss）替换为交叉熵损失（cross-entropy loss）</p>
+<pre><code>f = np.array([123, 456, 789]) # 例子中有3个分类，每个评分的数值都很大
+p = np.exp(f) / np.sum(np.exp(f)) # 不妙：数值问题，可能导致数值爆炸
+
+# 那么将f中的值平移到最大值为0：
+f -= np.max(f) # f becomes [-666, -333, 0]
+p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
+</code></pre><p>折叶损失（hinge loss）替换为交叉熵损失（cross-entropy loss）</p>
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+H%28p%2Cq%29%3D-%5Csum_xp%28x%29+logq%28x%29" alt=""></p>
 <h3 id="SVM和Softmax的比较"><a href="#SVM和Softmax的比较" class="headerlink" title="SVM和Softmax的比较"></a>SVM和Softmax的比较</h3><p>Softmax </p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
+<li><p>SVM 和 Softmax 基于 weight W 和 bias b</p>
+</li>
+<li><p>define Loss Function (损失函数) 用来更好的定义更好的预测模型</p>
+</li>
+</ul>
 <p>—-sad—-<br>Test Mathjax, 但是公式实在太复杂。</p>
 <p>$$<br>L<em>{i}=f</em>{y<em>i}+\log (\sum</em>{j} e^{f_j})<br>$$</p>
 <p>$L_{i} = -\log \frac {e^{f_y}} {e^{f_j}}$</p>
@@ -827,7 +997,7 @@ def L(X, y, W):
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-21 16:13:07" itemprop="dateModified" datetime="2018-05-21T16:13:07-06:00">2018-05-21</time>
+                <time title="Modified: 2018-05-27 20:25:25" itemprop="dateModified" datetime="2018-05-27T20:25:25-06:00">2018-05-27</time>
               
             
           </span>
@@ -2350,165 +2520,13 @@ Miller-Rabin is only judge the prime not find the factors.
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2016/07/15/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Weijie Sun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Weijie Sun Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/15/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-07-15 16:43:52" itemprop="dateCreated datePublished" datetime="2016-07-15T16:43:52-06:00">2016-07-15</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/15/hello-world/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/15/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2553,7 +2571,7 @@ Miller-Rabin is only judge the prime not find the factors.
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2826,9 +2844,9 @@ Miller-Rabin is only judge the prime not find the factors.
       
     
       
-        
-      
     
+      
+        
       
     
       

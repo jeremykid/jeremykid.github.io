@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>git://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
+    <lastmod>2018-06-04T06:45:35.312Z</lastmod>
+    <data>
+        <display>
+        <title>cs231n-note-3</title>
+        <pubTime>2018-06-04T06:38:22.000Z</pubTime>
+        
+        <tag>Machine_Learning</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>git://jeremykid.github.io/2018/05/21/cs231n-note-2/</loc>
-    <lastmod>2018-06-02T07:51:33.455Z</lastmod>
+    <lastmod>2018-06-04T06:43:39.190Z</lastmod>
     <data>
         <display>
         <title>cs231n note - 2</title>
@@ -37,14 +54,13 @@
     </url>
 
     
-    
   <url>
-    <loc>git://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/</loc>
-    <lastmod>2018-05-24T07:07:22.969Z</lastmod>
+    <loc>git://jeremykid.github.io/2018/05/20/cs231n-note-1/</loc>
+    <lastmod>2018-05-28T02:25:25.950Z</lastmod>
     <data>
         <display>
-        <title>Machine Learning Notes - 1</title>
-        <pubTime>2018-05-20T22:15:11.000Z</pubTime>
+        <title>cs231n note - 1</title>
+        <pubTime>2018-05-20T23:26:44.000Z</pubTime>
         
         <tag>Machine_Learning</tag>
          
@@ -55,13 +71,14 @@
     </url>
 
     
+    
   <url>
-    <loc>git://jeremykid.github.io/2018/05/20/cs231n-note-1/</loc>
-    <lastmod>2018-05-21T22:13:07.482Z</lastmod>
+    <loc>git://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/</loc>
+    <lastmod>2018-05-24T07:07:22.969Z</lastmod>
     <data>
         <display>
-        <title>cs231n note - 1</title>
-        <pubTime>2018-05-20T23:26:44.000Z</pubTime>
+        <title>Machine Learning Notes - 1</title>
+        <pubTime>2018-05-20T22:15:11.000Z</pubTime>
         
         <tag>Machine_Learning</tag>
          
