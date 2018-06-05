@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>git://jeremykid.github.io/2018/05/24/Install-pyenv/</loc>
+    <lastmod>2018-06-05T08:50:03.716Z</lastmod>
+    <data>
+        <display>
+        <title>Install pyenv</title>
+        <pubTime>2018-05-25T05:01:30.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>git://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
+    <lastmod>2018-06-05T08:14:28.389Z</lastmod>
+    <data>
+        <display>
+        <title>cs231n-note-3</title>
+        <pubTime>2018-06-04T06:38:22.000Z</pubTime>
+        
+        <tag>Machine_Learning</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>git://jeremykid.github.io/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/</loc>
     <lastmod>2018-06-05T07:39:07.250Z</lastmod>
     <data>
@@ -21,23 +55,6 @@
 
     
   <url>
-    <loc>git://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
-    <lastmod>2018-06-04T06:45:35.312Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n-note-3</title>
-        <pubTime>2018-06-04T06:38:22.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>git://jeremykid.github.io/2018/05/21/cs231n-note-2/</loc>
     <lastmod>2018-06-04T06:43:39.190Z</lastmod>
     <data>
@@ -46,23 +63,6 @@
         <pubTime>2018-05-21T20:56:48.000Z</pubTime>
         
         <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>git://jeremykid.github.io/2018/05/24/Install-pyenv/</loc>
-    <lastmod>2018-05-28T02:25:29.888Z</lastmod>
-    <data>
-        <display>
-        <title>Install pyenv</title>
-        <pubTime>2018-05-25T05:01:30.000Z</pubTime>
-        
-        <tag>python</tag>
          
          
            
