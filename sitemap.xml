@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git://jeremykid.github.io/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/</loc>
+    
+    <lastmod>2018-06-05T07:39:07.250Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
     
     <lastmod>2018-06-04T06:45:35.312Z</lastmod>

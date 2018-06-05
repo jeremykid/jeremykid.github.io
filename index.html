@@ -306,6 +306,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/" itemprop="url">
+                  sequelize cli NodeJs Learning Notes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-06-04 00:52:04" itemprop="dateCreated datePublished" datetime="2018-06-04T00:52:04-06:00">2018-06-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-05 01:39:07" itemprop="dateModified" datetime="2018-06-05T01:39:07-06:00">2018-06-05</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/04/sequelize-cli-NodeJs-Learning-Notes/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Sequlize cli 是一个后端对象控制的一个library</p>
+<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>首先要install： npm install –save sequelize-cli</p>
+<p>然后init： node_modules/.bin/sequelize init</p>
+<p>如果你是用Mac 你可以重命名 sequelize:    alias sequelize=’node_modules/.bin/sequelize’</p>
+<p>设置 config/config.json 基本上就是列出 database的schema username password 之类的</p>
+<h2 id="Migration"><a href="#Migration" class="headerlink" title="Migration"></a>Migration</h2><p>一种是create migration by model </p>
+<pre><code>node_modules/.bin/sequelize model:generate --name User
+</code></pre><p>还有一种是直接create migration</p>
+<pre><code>node_modules/.bin/sequelize migration:create --name add-wechatid-in-user
+</code></pre><h2 id="Seed"><a href="#Seed" class="headerlink" title="Seed"></a>Seed</h2><p>在数据库里生成一些demo 或者 测试dat啊</p>
+<p>生成 demo-user 的 seed </p>
+<pre><code>node_modules/.bin/sequelize seed:generate --name demo-user
+</code></pre><p>在seeder 文件里</p>
+<pre><code>&apos;use strict&apos;;
+module.exports = {
+  up: (queryInterface, Sequelize) =&gt; {
+    return queryInterface.bulkInsert(&apos;Users&apos;, [{
+        firstName: &apos;John&apos;,
+        lastName: &apos;Doe&apos;,
+        email: &apos;demo@demo.com&apos;
+      }], {});
+  },
+
+  down: (queryInterface, Sequelize) =&gt; {
+    return queryInterface.bulkDelete(&apos;Users&apos;, null, {});
+  }
+};
+</code></pre><p>Reference： </p>
+<p><a href="http://docs.sequelizejs.com/manual/tutorial/migrations.html" target="_blank" rel="noopener">Sequelize 手册</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2018/06/04/cs231n-note-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2351,175 +2543,6 @@ Miller-Rabin is only judge the prime not find the factors.
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="git://jeremykid.github.io/2016/07/18/HIV-project/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Weijie Sun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Weijie Sun Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/18/HIV-project/" itemprop="url">
-                  HIV_project - Weijie Sun
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-07-18 15:32:18" itemprop="dateCreated datePublished" datetime="2016-07-18T15:32:18-06:00">2016-07-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2016-07-19 17:37:49" itemprop="dateModified" datetime="2016-07-19T17:37:49-06:00">2016-07-19</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/18/HIV-project/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/18/HIV-project/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>HIV virus’s protine order like hexagon.<br>In the previous research, they working on the 2 dimension. However, in 3 dimension, the protine fills spherical surface.</p>
-<p>This prgramming project is used to help the biology researcher to plot the HIV virus and get a list of all surface protine coordinations by setting the different radius.</p>
-<h2 id="The-main-structure"><a href="#The-main-structure" class="headerlink" title="The main structure."></a>The main structure.</h2><p>If the point B rotated point A and get point C, I named points A is the father or root of B and C. As I mentioned that HIV virus’s surfaces protines order like a hexagen, protine will rotated 120 degree to get another protine. </p>
-<p>There are a K_keepers list of points which generated and a Pivot list of points.</p>
-<p>Use a Queue push in the points generated by the other 2 points, and push out the points which is already generated 2 points. When the distance is less than the protine’s radius, then the protines should not be placed at that coordination.</p>
-<p>Reference:<br><a href="https://en.wikipedia.org/wiki/Rotation_matrix" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Rotation_matrix</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2571,7 +2594,7 @@ Miller-Rabin is only judge the prime not find the factors.
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2611,7 +2634,9 @@ Miller-Rabin is only judge the prime not find the factors.
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2846,9 +2871,9 @@ Miller-Rabin is only judge the prime not find the factors.
       
     
       
-        
-      
     
+      
+        
       
     
       
