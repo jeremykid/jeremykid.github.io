@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jeremykid.github.io/2018/05/24/Install-pyenv/</loc>
+    <loc>http://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
     
-    <lastmod>2018-06-05T08:50:03.716Z</lastmod>
+    <lastmod>2018-06-18T04:41:42.474Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
+    <loc>http://jeremykid.github.io/categories/index.html</loc>
     
-    <lastmod>2018-06-05T08:14:28.389Z</lastmod>
+    <lastmod>2018-06-18T04:26:03.546Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeremykid.github.io/2018/05/24/Install-pyenv/</loc>
+    
+    <lastmod>2018-06-05T08:50:03.716Z</lastmod>
     
   </url>
   

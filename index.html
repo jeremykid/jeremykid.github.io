@@ -592,7 +592,7 @@ module.exports = {
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-05 02:14:28" itemprop="dateModified" datetime="2018-06-05T02:14:28-06:00">2018-06-05</time>
+                <time title="Modified: 2018-06-17 22:41:42" itemprop="dateModified" datetime="2018-06-17T22:41:42-06:00">2018-06-17</time>
               
             
           </span>
@@ -649,7 +649,120 @@ module.exports = {
 <li><p>最优化Optimization。最优化是寻找能使得损失函数值最小化的参数W的过程。</p>
 </li>
 </ul>
-<h1 id="损失函数可视化"><a href="#损失函数可视化" class="headerlink" title="损失函数可视化"></a>损失函数可视化</h1>
+<h1 id="损失函数可视化"><a href="#损失函数可视化" class="headerlink" title="损失函数可视化"></a>损失函数可视化</h1><ul>
+<li><p>在一维尺度上 $$L(W+aW_1)$$ x轴是a， y轴是loss function</p>
+</li>
+<li><p>在二维尺度上 $$L(W+aW_1+bW_2)$$, a,b 表达x轴, y轴， loss function 用颜色表示</p>
+</li>
+</ul>
+<p>单独的损失函数表示：</p>
+<p><img src="https://www.zhihu.com/equation?tex=Li%3D%5Csum_%7Bj%5Cnot%3Dy_i%7D%5Bmax%280%2Cw%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B1%29%5D" alt=""></p>
+<p>$$w_j$$ 如果对应分类正确即是负号，错误即是正号 $$L = \sumL/n$$</p>
+<p><img src="https://pic3.zhimg.com/80/3f6fbcd487b1c214e8fea1ea66eb413e_hd.jpg" alt=""></p>
+<p>SVM的损失函数是一种凸函数，可以学习一下如何高效最小化凸函数，在这种损失函数会有一些不可导的点（kinks）</p>
+<p>两个新概念： </p>
+<ul>
+<li>梯度？ 次梯度？未来学习点</li>
+</ul>
+<h1 id="最优化-Optimization"><a href="#最优化-Optimization" class="headerlink" title="最优化 Optimization"></a>最优化 Optimization</h1><p>对于神经网络的最优化策略有：</p>
+<h2 id="策略-1：随即搜索-最差劲的搜索方案（base-line）"><a href="#策略-1：随即搜索-最差劲的搜索方案（base-line）" class="headerlink" title="策略#1：随即搜索 最差劲的搜索方案（base line）"></a>策略#1：随即搜索 最差劲的搜索方案（base line）</h2><pre><code># 假设X_train的每一列都是一个数据样本（比如3073 x 50000）
+# 假设Y_train是数据样本的类别标签（比如一个长50000的一维数组）
+# 假设函数L对损失函数进行评价
+
+bestloss = float(&quot;inf&quot;) # Python assigns the highest possible float value
+for num in xrange(1000):
+  W = np.random.randn(10, 3073) * 0.0001 # generate random parameters
+  loss = L(X_train, Y_train, W) # get the loss over the entire training set
+  if loss &lt; bestloss: # keep track of the best solution
+    bestloss = loss
+    bestW = W
+  print &apos;in attempt %d the loss was %f, best %f&apos; % (num, loss, bestloss)
+</code></pre><p>感觉跟那个monkey sort 差不多 随机生成W weight。</p>
+<pre><code># 假设X_test尺寸是[3073 x 10000], Y_test尺寸是[10000 x 1]
+scores = Wbest.dot(Xte_cols) # 10 x 10000, the class scores for all test examples
+# 找到在每列中评分值最大的索引（即预测的分类）
+Yte_predict = np.argmax(scores, axis = 0)
+# 以及计算准确率
+np.mean(Yte_predict == Yte)
+# 返回 0.1555
+</code></pre><p>策略是：随机权重开始，然后迭代取优，从而获得更低的损失值。</p>
+<h2 id="策略-2：随机本地搜索"><a href="#策略-2：随机本地搜索" class="headerlink" title="策略#2：随机本地搜索"></a>策略#2：随机本地搜索</h2><p>生成一个随机的扰动 $$ \delta W $$</p>
+<p>$$ Wtry = W + \delta W $$ </p>
+<p>当 Wtry 的loss 变小的时候， 才决定移动</p>
+<pre><code>W = np.random.randn(10, 3073) * 0.001 # 生成随机初始W
+bestloss = float(&quot;inf&quot;)
+for i in xrange(1000):
+  step_size = 0.0001
+  Wtry = W + np.random.randn(10, 3073) * step_size
+  loss = L(Xtr_cols, Ytr, Wtry)
+  if loss &lt; bestloss:
+    W = Wtry
+    bestloss = loss
+  print &apos;iter %d loss is %f&apos; % (i, bestloss)
+</code></pre><h2 id="策略-3：跟随梯度"><a href="#策略-3：跟随梯度" class="headerlink" title="策略#3：跟随梯度"></a>策略#3：跟随梯度</h2><p>策略1 和 策略2 都是尝试好几个方向来找减少loss的方向，其实可以用梯度（gradient）来找到最陡峭的方向减少loss，</p>
+<p>一维求导公式： d(fx)/dx</p>
+<p>当函数有多个参数的时候，我们称导数为偏导数。而梯度就是在每个维度上偏导数所形成的向量。</p>
+<h1 id="梯度计算"><a href="#梯度计算" class="headerlink" title="梯度计算"></a>梯度计算</h1><p>有两种方法计算梯度：</p>
+<h2 id="数值梯度法-（实现简单-但是缓慢）"><a href="#数值梯度法-（实现简单-但是缓慢）" class="headerlink" title="数值梯度法 （实现简单 但是缓慢）"></a>数值梯度法 （实现简单 但是缓慢）</h2><pre><code>def eval_numerical_gradient(f, x):
+  &quot;&quot;&quot;  
+  一个f在x处的数值梯度法的简单实现
+  - f是只有一个参数的函数
+  - x是计算梯度的点
+  &quot;&quot;&quot; 
+
+  fx = f(x) # 在原点计算函数值
+  grad = np.zeros(x.shape)
+  h = 0.00001
+
+  # 对x中所有的item索引进行迭代
+  it = np.nditer(x, flags=[&apos;multi_index&apos;], op_flags=[&apos;readwrite&apos;])
+  while not it.finished:
+
+    # 计算x+h处的函数值
+    ix = it.multi_index
+    old_value = x[ix]
+    x[ix] = old_value + h # 增加h
+    fxh = f(x) # 计算f(x + h)
+    x[ix] = old_value # 存到前一个值中 (非常重要)
+
+    # 计算偏导数
+    grad[ix] = (fxh - fx) / h # 坡度
+    it.iternext() # 到下个维度
+
+  return grad
+</code></pre><p>实际中用中心差值公式（centered difference formula）[f(x+h)-f(x-h)]/2h 效果较好 <a href="https://en.wikipedia.org/wiki/Numerical_differentiation" target="_blank" rel="noopener">Numerical_differentiation</a></p>
+<pre><code># 要使用上面的代码我们需要一个只有一个参数的函数
+# (在这里参数就是权重)所以也包含了X_train和Y_train
+def CIFAR10_loss_fun(W):
+  return L(X_train, Y_train, W)
+
+W = np.random.rand(10, 3073) * 0.001 # 随机权重向量
+df = eval_numerical_gradient(CIFAR10_loss_fun, W) # 得到梯度
+</code></pre><p>loss_original = CIFAR10_loss_fun(W) # 初始损失值<br>print ‘original loss: %f’ % (loss_original, )</p>
+<pre><code># 查看不同步长的效果
+for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
+  step_size = 10 ** step_size_log
+  W_new = W - step_size * df # 权重空间中的新位置
+  loss_new = CIFAR10_loss_fun(W_new)
+  print &apos;for step size %f new loss: %f&apos; % (step_size, loss_new)
+
+# 输出:
+# original loss: 2.200718
+# for step size 1.000000e-10 new loss: 2.200652
+# for step size 1.000000e-09 new loss: 2.200057
+# for step size 1.000000e-08 new loss: 2.194116
+# for step size 1.000000e-07 new loss: 2.135493
+# for step size 1.000000e-06 new loss: 1.647802
+# for step size 1.000000e-05 new loss: 2.844355
+# for step size 1.000000e-04 new loss: 25.558142
+# for step size 1.000000e-03 new loss: 254.086573
+# for step size 1.000000e-02 new loss: 2539.370888
+# for step size 1.000000e-01 new loss: 25392.214036
+</code></pre><p>步长的影响：梯度指明了函数在哪个方向?是变化率最大的 步长(也叫作学习率)</p>
+<p>小步长下降稳定但进度慢 &lt;-&gt; 大步长进展快但是风险更大</p>
+<p>在本例中有30730个参数，所以损失函数每走一步就需要计算30731次损失函数的梯度, 效率太低</p>
+<h2 id="分析梯度法-（计算迅速，结果精确）-微分分析计算梯度"><a href="#分析梯度法-（计算迅速，结果精确）-微分分析计算梯度" class="headerlink" title="分析梯度法 （计算迅速，结果精确） 微分分析计算梯度"></a>分析梯度法 （计算迅速，结果精确） 微分分析计算梯度</h2><p>Todo</p>
+
           
         
       
@@ -3234,11 +3347,11 @@ Miller-Rabin is only judge the prime not find the factors.
       
     
       
-    
-      
-    
-      
         
+      
+    
+      
+    
       
     
       
