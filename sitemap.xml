@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jeremykid.github.io/2018/05/24/Install-python-library/</loc>
+    
+    <lastmod>2018-06-19T04:43:23.853Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeremykid.github.io/2018/06/18/cs231n-note-4/</loc>
+    
+    <lastmod>2018-06-19T04:29:59.928Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
     
-    <lastmod>2018-06-18T04:41:42.474Z</lastmod>
+    <lastmod>2018-06-19T04:21:53.413Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>http://jeremykid.github.io/categories/index.html</loc>
     
     <lastmod>2018-06-18T04:26:03.546Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeremykid.github.io/2018/05/24/Install-pyenv/</loc>
-    
-    <lastmod>2018-06-05T08:50:03.716Z</lastmod>
     
   </url>
   

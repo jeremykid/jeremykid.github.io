@@ -337,6 +337,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/06/18/cs231n-note-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/18/cs231n-note-4/" itemprop="url">
+                  cs231n-note-4
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-06-18 22:23:21 / Modified: 22:29:59" itemprop="dateCreated datePublished" datetime="2018-06-18T22:23:21-06:00">2018-06-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/18/cs231n-note-4/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/18/cs231n-note-4/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>反向传播</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction:"></a>Introduction:</h1><p>反向传播是利用链式法则递归计算表达式的梯度的方法。</p>
+<p>TODO</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -592,7 +746,7 @@ module.exports = {
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-17 22:41:42" itemprop="dateModified" datetime="2018-06-17T22:41:42-06:00">2018-06-17</time>
+                <time title="Modified: 2018-06-18 22:21:53" itemprop="dateModified" datetime="2018-06-18T22:21:53-06:00">2018-06-18</time>
               
             
           </span>
@@ -639,9 +793,7 @@ module.exports = {
       
         
           
-            <p><a href="https://zhuanlan.zhihu.com/p/21360434" target="_blank" rel="noopener">最优化上</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/21387326" target="_blank" rel="noopener">最优化下</a></p>
-<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><ul>
+            <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><ul>
 <li><p>基于参数的评分函数。该函数将原始图像像素映射为分类评分值。</p>
 </li>
 <li><p>损失函数。该函数能够根据分类评分和训练集图像数据实际分类的一致性，衡量某个具体参数集的质量好坏。损失函数有多种版本和不同的实现方式（例如：Softmax或SVM）。 <em>Softmax 和 SVM 不应该包括了score function 和 lost function</em></p>
@@ -761,7 +913,26 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
 </code></pre><p>步长的影响：梯度指明了函数在哪个方向?是变化率最大的 步长(也叫作学习率)</p>
 <p>小步长下降稳定但进度慢 &lt;-&gt; 大步长进展快但是风险更大</p>
 <p>在本例中有30730个参数，所以损失函数每走一步就需要计算30731次损失函数的梯度, 效率太低</p>
-<h2 id="分析梯度法-（计算迅速，结果精确）-微分分析计算梯度"><a href="#分析梯度法-（计算迅速，结果精确）-微分分析计算梯度" class="headerlink" title="分析梯度法 （计算迅速，结果精确） 微分分析计算梯度"></a>分析梯度法 （计算迅速，结果精确） 微分分析计算梯度</h2><p>Todo</p>
+<h2 id="分析梯度法-（计算迅速，结果精确）-微分分析计算梯度"><a href="#分析梯度法-（计算迅速，结果精确）-微分分析计算梯度" class="headerlink" title="分析梯度法 （计算迅速，结果精确） 微分分析计算梯度"></a>分析梯度法 （计算迅速，结果精确） 微分分析计算梯度</h2><p>用公式计算梯度速度很快，唯一不好的就是实现的时候容易出错. 于是我们需要将分析梯度法的结果于数值梯度法作比较， 这个步骤叫做梯度检查。</p>
+<p>eg: SVM lossfunction</p>
+<p><img src="https://www.zhihu.com/equation?tex=L_i%3D%5Cdisplaystyle%5Csum_%7Bj%5Cnot+%3Dy_i%7D%5Bmax%280%2Cw%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B%5CDelta%29%5D" alt=""></p>
+<p>对W_yi 进行微分</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle%5Cnabla_%7Bw_%7By_i%7D%7DL_i%3D-%28%5Csum_%7Bj%5Cnot%3Dy_i%7D1%28w%5ET_jx_i-w%5ET_%7By_i%7Dx_i%2B%5CDelta%3E0%29%29x_i" alt=""></p>
+<h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><h4 id="普通版本"><a href="#普通版本" class="headerlink" title="普通版本"></a>普通版本</h4><pre><code># 普通的梯度下降
+while True:
+  weights_grad = evaluate_gradient(loss_fun, data, weights)
+  weights += - step_size * weights_grad # 进行梯度更新
+</code></pre><h4 id="小批量数据梯度下降（Mini-batch-gradient-descent）"><a href="#小批量数据梯度下降（Mini-batch-gradient-descent）" class="headerlink" title="小批量数据梯度下降（Mini-batch gradient descent）"></a>小批量数据梯度下降（Mini-batch gradient descent）</h4><p>每次小子集往下减少，小批量数据的梯度就是对整个数据集梯度的一个近似， 需要data的数量远大于小批数量</p>
+<pre><code># 普通的小批量数据梯度下降
+while True:
+  data_batch = sample_training_data(data, 256) # 256个数据
+  weights_grad = evaluate_gradient(loss_fun, data_batch, weights)
+  weights += - step_size * weights_grad # 参数更新
+</code></pre><h4 id="随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><a href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）" class="headerlink" title="随机梯度下降（Stochastic Gradient Descent 简称SGD）"></a>随机梯度下降（Stochastic Gradient Descent 简称SGD）</h4><p>如果小批量数据中每个批量只有1个数据样本</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h1><p><img src="https://pic2.zhimg.com/80/03b3eccf18ee3760e219f9f95ec14305_hd.jpg" alt=""></p>
+<p>x,y 是给定的，weight 从一个随机开始，可以随时改变。 损失函数包含两个部分：数据损失和正则化损失，在梯度下降中，计算权重的维度实现参数的更新。</p>
+<h1 id="Reference："><a href="#Reference：" class="headerlink" title="Reference："></a>Reference：</h1><p><a href="https://zhuanlan.zhihu.com/p/21360434" target="_blank" rel="noopener">最优化上</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21387326" target="_blank" rel="noopener">最优化下</a></p>
 
           
         
@@ -815,7 +986,7 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/05/24/Install-pyenv/">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/05/24/Install-python-library/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weijie Sun">
@@ -834,8 +1005,8 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/24/Install-pyenv/" itemprop="url">
-                  Install pyenv
+                <a class="post-title-link" href="/2018/05/24/Install-python-library/" itemprop="url">
+                  Install python library
                 </a>
               
             
@@ -878,7 +1049,7 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-05 02:50:03" itemprop="dateModified" datetime="2018-06-05T02:50:03-06:00">2018-06-05</time>
+                <time title="Modified: 2018-06-18 22:43:23" itemprop="dateModified" datetime="2018-06-18T22:43:23-06:00">2018-06-18</time>
               
             
           </span>
@@ -892,10 +1063,10 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/24/Install-pyenv/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/24/Install-python-library/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/24/Install-pyenv/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/24/Install-python-library/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -925,7 +1096,7 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
       
         
           
-            <p>因为之前用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> node 的版本管理器</p>
+            <h1 id="Pyenv"><a href="#Pyenv" class="headerlink" title="Pyenv"></a>Pyenv</h1><p>因为之前用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> node 的版本管理器</p>
 <p>所以pyenv 应该也是python 的版本管理器</p>
 <p>运行 curl -L <a href="https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer" target="_blank" rel="noopener">https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer</a> | bash</p>
 <p>然后打开 vim ~/.bash_profile </p>
@@ -946,7 +1117,34 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 <p>然后运行 </p>
 <pre><code>source ~/.bash_profile     
 </code></pre><p>就好了</p>
-<h1 id="Kears"><a href="#Kears" class="headerlink" title="Kears"></a>Kears</h1>
+<p>Cheating sheet：<a href="https://github.com/eteplus/blog/issues/4" target="_blank" rel="noopener">reference</a></p>
+<ul>
+<li><p>安装和查看pyenv 和 python</p>
+<p>  #查看pyenv版本<br>  pyenv –version</p>
+<p>  #查看可用的python version<br>  pyenv versions</p>
+<p>  #用pyenv 安装python<br>  pyenv install 3.6.3</p>
+</li>
+<li><p>设置 python version</p>
+<h1 id="对所有的Shell全局有效，会把版本号写入到-pyenv-version文件中"><a href="#对所有的Shell全局有效，会把版本号写入到-pyenv-version文件中" class="headerlink" title="对所有的Shell全局有效，会把版本号写入到~/.pyenv/version文件中"></a>对所有的Shell全局有效，会把版本号写入到~/.pyenv/version文件中</h1><p>  pyenv global 3.6.3</p>
+<h1 id="只对当前目录有效，会在当前目录创建-python-version文件"><a href="#只对当前目录有效，会在当前目录创建-python-version文件" class="headerlink" title="只对当前目录有效，会在当前目录创建.python-version文件"></a>只对当前目录有效，会在当前目录创建.python-version文件</h1><p>  pyenv local 3.6.3</p>
+<h1 id="只在当前会话有效"><a href="#只在当前会话有效" class="headerlink" title="只在当前会话有效"></a>只在当前会话有效</h1><p>  pyenv shell 3.6.3</p>
+</li>
+</ul>
+<p>我在安装的时候遇到了一下描述的问题</p>
+<pre><code>Last 10 log lines:   File &quot;/private/var/folders/py/3006ng_x6x3g5c42jx_gznlc0000gn/T/python-build.20180618223416.3806/Python-3.6.3/Lib/ensurepip/__main__.py&quot;, line 4, in &lt;module&gt;     ensurepip._main()
+</code></pre><p><a href="http://www.cnblogs.com/mingaixin/p/6295799.html" target="_blank" rel="noopener">解决方法</a></p>
+<h1 id="Kears"><a href="#Kears" class="headerlink" title="Kears"></a>Kears</h1><pre><code># GPU 版本
+&gt;&gt;&gt; pip install --upgrade tensorflow-gpu
+
+# CPU 版本
+&gt;&gt;&gt; pip install --upgrade tensorflow
+
+# Keras 安装
+&gt;&gt;&gt; pip install keras -U --pre
+
+import keras
+#然后就显示tensorflow work on backend
+</code></pre>
           
         
       
@@ -2129,578 +2327,6 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/18/Algorithm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Weijie Sun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Weijie Sun Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/18/Algorithm/" itemprop="url">
-                  Algorithm - Weijie Sun
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-07-18 16:54:34" itemprop="dateCreated datePublished" datetime="2016-07-18T16:54:34-06:00">2016-07-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2016-07-21 01:12:33" itemprop="dateModified" datetime="2016-07-21T01:12:33-06:00">2016-07-21</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/18/Algorithm/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/18/Algorithm/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="integer-factorization-algorithm"><a href="#integer-factorization-algorithm" class="headerlink" title="integer factorization algorithm"></a>integer factorization algorithm</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">trial_division.py</td>
-<td style="text-align:right">note0</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">euler_trivial.py note2</td>
-<td style="text-align:right">note1</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">fermatfactor_trivial.py</td>
-<td style="text-align:right">fermatfactor_improved_prime.py</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">Pollards_rho_trivial.py</td>
-<td style="text-align:right">Pollards_rho_improved_prime.py</td>
-<td>note3</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>note0 : Trivial Division use the trivial prime, which cannot use Miller-Rabin primality test</li>
-<li>note1 : Euler’s factorization method stops the algorithm<pre><code>when a number cannot found number = a^2 + b^2 = c^2 + d^2. 
-Miller-Rabin is only judge the prime not find the factors.
-</code></pre></li>
-<li>note2 : Since I have not find a better way to find a number = a^2 + b^2 = c^2 + d^2. <pre><code>So Euler&apos;s spend on the this function I will list after that 
-</code></pre></li>
-<li>note3 : In Pollards_rho Miller-Rabin primality test, inorder to handle some base cases. I use the <pre><code>trial_division to handle some special cases.
-</code></pre></li>
-</ul>
-<p>#Integer factorization:</p>
-<h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p>Trial division: (Baseline)<br>This is a base line in my integer factorization algorithm project. It is using<br>a prime sieve for prime number generation which can judge a number is a prime or<br>continue do factorization.</p>
-<p>Running time: in the worst case it is O(2^(n/2)/((n/2)*ln2)) </p>
-<ul>
-<li>n is base-2 n digit number.</li>
-</ul>
-<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3><p>Euler’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Euler’s factorization is if<br>a number = a^2 + b^2 = c^2 + d^2. There is a quickly way to seperate into 2 factors.</p>
-<p>Running time: It is very slow, worst case is greater than trial division,<br>only quick in some special cases and has potient quick.</p>
-<h3 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h3><p>Fermat’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Fermat’s factorization method:<br> is if a number = a^2 - b^2 There is a quickly way to seperate into 2 factors.</p>
-<p>Running time: Worst case is O(N^{1/2})<br>              General case is O(N^{1/3}) time.</p>
-<h3 id="1-4"><a href="#1-4" class="headerlink" title="1.4"></a>1.4</h3><p>Pollard’s rho algorithm:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Pollard’s rho algorithm is if a find<br>the abs(x^2+1-x) mod N if not 1 then it is a factor of N.</p>
-<p>Running time: General case by the Birthday paradox in O(\sqrt p)\ &lt;= O(n^{1/4})<br>              but this is a heuristic claim, and rigorous analysis of the algorithm remains open.</p>
-<h2 id="2-A-description-of-what-sort-of-tests-I-have-included"><a href="#2-A-description-of-what-sort-of-tests-I-have-included" class="headerlink" title="2 A description of what sort of tests I have included"></a>2 A description of what sort of tests I have included</h2><h1 id="1-St-2-primes-production-each-prime-gt-million"><a href="#1-St-2-primes-production-each-prime-gt-million" class="headerlink" title="1 St: 2 primes production (each prime &gt; million)"></a>1 St: 2 primes production (each prime &gt; million)</h1><p>When the prime is very big, test the speed of each methods.</p>
-<p>###1.1<br>The testcases: 15485867*32452867 = 502560782130689</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">31.0308229923</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">32.3473279476+3.276534002</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">2.5645339489</td>
-<td style="text-align:right">3.19916701317</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0414018630981</td>
-<td style="text-align:right">0.0358607769012</td>
-</tr>
-</tbody>
-</table>
-<p>###1.2<br>The testcases: 15487019*15487469 = 239854726664911</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">22.700715065</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">21.358424902+3.0871624554</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">3.99884200096</td>
-<td style="text-align:right">2.206387043</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0165410041809</td>
-<td style="text-align:right">0.0110921859741</td>
-</tr>
-</tbody>
-</table>
-<p>###1.3<br>The testcases: 15490781*67869427 = 1051350430252487</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">53.9460468292</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">47.7404336929+8.194948196</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">8.05504488945</td>
-<td style="text-align:right">9.30907988548</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0999021530151</td>
-<td style="text-align:right">0.0918011665344</td>
-</tr>
-</tbody>
-</table>
-<h1 id="2-nd-4-primes-production-each-prime-between-1000-9999"><a href="#2-nd-4-primes-production-each-prime-between-1000-9999" class="headerlink" title="2 nd: 4 primes production (each prime between[1000,9999])"></a>2 nd: 4 primes production (each prime between[1000,9999])</h1><p>When the prime is big and more factors, test the speed of each methods.</p>
-<p>###2.1<br>The testcases: 8147 <em> 8369 </em> 8623 * 7127 = 4190216175859403</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">109.196480989</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">105.0888099666+5.89233399</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">2.5645339489</td>
-<td style="text-align:right">3.19916701317</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0414018630981</td>
-<td style="text-align:right">0.0358607769012</td>
-</tr>
-</tbody>
-</table>
-<p>###2.2<br>The testcases: 1259 <em> 1451 </em> 1613 * 1811 = 5336370322687</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">2.96865296364</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">3.3992729187+0.5768110752</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">5.54617881775</td>
-<td style="text-align:right">3.116948843</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.00448799133301</td>
-<td style="text-align:right">0.00167012214661</td>
-</tr>
-</tbody>
-</table>
-<p>###2.3<br>The testcases: 6277 <em> 5351 </em> 8831 * 9733 = 2886979418455921</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">77.4180650711</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">72.7111520767+13.2122049</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">2.87196207047</td>
-<td style="text-align:right">3.24289989471</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.479516983032</td>
-<td style="text-align:right">0.00454497337341</td>
-</tr>
-</tbody>
-</table>
-<h1 id="3-rd-over-6-small-prime-product"><a href="#3-rd-over-6-small-prime-product" class="headerlink" title="3 rd: over 6 small prime product"></a>3 rd: over 6 small prime product</h1><p>When the prime is not that big, but we have more factors for the number which need to be factorization.</p>
-<p>###3.1<br>The testcases: 13 <em> 127 </em> 263 <em> 419 </em> 17 <em> 131 </em> 269 = 108990674873561</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">12.9187300205</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">12.9247641563+2.445067882</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">3.29201412201</td>
-<td style="text-align:right">2.98240017891</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.00494313240051</td>
-<td style="text-align:right">0.00559782981873</td>
-</tr>
-</tbody>
-</table>
-<p>###3.2<br>The testcases: 13 <em> 17 </em> 2 <em> 1123 </em> 1426499 * 5 = 3540328013170</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">4.11624193192</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">4.38335967064+0.452334165</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">3.39200806618</td>
-<td style="text-align:right">2.18938994408</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.00471496582031</td>
-<td style="text-align:right">0.00225687026978</td>
-</tr>
-</tbody>
-</table>
-<p>###3.3<br>The testcases: 547 <em> 701 </em> 29 <em> 149 </em> 5 * 2 = 16568744870</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">3.92766094208</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">2.42819094658+0.031641006</td>
-<td style="text-align:right">null</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">3.00680112839</td>
-<td style="text-align:right">4.95704817772</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0637471675873</td>
-<td style="text-align:right">0.000675916671753</td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-How-to-run-the-code"><a href="#3-How-to-run-the-code" class="headerlink" title="3 How to run the code:"></a>3 How to run the code:</h2><p>There is a easy way to run by<br><figure class="highlight python"><figcaption><span>runner.py```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Then following the introduction. </span><br><span class="line"></span><br><span class="line">Firstly, you will see this introduction format.</span><br></pre></td></tr></table></figure></p>
-<p>integer factorization algorithm<br>type the number you want to run the algorithm<br>eg: 1<br>then will run the Trial division<br>1.Trial division<br>2.Euler’s factorization method<br>3.Fermat’s factorization method<br>4.Pollard’s rho algorithm<br>input the number:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Then input the id of factorization method.</span><br><span class="line"></span><br><span class="line">for the 3rd and 4th, you also need to choose the id of the prime generate method.</span><br></pre></td></tr></table></figure></p>
-<p>runner.py<br>  -+—-1 “Trial division”—-+—“type number of testcases”<br>   |                          +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-2 “Euler’s factorization method”—+—“type number of testcases”<br>   |                                       +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-3 “Fermat’s factorization method”—+—“type the prime generate method”<br>   |                                        +—1 “trivial prime”<br>   |                                          +       +—“type number of testcases”<br>   |                                        |    +—“input the number which needs factorization”<br>   |                                        |<br>   |                                        +—2 “Miller-Rabin primality test”<br>   |                                             +—“type number of testcases”<br>   |                                             +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-4 “Pollard’s rho algorithm”—+—“type the prime generate method”<br>                                      +—1 “trivial prime”<br>                                      |        +—“type number of testcases”<br>                                      |     +—“input the number which needs factorization”<br>                                     |<br>                                      +—2 “Miller-Rabin primality test”<br>                                               +—“type number of testcases”<br>                                            +—“input the number which needs factorization”<br>```<br>Or </p>
-<p>You can runner each single file<br>which has been listed:</p>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trial division(baseline)</td>
-<td style="text-align:center">trial_division.py</td>
-<td style="text-align:right">note0</td>
-</tr>
-<tr>
-<td>Euler’s factorization method</td>
-<td style="text-align:center">euler_trivial.py note2</td>
-<td style="text-align:right">note1</td>
-</tr>
-<tr>
-<td>Fermat’s factorization method</td>
-<td style="text-align:center">fermatfactor_trivial.py</td>
-<td style="text-align:right">fermatfactor_improved_prime.py</td>
-</tr>
-<tr>
-<td>Pollard’s rho algorithm</td>
-<td style="text-align:center">Pollards_rho_trivial.py</td>
-<td style="text-align:right">Pollards_rho_improved_prime.py</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Anything-else-you-deem-relevant"><a href="#Anything-else-you-deem-relevant" class="headerlink" title="Anything else you deem relevant."></a>Anything else you deem relevant.</h2><p>1 I used the trivial prime:<br>    which judge if a number is a prime.</p>
-<p>2 I used another prime test called Miller-Rabin primality test:<br>    which is much quicker and I have referenced in all my test cases. Prime test is correct.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.bigprimes.net/archive/prime/10/" target="_blank" rel="noopener">http://www.bigprimes.net/archive/prime/10/</a></p>
-<p><a href="https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers" target="_blank" rel="noopener">https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Integer_factorization" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Integer_factorization</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Trial_division" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Trial_division</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Fermat%27s_factorization_method" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Fermat%27s_factorization_method</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Euler%27s_factorization_method" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euler%27s_factorization_method</a></p>
-<p><a href="http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html" target="_blank" rel="noopener">http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html</a></p>
-<p><a href="http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html" target="_blank" rel="noopener">http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2752,7 +2378,7 @@ Miller-Rabin is only judge the prime not find the factors.
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -3347,9 +2973,9 @@ Miller-Rabin is only judge the prime not find the factors.
       
     
       
-        
-      
     
+      
+        
       
     
       

@@ -337,6 +337,578 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/18/Algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/07/18/Algorithm/" itemprop="url">
+                  Algorithm - Weijie Sun
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2016-07-18 16:54:34" itemprop="dateCreated datePublished" datetime="2016-07-18T16:54:34-06:00">2016-07-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2016-07-21 01:12:33" itemprop="dateModified" datetime="2016-07-21T01:12:33-06:00">2016-07-21</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/18/Algorithm/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/07/18/Algorithm/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="integer-factorization-algorithm"><a href="#integer-factorization-algorithm" class="headerlink" title="integer factorization algorithm"></a>integer factorization algorithm</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">trial_division.py</td>
+<td style="text-align:right">note0</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">euler_trivial.py note2</td>
+<td style="text-align:right">note1</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">fermatfactor_trivial.py</td>
+<td style="text-align:right">fermatfactor_improved_prime.py</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">Pollards_rho_trivial.py</td>
+<td style="text-align:right">Pollards_rho_improved_prime.py</td>
+<td>note3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>note0 : Trivial Division use the trivial prime, which cannot use Miller-Rabin primality test</li>
+<li>note1 : Euler’s factorization method stops the algorithm<pre><code>when a number cannot found number = a^2 + b^2 = c^2 + d^2. 
+Miller-Rabin is only judge the prime not find the factors.
+</code></pre></li>
+<li>note2 : Since I have not find a better way to find a number = a^2 + b^2 = c^2 + d^2. <pre><code>So Euler&apos;s spend on the this function I will list after that 
+</code></pre></li>
+<li>note3 : In Pollards_rho Miller-Rabin primality test, inorder to handle some base cases. I use the <pre><code>trial_division to handle some special cases.
+</code></pre></li>
+</ul>
+<p>#Integer factorization:</p>
+<h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p>Trial division: (Baseline)<br>This is a base line in my integer factorization algorithm project. It is using<br>a prime sieve for prime number generation which can judge a number is a prime or<br>continue do factorization.</p>
+<p>Running time: in the worst case it is O(2^(n/2)/((n/2)*ln2)) </p>
+<ul>
+<li>n is base-2 n digit number.</li>
+</ul>
+<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3><p>Euler’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Euler’s factorization is if<br>a number = a^2 + b^2 = c^2 + d^2. There is a quickly way to seperate into 2 factors.</p>
+<p>Running time: It is very slow, worst case is greater than trial division,<br>only quick in some special cases and has potient quick.</p>
+<h3 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h3><p>Fermat’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Fermat’s factorization method:<br> is if a number = a^2 - b^2 There is a quickly way to seperate into 2 factors.</p>
+<p>Running time: Worst case is O(N^{1/2})<br>              General case is O(N^{1/3}) time.</p>
+<h3 id="1-4"><a href="#1-4" class="headerlink" title="1.4"></a>1.4</h3><p>Pollard’s rho algorithm:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Pollard’s rho algorithm is if a find<br>the abs(x^2+1-x) mod N if not 1 then it is a factor of N.</p>
+<p>Running time: General case by the Birthday paradox in O(\sqrt p)\ &lt;= O(n^{1/4})<br>              but this is a heuristic claim, and rigorous analysis of the algorithm remains open.</p>
+<h2 id="2-A-description-of-what-sort-of-tests-I-have-included"><a href="#2-A-description-of-what-sort-of-tests-I-have-included" class="headerlink" title="2 A description of what sort of tests I have included"></a>2 A description of what sort of tests I have included</h2><h1 id="1-St-2-primes-production-each-prime-gt-million"><a href="#1-St-2-primes-production-each-prime-gt-million" class="headerlink" title="1 St: 2 primes production (each prime &gt; million)"></a>1 St: 2 primes production (each prime &gt; million)</h1><p>When the prime is very big, test the speed of each methods.</p>
+<p>###1.1<br>The testcases: 15485867*32452867 = 502560782130689</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">31.0308229923</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">32.3473279476+3.276534002</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">2.5645339489</td>
+<td style="text-align:right">3.19916701317</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.0414018630981</td>
+<td style="text-align:right">0.0358607769012</td>
+</tr>
+</tbody>
+</table>
+<p>###1.2<br>The testcases: 15487019*15487469 = 239854726664911</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">22.700715065</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">21.358424902+3.0871624554</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">3.99884200096</td>
+<td style="text-align:right">2.206387043</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.0165410041809</td>
+<td style="text-align:right">0.0110921859741</td>
+</tr>
+</tbody>
+</table>
+<p>###1.3<br>The testcases: 15490781*67869427 = 1051350430252487</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">53.9460468292</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">47.7404336929+8.194948196</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">8.05504488945</td>
+<td style="text-align:right">9.30907988548</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.0999021530151</td>
+<td style="text-align:right">0.0918011665344</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-nd-4-primes-production-each-prime-between-1000-9999"><a href="#2-nd-4-primes-production-each-prime-between-1000-9999" class="headerlink" title="2 nd: 4 primes production (each prime between[1000,9999])"></a>2 nd: 4 primes production (each prime between[1000,9999])</h1><p>When the prime is big and more factors, test the speed of each methods.</p>
+<p>###2.1<br>The testcases: 8147 <em> 8369 </em> 8623 * 7127 = 4190216175859403</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">109.196480989</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">105.0888099666+5.89233399</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">2.5645339489</td>
+<td style="text-align:right">3.19916701317</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.0414018630981</td>
+<td style="text-align:right">0.0358607769012</td>
+</tr>
+</tbody>
+</table>
+<p>###2.2<br>The testcases: 1259 <em> 1451 </em> 1613 * 1811 = 5336370322687</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">2.96865296364</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">3.3992729187+0.5768110752</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">5.54617881775</td>
+<td style="text-align:right">3.116948843</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.00448799133301</td>
+<td style="text-align:right">0.00167012214661</td>
+</tr>
+</tbody>
+</table>
+<p>###2.3<br>The testcases: 6277 <em> 5351 </em> 8831 * 9733 = 2886979418455921</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">77.4180650711</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">72.7111520767+13.2122049</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">2.87196207047</td>
+<td style="text-align:right">3.24289989471</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.479516983032</td>
+<td style="text-align:right">0.00454497337341</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-rd-over-6-small-prime-product"><a href="#3-rd-over-6-small-prime-product" class="headerlink" title="3 rd: over 6 small prime product"></a>3 rd: over 6 small prime product</h1><p>When the prime is not that big, but we have more factors for the number which need to be factorization.</p>
+<p>###3.1<br>The testcases: 13 <em> 127 </em> 263 <em> 419 </em> 17 <em> 131 </em> 269 = 108990674873561</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">12.9187300205</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">12.9247641563+2.445067882</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">3.29201412201</td>
+<td style="text-align:right">2.98240017891</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.00494313240051</td>
+<td style="text-align:right">0.00559782981873</td>
+</tr>
+</tbody>
+</table>
+<p>###3.2<br>The testcases: 13 <em> 17 </em> 2 <em> 1123 </em> 1426499 * 5 = 3540328013170</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">4.11624193192</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">4.38335967064+0.452334165</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">3.39200806618</td>
+<td style="text-align:right">2.18938994408</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.00471496582031</td>
+<td style="text-align:right">0.00225687026978</td>
+</tr>
+</tbody>
+</table>
+<p>###3.3<br>The testcases: 547 <em> 701 </em> 29 <em> 149 </em> 5 * 2 = 16568744870</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">3.92766094208</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">2.42819094658+0.031641006</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">3.00680112839</td>
+<td style="text-align:right">4.95704817772</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">0.0637471675873</td>
+<td style="text-align:right">0.000675916671753</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-How-to-run-the-code"><a href="#3-How-to-run-the-code" class="headerlink" title="3 How to run the code:"></a>3 How to run the code:</h2><p>There is a easy way to run by<br><figure class="highlight python"><figcaption><span>runner.py```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Then following the introduction. </span><br><span class="line"></span><br><span class="line">Firstly, you will see this introduction format.</span><br></pre></td></tr></table></figure></p>
+<p>integer factorization algorithm<br>type the number you want to run the algorithm<br>eg: 1<br>then will run the Trial division<br>1.Trial division<br>2.Euler’s factorization method<br>3.Fermat’s factorization method<br>4.Pollard’s rho algorithm<br>input the number:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Then input the id of factorization method.</span><br><span class="line"></span><br><span class="line">for the 3rd and 4th, you also need to choose the id of the prime generate method.</span><br></pre></td></tr></table></figure></p>
+<p>runner.py<br>  -+—-1 “Trial division”—-+—“type number of testcases”<br>   |                          +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-2 “Euler’s factorization method”—+—“type number of testcases”<br>   |                                       +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-3 “Fermat’s factorization method”—+—“type the prime generate method”<br>   |                                        +—1 “trivial prime”<br>   |                                          +       +—“type number of testcases”<br>   |                                        |    +—“input the number which needs factorization”<br>   |                                        |<br>   |                                        +—2 “Miller-Rabin primality test”<br>   |                                             +—“type number of testcases”<br>   |                                             +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-4 “Pollard’s rho algorithm”—+—“type the prime generate method”<br>                                      +—1 “trivial prime”<br>                                      |        +—“type number of testcases”<br>                                      |     +—“input the number which needs factorization”<br>                                     |<br>                                      +—2 “Miller-Rabin primality test”<br>                                               +—“type number of testcases”<br>                                            +—“input the number which needs factorization”<br>```<br>Or </p>
+<p>You can runner each single file<br>which has been listed:</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align:center">trivial prime</th>
+<th style="text-align:right">Miller-Rabin primality test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial division(baseline)</td>
+<td style="text-align:center">trial_division.py</td>
+<td style="text-align:right">note0</td>
+</tr>
+<tr>
+<td>Euler’s factorization method</td>
+<td style="text-align:center">euler_trivial.py note2</td>
+<td style="text-align:right">note1</td>
+</tr>
+<tr>
+<td>Fermat’s factorization method</td>
+<td style="text-align:center">fermatfactor_trivial.py</td>
+<td style="text-align:right">fermatfactor_improved_prime.py</td>
+</tr>
+<tr>
+<td>Pollard’s rho algorithm</td>
+<td style="text-align:center">Pollards_rho_trivial.py</td>
+<td style="text-align:right">Pollards_rho_improved_prime.py</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Anything-else-you-deem-relevant"><a href="#Anything-else-you-deem-relevant" class="headerlink" title="Anything else you deem relevant."></a>Anything else you deem relevant.</h2><p>1 I used the trivial prime:<br>    which judge if a number is a prime.</p>
+<p>2 I used another prime test called Miller-Rabin primality test:<br>    which is much quicker and I have referenced in all my test cases. Prime test is correct.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.bigprimes.net/archive/prime/10/" target="_blank" rel="noopener">http://www.bigprimes.net/archive/prime/10/</a></p>
+<p><a href="https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers" target="_blank" rel="noopener">https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Integer_factorization" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Integer_factorization</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Trial_division" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Trial_division</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Fermat%27s_factorization_method" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Fermat%27s_factorization_method</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Euler%27s_factorization_method" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euler%27s_factorization_method</a></p>
+<p><a href="http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html" target="_blank" rel="noopener">http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html</a></p>
+<p><a href="http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html" target="_blank" rel="noopener">http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/18/HIV-project/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -698,7 +1270,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1289,6 +1861,8 @@
 
   
   
+    
+      
     
       
     
