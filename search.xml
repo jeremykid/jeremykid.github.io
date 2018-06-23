@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[有趣的生物灵魂]]></title>
+    <url>%2F2018%2F06%2F23%2F%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%9F%E7%89%A9%E7%81%B5%E9%AD%82%2F</url>
+    <content type="text"><![CDATA[变性之差一段DNA30 年前就有一支生物团队发现一段Sry 基因，可以使雌性小白鼠发育成雄性。 最近有新的进展发现Sry 基因可以控制合成SOX9的蛋白，动物会在这段蛋白的影响下发育出雄性的生殖器官。 反之如果雄性缺少这段蛋白也能变成雌性。 Reference:(Evidence to exclude SOX9 as a candidate gene for XY sex reversal without skeletal malformation)[http://jmg.bmj.com/content/jmedgenet/33/9/800.full.pdf] 非双螺旋的新DNA结构TODO]]></content>
+      <tags>
+        <tag>Biology</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[cs231n-note-4]]></title>
     <url>%2F2018%2F06%2F18%2Fcs231n-note-4%2F</url>
     <content type="text"><![CDATA[反向传播 Introduction:反向传播是利用链式法则递归计算表达式的梯度的方法。 TODO]]></content>
