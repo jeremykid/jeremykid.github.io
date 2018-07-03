@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[中国剩余定理]]></title>
+    <url>%2F2018%2F07%2F02%2F%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%2F</url>
+    <content type="text"><![CDATA[在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。 比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少 x = 2 mod 3 x = 3 mod 5 x = 2 mod 7 这个时候分成3个mod 部分分别求基础解。 比如第一部分 另外两个mod的乘积为 5 x 7 = 35 然后在mod 3 中求 35 的倒数 35 x 2 = 1 mod 3 再把 倒数 x 一开始余的数 x 另外两个mod 的乘积 = 2 x 2 x 35 = 140 然后同理，求出另外两个mod的结果再加在一起 = 233， 那么所有233 + (3x5x7) x k 的数都满足这个条件 接下来我想尝试写一个python 程序解决所有诸如此类的问题]]></content>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[有趣的生物灵魂]]></title>
     <url>%2F2018%2F06%2F23%2F%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%9F%E7%89%A9%E7%81%B5%E9%AD%82%2F</url>
     <content type="text"><![CDATA[变性之差一段DNA30 年前就有一支生物团队发现一段Sry 基因，可以使雌性小白鼠发育成雄性。 最近有新的进展发现Sry 基因可以控制合成SOX9的蛋白，动物会在这段蛋白的影响下发育出雄性的生殖器官。 反之如果雄性缺少这段蛋白也能变成雌性。 Reference:(Evidence to exclude SOX9 as a candidate gene for XY sex reversal without skeletal malformation)[http://jmg.bmj.com/content/jmedgenet/33/9/800.full.pdf] 非双螺旋的新DNA结构TODO]]></content>
@@ -11,7 +19,7 @@
   <entry>
     <title><![CDATA[cs231n-note-4]]></title>
     <url>%2F2018%2F06%2F18%2Fcs231n-note-4%2F</url>
-    <content type="text"><![CDATA[反向传播 Introduction:反向传播是利用链式法则递归计算表达式的梯度的方法。 TODO]]></content>
+    <content type="text"><![CDATA[反向传播 Introduction:反向传播是利用链式法则递归计算表达式的梯度的方法。 根据函数 f(x), 求关于f 关于 x的梯度 gradient 偏导数（我的理解就是当对其中一个param 求导的时候视其他的params为const， 含义为当这个param 增加的时候 对f 的增加量的比值） 链式法则Chain rule 这下面这个sample给的真的是清楚 x = -2; y = 5; z = -4 f(x,y,z) = (x+y)z 绿色的从输入端到输出端 为前向传播 红色的从输出端到输入端 为反向传播 反向传播的理解]]></content>
       <tags>
         <tag>Machine_Learning</tag>
       </tags>

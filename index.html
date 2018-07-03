@@ -337,6 +337,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/02/中国剩余定理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/02/中国剩余定理/" itemprop="url">
+                  中国剩余定理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-02 22:32:36 / Modified: 23:04:14" itemprop="dateCreated datePublished" datetime="2018-07-02T22:32:36-06:00">2018-07-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/02/中国剩余定理/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/02/中国剩余定理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。</p>
+<p>比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少</p>
+<p>x = 2 mod 3</p>
+<p>x = 3 mod 5</p>
+<p>x = 2 mod 7</p>
+<p>这个时候分成3个mod 部分分别求基础解。</p>
+<p>比如第一部分 另外两个mod的乘积为 5 x 7 = 35</p>
+<p>然后在mod 3 中求 35 的倒数</p>
+<p>35 x 2 = 1 mod 3</p>
+<p>再把 倒数 x 一开始余的数 x 另外两个mod 的乘积 = 2 x 2 x 35 = 140</p>
+<p>然后同理，求出另外两个mod的结果再加在一起 = 233，</p>
+<p>那么所有233 + (3x5x7) x k 的数都满足这个条件</p>
+<p>接下来我想尝试写一个python 程序解决所有诸如此类的问题</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/06/23/有趣的生物灵魂/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -539,12 +703,24 @@
                 
               
 
-              <time title="Created: 2018-06-18 22:23:21 / Modified: 22:29:59" itemprop="dateCreated datePublished" datetime="2018-06-18T22:23:21-06:00">2018-06-18</time>
+              <time title="Created: 2018-06-18 22:23:21" itemprop="dateCreated datePublished" datetime="2018-06-18T22:23:21-06:00">2018-06-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-23 19:42:50" itemprop="dateModified" datetime="2018-06-23T19:42:50-06:00">2018-06-23</time>
               
             
           </span>
@@ -592,9 +768,18 @@
         
           
             <p>反向传播</p>
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction:"></a>Introduction:</h1><p>反向传播是利用链式法则递归计算表达式的梯度的方法。</p>
-<p>TODO</p>
-
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction:"></a>Introduction:</h1><p>反向传播是利用链式法则递归计算表达式的梯度的方法。 根据函数 f(x), 求关于f 关于 x的梯度 gradient</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c86221324a9d066ca28310ee772941748a5f370f" alt=""></p>
+<h2 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h2><p>（我的理解就是当对其中一个param 求导的时候视其他的params为const， 含义为当这个param 增加的时候 对f 的增加量的比值）</p>
+<h2 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h2><p>Chain rule</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x%7D%3D%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+q%7D%5Cfrac%7B%5Cpartial+q%7D%7B%5Cpartial+x%7D" alt=""></p>
+<p>这下面这个sample给的真的是清楚</p>
+<p>x = -2; y = 5; z = -4</p>
+<p>f(x,y,z) = (x+y)z</p>
+<p><img src="https://pic4.zhimg.com/80/213da7f66594510b45989bd134fc2d8b_hd.jpg" alt=""></p>
+<p>绿色的从输入端到输出端 为前向传播</p>
+<p>红色的从输出端到输入端 为反向传播</p>
+<h2 id="反向传播的理解"><a href="#反向传播的理解" class="headerlink" title="反向传播的理解"></a>反向传播的理解</h2>
           
         
       
@@ -2152,166 +2337,6 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Weijie Sun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Weijie Sun Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/" itemprop="url">
-                  Machine Learning Project[1]-Weijie Sun
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-08-02 15:37:01 / Modified: 16:14:45" itemprop="dateCreated datePublished" datetime="2016-08-02T15:37:01-06:00">2016-08-02</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/08/02/Machine-Learning-Project-1-Weijie-Sun/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I have taken a Machine Learning Course at the University of Alberta. Our professor is <a href="https://en.wikipedia.org/wiki/Russell_Greiner" target="_blank" rel="noopener">Russell Greiner</a>. We need to make a project and do some researches by Machine Learning method with our coach <a href="https://sites.ualberta.ca/~golmoham/" target="_blank" rel="noopener">Koosha Golmohammadi</a>. Since this is my first Machine Learning project. Soooo, this is not as good as some projects made by Machine Learning experts. However, we achieve a result is 90% accuracy which is closed to some the U.S agency in Boston.</p>
-<h1 id="1-Scraping-Data"><a href="#1-Scraping-Data" class="headerlink" title="1 Scraping Data."></a>1 Scraping Data.</h1><p>We scraped some real estate data from real estate data website from Edmonton and marked in Edmonton Map.</p>
-<p><img src="/images/MachineLearning-data2.png" alt=""></p>
-<h1 id="2-Matching-Data"><a href="#2-Matching-Data" class="headerlink" title="2 Matching Data"></a>2 Matching Data</h1><p>Then we tried to match the real estate data with over 110 features in <a href="https://data.edmonton.ca/" target="_blank" rel="noopener">Open City Edmonton Data</a></p>
-<p>It is a tough work there are different names for an address which is easier for the human to understand than a machine. After a little of the algorithm in nature language process(very basic). </p>
-<p>we got the following useful data.<br><img src="/images/MachineLearning-data1.png" alt=""></p>
-<p>This is our first step for collating data and scraping data.</p>
-<p>I will keep updating for Machine learning.<br>See you next time.</p>
-<p><a href="https://github.com/koosha/property_values" target="_blank" rel="noopener">Our code resource</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2363,7 +2388,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2407,7 +2432,9 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2964,9 +2991,9 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
       
     
       
-        
-      
     
+      
+        
       
     
       
