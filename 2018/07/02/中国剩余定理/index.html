@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Weijie Sun Blog">
 <meta property="og:description" content="在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。 比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少 x = 2 mod 3 x = 3 mod 5 x = 2 mod 7 这个时候分成3个mod 部分分别求基础解。 比如第一部分 另外两个mod的乘积为 5 x 7 = 35 然后在mod 3 中求 35 的倒数 35 x 2 = 1 mod">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-03T05:04:14.695Z">
+<meta property="og:updated_time" content="2018-07-04T05:36:44.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="中国剩余定理">
 <meta name="twitter:description" content="在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。 比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少 x = 2 mod 3 x = 3 mod 5 x = 2 mod 7 这个时候分成3个mod 部分分别求基础解。 比如第一部分 另外两个mod的乘积为 5 x 7 = 35 然后在mod 3 中求 35 的倒数 35 x 2 = 1 mod">
@@ -383,12 +383,24 @@
                 
               
 
-              <time title="Created: 2018-07-02 22:32:36 / Modified: 23:04:14" itemprop="dateCreated datePublished" datetime="2018-07-02T22:32:36-06:00">2018-07-02</time>
+              <time title="Created: 2018-07-02 22:32:36" itemprop="dateCreated datePublished" datetime="2018-07-02T22:32:36-06:00">2018-07-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-03 23:36:44" itemprop="dateModified" datetime="2018-07-03T23:36:44-06:00">2018-07-03</time>
               
             
           </span>
@@ -446,7 +458,17 @@
 <p>然后同理，求出另外两个mod的结果再加在一起 = 233，</p>
 <p>那么所有233 + (3x5x7) x k 的数都满足这个条件</p>
 <p>接下来我想尝试写一个python 程序解决所有诸如此类的问题</p>
+<p>Todo</p>
+<pre><code>def getTMod(t, mod):
+    if (mod//t)*t == mod:
+        return false
 
+    product = t%mod
+    result = 1
+    while (product != 1 and result &lt; mod):
+        product += t
+        result += 1:
+</code></pre>
       
     </div>
 
