@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cs231n-note-5]]></title>
+    <url>%2F2018%2F07%2F16%2Fcs231n-note-5%2F</url>
+    <content type="text"><![CDATA[神经网络笔记1对比线性代数算法基础的线性代数算法 s = Wx, x 是一个输入矩阵 [n 1], W 是一个权重矩阵 [种类 n]，s 为一个评分矩阵。 神经网络算法简介神经网络算法是 s = W_2 max(0, W_1x). 在这种情况下 W_1 广度增加，比如可能为 [100 * n], max 是通过设置熵值来过滤掉所有的小于0的score。其实有其他方法来过滤。 W_2 是一个[种类 * 100] 的矩阵， 权重W 通过梯度下降来学习。 单个神经元 建模神经网络是从生物上得到的启发。 生物动机与连接!()[https://pic4.zhimg.com/80/d0cbce2f2654b8e70fe201fec2982c7d_hd.jpg] 当多个信号传进神经元，与神经元内权重相乘并且相加，如果超过某一个阈值，那么激活神经元。激活函数最早接触的sigmoid，最大优势是将数据控制在【0，1】之间。 一个神经元前向传播的代码是： 1234567class Neuron(object): # ... def forward(inputs): &quot;&quot;&quot; 假设输入和权重是1-D的numpy数组，偏差是一个数字 &quot;&quot;&quot; cell_body_sum = np.sum(inputs * self.weights) + self.bias firing_rate = 1.0 / (1.0 + math.exp(-cell_body_sum)) # sigmoid激活函数 return firing_rate —- Todo —– 作为线性分类器的单个神经元分类器我的理解还是吧score 转化为正确概率。然后进行一个loss 的计算, 前面有公式 二分类Softmax分类器二分类SVM分类器常用激活函数我的理解，激活函数就是通过score 得到概率。 Sigmoid把实数压缩成[0, 1]的概率 Tanh把实数压缩成[-1, 1]的概率， 和sigmoid 类似 ReLULeaky ReLUMaxoutReference]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[中国剩余定理]]></title>
     <url>%2F2018%2F07%2F02%2F%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%2F</url>
     <content type="text"><![CDATA[在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。 比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少 x = 2 mod 3 x = 3 mod 5 x = 2 mod 7 这个时候分成3个mod 部分分别求基础解。 比如第一部分 另外两个mod的乘积为 5 x 7 = 35 然后在mod 3 中求 35 的倒数 35 x 2 = 1 mod 3 再把 倒数 x 一开始余的数 x 另外两个mod 的乘积 = 2 x 2 x 35 = 140 然后同理，求出另外两个mod的结果再加在一起 = 233， 那么所有233 + (3x5x7) x k 的数都满足这个条件 接下来我想尝试写一个python 程序解决所有诸如此类的问题 Todo def getTMod(t, mod): if (mod//t)*t == mod: return false product = t%mod result = 1 while (product != 1 and result &lt; mod): product += t result += 1:]]></content>
