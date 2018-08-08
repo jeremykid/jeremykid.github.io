@@ -118,7 +118,9 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/d7de7b9aa6a9bbc6f6435c24173c0597464c8420">
 <meta property="og:image" content="https://pic2.zhimg.com/80/df6a713c1b97cc55bd20afce46ace718_hd.jpg">
-<meta property="og:updated_time" content="2018-08-03T04:47:38.833Z">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+3+%5C%5C+2+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+5%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+p_1+%5C%5C+p_2+%5C%5C+%5Cvdots+%5C%5C+p_R+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+a_1+%26+a_2+%26+%5Ccdots+%26+a_M+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+p_1a_1+%26+p_1a_2+%26+%5Ccdots+%26+p_1a_M+%5C%5C+p_2a_1+%26+p_2a_2+%26+%5Ccdots+%26+p_2a_M+%5C%5C+%5Cvdots+%26+%5Cvdots+%26+%5Cddots+%26+%5Cvdots+%5C%5C+p_Ra_1+%26+p_Ra_2+%26+%5Ccdots+%26+p_Ra_M+%5Cend%7Bpmatrix%7D">
+<meta property="og:updated_time" content="2018-08-08T04:25:23.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数学手册">
 <meta name="twitter:description" content="PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维) 1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低. 朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。 eg: 数据记录为 (日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) =&amp;gt; （500，240，25，13，2">
@@ -403,7 +405,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-02 22:47:38" itemprop="dateModified" datetime="2018-08-02T22:47:38-06:00">2018-08-02</time>
+                <time title="Modified: 2018-08-07 22:25:23" itemprop="dateModified" datetime="2018-08-07T22:25:23-06:00">2018-08-07</time>
               
             
           </span>
@@ -463,7 +465,17 @@
 <p>原理上是在x轴上的投影为3，在y轴上的投影为2。 从代数原理上，（3，2） = 3x（1，0）+2x（0，1）</p>
 <p>（1，0） 和 （0，1） 就是二维空间中的一组基，基的模长度往往为1</p>
 <p>我们可以变换这组基的方向，比如（1，1）， （-1，1），然后把他转化为基，即为 (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})和(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})。 </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zhuanlan.zhihu.com/p/21580949" target="_blank" rel="noopener">知乎PCA的数学原理 貌似也是转的，找不到原link</a> </p>
+<h3 id="基变换-（二维）"><a href="#基变换-（二维）" class="headerlink" title="基变换 （二维）"></a>基变换 （二维）</h3><p>顺时针 theta 角度</p>
+<p>cos(theta) -sin(theta)<br>sin(theta) cos(theta)</p>
+<h2 id="5-基变换的矩阵表示"><a href="#5-基变换的矩阵表示" class="headerlink" title="5. 基变换的矩阵表示"></a>5. 基变换的矩阵表示</h2><p>原坐标 [1 0], [0 1]</p>
+<p>[1 0]  [3]  =&gt; [3]<br>[0 1]  [2]     [2]</p>
+<p>新坐标<br>$$ (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}) $$ </p>
+<p>$$ (-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}) $$</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+3+%5C%5C+2+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+5%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D" alt=""></p>
+<p>当把M个N维向量变换到R个N维向量表示的新空间中去，数学表达式为</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+p_1+%5C%5C+p_2+%5C%5C+%5Cvdots+%5C%5C+p_R+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+a_1+%26+a_2+%26+%5Ccdots+%26+a_M+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+p_1a_1+%26+p_1a_2+%26+%5Ccdots+%26+p_1a_M+%5C%5C+p_2a_1+%26+p_2a_2+%26+%5Ccdots+%26+p_2a_M+%5C%5C+%5Cvdots+%26+%5Cvdots+%26+%5Cddots+%26+%5Cvdots+%5C%5C+p_Ra_1+%26+p_Ra_2+%26+%5Ccdots+%26+p_Ra_M+%5Cend%7Bpmatrix%7D" alt=""></p>
+<p>R是可以小于N的，R是基的数量，可以讲N维数据变换到更低的维度中去。这种矩阵相乘表示为降维变换。</p>
+<h2 id="6-协方差矩阵及优化目标"><a href="#6-协方差矩阵及优化目标" class="headerlink" title="6. 协方差矩阵及优化目标"></a>6. 协方差矩阵及优化目标</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zhuanlan.zhihu.com/p/21580949" target="_blank" rel="noopener">知乎PCA的数学原理 貌似也是转的，找不到原link</a> </p>
 
       
     </div>
@@ -695,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PCA的数学原理"><span class="nav-number">1.</span> <span class="nav-text">PCA的数学原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数据的向量表示及降维问题"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数据的向量表示及降维问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-向量的表示及基变换"><span class="nav-number">1.2.</span> <span class="nav-text">2. 向量的表示及基变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-内积与投影"><span class="nav-number">1.3.</span> <span class="nav-text">3. 内积与投影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-基-basis"><span class="nav-number">1.4.</span> <span class="nav-text">4. 基 basis)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.5.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PCA的数学原理"><span class="nav-number">1.</span> <span class="nav-text">PCA的数学原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数据的向量表示及降维问题"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数据的向量表示及降维问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-向量的表示及基变换"><span class="nav-number">1.2.</span> <span class="nav-text">2. 向量的表示及基变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-内积与投影"><span class="nav-number">1.3.</span> <span class="nav-text">3. 内积与投影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-基-basis"><span class="nav-number">1.4.</span> <span class="nav-text">4. 基 basis)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基变换-（二维）"><span class="nav-number">1.4.1.</span> <span class="nav-text">基变换 （二维）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-基变换的矩阵表示"><span class="nav-number">1.5.</span> <span class="nav-text">5. 基变换的矩阵表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-协方差矩阵及优化目标"><span class="nav-number">1.6.</span> <span class="nav-text">6. 协方差矩阵及优化目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.7.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
             
 
           </div>
