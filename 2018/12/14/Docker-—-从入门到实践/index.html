@@ -109,13 +109,14 @@
 
 
   <meta name="description" content="Docker 有三个基本概念：  镜像 Image  容器 Container  仓库 Repository   镜像Docker 镜像（Image）就相当于是一个 root 文件系统。Docker 镜像 是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被">
+<meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker — 从入门到实践">
 <meta property="og:url" content="http://jeremykid.github.io/2018/12/14/Docker-—-从入门到实践/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
 <meta property="og:description" content="Docker 有三个基本概念：  镜像 Image  容器 Container  仓库 Repository   镜像Docker 镜像（Image）就相当于是一个 root 文件系统。Docker 镜像 是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-14T11:45:43.410Z">
+<meta property="og:updated_time" content="2019-01-29T18:05:26.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker — 从入门到实践">
 <meta name="twitter:description" content="Docker 有三个基本概念：  镜像 Image  容器 Container  仓库 Repository   镜像Docker 镜像（Image）就相当于是一个 root 文件系统。Docker 镜像 是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被">
@@ -382,12 +383,24 @@
                 
               
 
-              <time title="Created: 2018-12-14 04:29:57 / Modified: 04:45:43" itemprop="dateCreated datePublished" datetime="2018-12-14T04:29:57-07:00">2018-12-14</time>
+              <time title="Created: 2018-12-14 04:29:57" itemprop="dateCreated datePublished" datetime="2018-12-14T04:29:57-07:00">2018-12-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-29 11:05:26" itemprop="dateModified" datetime="2019-01-29T11:05:26-07:00">2019-01-29</time>
               
             
           </span>
@@ -445,7 +458,7 @@
 <h3 id="分层存储"><a href="#分层存储" class="headerlink" title="分层存储"></a>分层存储</h3><p>镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
 <p>镜像构建时，会一层层构建，前一层是后一层的基础。每一层构建完就不会再发生改变，后一层上的任何改变只发生在自己这一层。比如，删除前一层文件的操作，实际不是真的删除前一层的文件，而是仅在当前层标记为该文件已删除。在最终容器运行的时候，虽然不会看到这个文件，但是实际上该文件会一直跟随镜像。因此，在构建镜像的时候，需要额外小心，每一层尽量只包含该层需要添加的东西，任何额外的东西应该在该层构建结束前清理掉。</p>
 <p>分层存储的特征还使得镜像的复用、定制变的更为容易。甚至可以用之前构建好的镜像作为基础层，然后进一步添加新的层，以定制自己所需的内容，构建新的镜像。</p>
-<p><a href="https://yeasy.gitbooks.io/docker_practice" target="_blank" rel="noopener">https://yeasy.gitbooks.io/docker_practice</a></p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p><a href="https://yeasy.gitbooks.io/docker_practice" target="_blank" rel="noopener">https://yeasy.gitbooks.io/docker_practice</a></p>
 
       
     </div>
@@ -463,6 +476,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+        </div>
       
 
       
@@ -573,7 +592,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -621,7 +640,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -677,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#镜像"><span class="nav-number">1.</span> <span class="nav-text">镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分层存储"><span class="nav-number">1.1.</span> <span class="nav-text">分层存储</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#镜像"><span class="nav-number">1.</span> <span class="nav-text">镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分层存储"><span class="nav-number">1.1.</span> <span class="nav-text">分层存储</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器"><span class="nav-number">2.</span> <span class="nav-text">容器</span></a></li></ol></div>
             
 
           </div>
