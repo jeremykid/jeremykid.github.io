@@ -7,6 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>README</title>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144253155-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144253155-1');
+</script>
 
 <style type="text/css">
 body {
@@ -313,27 +322,33 @@ sup {
 
 <body>
 
-<h1 id="toc_0">Instruction</h1>
+<h1 id="toc_0">HIV-1 Matrix builder Instruction</h1>
 
-<h2 id="toc_1">Technical overview</h2>
+<h2 id="toc_1">Welcome Massage</h2>
 
-<p>3 main components make up the script</p>
+<p><img src="https://sites.ualberta.ca/%7Emarcelo/Figure5Jul18-black-intro.jpg" alt=""></p>
+
+<p>This site will provide you with the tools and guide to develop on HIV-1 Matrix using methods described by Weijie Sun.</p>
+
+<h2 id="toc_2">Technical overview</h2>
+
+<p>3 main components are contained in script</p>
 
 <ul>
-<li><p>calculated all trimer center coordinations</p></li>
+<li><p>calculated all HIV-1 MA trimer center coordinations</p></li>
 <li><p>Generate PyMol Model from 1st component result </p></li>
-<li><p>Generate tabulate relationship between trimer numbers and raduis of HIV</p></li>
+<li><p>Generate tabulate relationship between trimer numbers and radius of HIV</p></li>
 </ul>
 
-<h2 id="toc_2">Getting Start</h2>
+<h2 id="toc_3">System Requrements</h2>
 
-<h2 id="toc_3">python 3 support (Recommand)</h2>
+<h3 id="toc_4">Python 3 support (Recommend)</h3>
 
 <ul>
 <li>check prerequisites</li>
 </ul>
 
-<p>python 3.5 or greater</p>
+<p>Python 3.5 or greater</p>
 
 <p><a href="https://www.anaconda.com/distribution/">Anaconda3 &gt; Jupytor NoteBook</a></p>
 
@@ -343,7 +358,7 @@ sup {
 
 <p>pymol 2.3.2 or greater</p>
 
-<p>panda 0.24.2 or greater</p>
+<p>pandas 0.24.2 or greater</p>
 
 <ul>
 <li>Getting Start</li>
@@ -351,11 +366,11 @@ sup {
 
 <p>Open Anaconda create a python 3.5 environment</p>
 
-<p>Let&#39;s name as &#39;HIV&#39;</p>
+<p>Install basemap, PyMol, panda libraries</p>
 
-<p>Install basemap, pymol, panda libraries</p>
+<p>If any libraries are not in your Anaconda packages, you could following the commands bellow</p>
 
-<p>or you could install by following commands</p>
+<p><img src="https://sites.ualberta.ca/%7Eweijie2/terminal.jpg" alt="points-plot"></p>
 
 <div><pre><code class="language-none">conda install -c anaconda basemap 
 conda install -c anaconda pandas 
@@ -363,11 +378,11 @@ conda install -c schrodinger pymol</code></pre></div>
 
 <p>Then open the main_flow.ipynb file.</p>
 
-<p>you should run the code successfully</p>
+<p>you should run the code successfully like the following <a href="https://sites.ualberta.ca/%7Eweijie2/main_flow">results</a>.</p>
 
-<h2 id="toc_4">python 2.7 support</h2>
+<h3 id="toc_5">Python 2.7 support</h3>
 
-<h4 id="toc_5">1st component:</h4>
+<h4 id="toc_6">1st component:</h4>
 
 <ul>
 <li>Check prerequisites</li>
@@ -377,11 +392,7 @@ conda install -c schrodinger pymol</code></pre></div>
 
 <p>Python Library: </p>
 
-<p>importlib</p>
-
-<p>matplotlib</p>
-
-<p>mpl_toolkits</p>
+<p>importlib, matplotlib, mpl_toolkits</p>
 
 <p><a href="https://pymolwiki.org/index.php/Windows_Install#Open-Source_PyMOL">PyMol 1.72 or greater</a></p>
 
@@ -409,11 +420,11 @@ and There is another file <a href="https://github.com/jeremykid/HIV_project-1/bl
 3 - quit
 </code></p>
 
-<p><img src="https://github.com/jeremykid/HIV_project-1/blob/master/points.png?raw=true" alt="points-plot"></p>
+<p><img src="https://sites.ualberta.ca/%7Eweijie2/points.png" alt="points-plot"></p>
 
-<p><img src="https://github.com/jeremykid/HIV_project-1/blob/master/lines.png?raw=true" alt="lines-plot"></p>
+<p><img src="https://sites.ualberta.ca/%7Eweijie2/lines.png" alt="lines-plot"></p>
 
-<h4 id="toc_6">2nd Component</h4>
+<h4 id="toc_7">2nd Component</h4>
 
 <ul>
 <li>Sample of running</li>
@@ -425,7 +436,7 @@ and There is another file <a href="https://github.com/jeremykid/HIV_project-1/bl
 
 <p>You could store PyMol model in pdb or dae type of file.</p>
 
-<h4 id="toc_7">3rd Component</h4>
+<h4 id="toc_8">3rd Component</h4>
 
 <ul>
 <li>Sample of running</li>
@@ -433,7 +444,7 @@ and There is another file <a href="https://github.com/jeremykid/HIV_project-1/bl
 
 <div><pre><code class="language-none">&gt; python tabulate_relationship_of_R_and_trimer_number.py</code></pre></div>
 
-<p>Then you need to input Min Radius, Max Radius and interval</p>
+<p>Then you need to input Min Radius, Max Radius, and interval</p>
 
 <p>eg:
 <code>
@@ -443,7 +454,7 @@ Input the interval: 10
 Do you want to use default r = 52.0769942809? (y or n): y
 </code></p>
 
-<p>Then the script will ouput how many trimers be generated.</p>
+<p>Then the script will output how many trimers be generated.</p>
 
 <p>eg:
 <code>
@@ -460,7 +471,19 @@ Do you want to use default r = 52.0769942809? (y or n): y
 1243
 </code></p>
 
-<h2 id="toc_8">Cite:</h2>
+<h2 id="toc_9">Term of Use</h2>
+
+<blockquote>
+<p>ACADEMIC PUBLIC LICENSE ...This license contains the terms and conditions of using HIV-1 Matrix Builder in noncommercial settings: at academic institutions for teaching and research use, and at non-profit research organizations. You will find that this license provides noncommercial users of HIV-1 Matrix Builder with rights that are similar to the well-known GNU General Public License, yet it retains the possibility for HIV-1 Matrix Builder authors to financially support the development by selling commercial licenses. In fact, if you intend to use HIV-1 Matrix Builder in a &quot;for-profit&quot; environment, where research is conducted to develop or enhance a product, is used in a commercial service offering, or when a commercial company uses HIV-1 Matrix Builder to participate in a research project (for example government-funded or EU-funded research projects), then you need to obtain a commercial license for HIV-1 Matrix Builder. In that case, please contact the Author to inquire about commercial licenses.</p>
+
+<p>What are the rights given to noncommercial users? Similarly to GPL, you have the right to use the software, to distribute copies, to receive source code, to change the software and distribute your modifications or the modified software. Also similarly to the GPL, if you distribute verbatim or modified copies of this software, they must be distributed under this license.</p>
+
+<p>By modeling the GPL, this license guarantees that you&#39;re safe when using HIV-1 Matrix Builder in your work, for teaching or research. This license guarantees that HIV-1 Matrix Builder will remain available free of charge for nonprofit use. You can modify HIV-1 Matrix Builder to your purposes, and you can also share your modifications. Even in the unlikely case of the authors abandoning HIV-1 Matrix Builder entirely, this license permits anyone to continue developing it from the last release, and to create further releases under this license...</p>
+</blockquote>
+
+<h2 id="toc_10">Cite:</h2>
+
+<p>Weijie Sun, Eduardo Reyes-Serratos, David Barilla, Joy Ramielle L. Santos, Mattéa Bujold, Sean Graves and Marcelo Marcet-Palacios. (2019) Mathematical Determination of the HIV-1 Matrix Shell Structure and its Impact on the Biology of HIV-1. Under review.</p>
 
 <p>Please cite if you use this code in your own work:</p>
 
@@ -471,7 +494,7 @@ Do you want to use default r = 52.0769942809? (y or n): y
   year={2019},
 }</code></pre></div>
 
-<h2 id="toc_9">Recourse:</h2>
+<p>Please feel free to contact Weijie Sun by weijie2@ualberta.ca email, if you want some help in running scripts or do external project related.</p>
 
 
 
