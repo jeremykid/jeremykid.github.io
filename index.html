@@ -1,112 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.3.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jeremykid.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Weijie Sun Blog">
@@ -116,18 +28,16 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weijie Sun Blog">
 
+<link rel="canonical" href="http://jeremykid.github.io/">
 
 
-
-
-
-  <link rel="canonical" href="http://jeremykid.github.io/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
   };
 </script>
 
@@ -137,292 +47,175 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81011440-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-81011440-1');
-</script>
-
-
-
-
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Weijie Sun Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
-      
-        <p class="site-subtitle">To elegant code</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Weijie Sun Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To elegant code</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
+
 
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home menu-item-active">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
   </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
-        </li>
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
 </nav>
 
 
 
-  
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
 
-
+    </div>
+  </div>
 
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content index posts-expand">
             
-  <section id="posts" class="posts-expand">
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2019/03/14/partial-plots/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/14/partial-plots/" itemprop="url">
-                  partial-plots
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/14/partial-plots/" class="post-title-link" itemprop="url">partial-plots</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">Posted on</span>
               
 
               <time title="Created: 2019-03-14 21:46:58 / Modified: 21:47:28" itemprop="dateCreated datePublished" datetime="2019-03-14T21:46:58-06:00">2019-03-14</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/14/partial-plots/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/03/14/partial-plots/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -430,158 +223,146 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h2 id="Partial-Dependence-Plots"><a href="#Partial-Dependence-Plots" class="headerlink" title="Partial Dependence Plots"></a>Partial Dependence Plots</h2><p>部分特征图</p>
+<p>While feature importance shows what variables most affect predictions, partial dependence plots show how a feature affects predictions.</p>
+<p>当特征重要性显示出哪一个特征对预测结果影响最大，部分特征图显示出一个特征如何影响预测结果。</p>
+<p>This is useful to answer questions like:</p>
+<p>这对回答以下问题非常有帮助。</p>
+<p>Controlling for all other house features, what impact do longitude and latitude have on home prices? To restate this, how would similarly sized houses be priced in different areas?</p>
+<p>在其他特征都相同的情况下，经纬度是如何影响房价? 换句话说在不同的地区，相同的房子的价格是如何不同的?</p>
+<p>Are predicted health differences between two groups due to differences in their diets, or due to some other factor?</p>
+<p>两个人群中，健康因素是由于饮食不同而变化，还是由于其他因素?</p>
+<p>If you are familiar with linear or logistic regression models, partial dependence plots can be interepreted similarly to the coefficients in those models. Though, partial dependence plots on sophisticated models can capture more complex patterns than coefficients from simple models. If you aren’t familiar with linear or logistic regressions, don’t worry about this comparison.</p>
+<p>如果你对线性回归或者逻辑回归模型熟悉的话，部分特征图可以解释为这些模型特征前面的系数。但是部分特征图可以解决更复杂的模型，而不局限于只是简单模型中的系数。如果你不熟悉线性回归或者逻辑回归模型，也不必担心。</p>
+<p>We will show a couple examples, explain the interpretation of these plots, and then review the code to create these plots.</p>
+<p>我们会展示几个案例，然后去解释这些图形包括生成这些图形的代码。</p>
+<h2 id="How-it-Works"><a href="#How-it-Works" class="headerlink" title="How it Works"></a>How it Works</h2><p>如何运行</p>
+<p>Like permutation importance, <strong>partial dependence plots are calculated after a model has been fit</strong>. The model is fit on real data that has not been artificially manipulated in any way.</p>
+<p>和排列重要性类似，部分特征图也必须在模型训练结束之后开始计算。这个模型必须完全基于真实数据（不能有人为的更改）。</p>
+<p>In our soccer example, teams may differ in many ways. How many passes they made, shots they took, goals they scored, etc. At first glance, it seems difficult to disentangle the effect of these features.</p>
+<p>在我们的足球例子中，每个足球队都有很多方面不同。比如多少次传球，射门，得分等。一开始，我们会觉得很难去解开每个特征对结果的影响。</p>
+<p>To see how partial plots separate out the effect of each feature, we start by considering a single row of data. For example, that row of data might represent a team that had the ball 50% of the time, made 100 passes, took 10 shots and scored 1 goal.</p>
+<p>我们可以从一条数据开始去了解部分特征图如何去解决每个特征的影响的。比如这一条数据，这个队伍控球50%，传了100次，射了10次门，并且得了1分。</p>
+<p>We will use the fitted model to predict our outcome (probability their player won “man of the game”). But we <strong>repeatedly alter the value for one variable</strong> to make a series of predictions. We could predict the outcome if the team had the ball only 40% of the time. We then predict with them having the ball 50% of the time. Then predict again for 60%. And so on. We trace out predicted outcomes (on the vertical axis) as we move from small values of ball possession to large values (on the horizontal axis).</p>
+<p>我们会用训练好的模型去预测结果(大概是哪位队员会赢得本场比赛的mvp)。但是我们重复改变其中的一个特征来得出一系列预测。我们可以预测如果一个队只控球40%比赛时间。我们继续预测如果一个队只控球50%比赛时间，然后预测60%，以此类推。我们把预测结果放Y轴，然后我们在X轴上把控球从小往大移动。</p>
+<p>In this description, we used only a single row of data. Interactions between features may cause the plot for a single row to be atypical. So, we repeat that mental experiment with multiple rows from the original dataset, and we plot the average predicted outcome on the vertical axis.</p>
+<p>解释中我们只用了一条数据。得出来的结果并不是最典型的。所以我们重复这种思想实验并且更改原来的数据。我们可以画出预测结果的平均数在Y轴上。</p>
+<h2 id="Code-Example"><a href="#Code-Example" class="headerlink" title="Code Example"></a>Code Example</h2><p>Model building isn’t our focus, so we won’t focus on the data exploration or model building code.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">'../input/fifa-2018-match-statistics/FIFA 2018 Statistics.csv'</span>)</span><br><span class="line">y = (data[<span class="string">'Man of the Match'</span>] == <span class="string">"Yes"</span>)  <span class="comment"># Convert from string "Yes"/"No" to binary</span></span><br><span class="line">feature_names = [i <span class="keyword">for</span> i <span class="keyword">in</span> data.columns <span class="keyword">if</span> data[i].dtype <span class="keyword">in</span> [np.int64]]</span><br><span class="line">X = data[feature_names]</span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line">tree_model = DecisionTreeClassifier(random_state=<span class="number">0</span>, max_depth=<span class="number">5</span>, min_samples_split=<span class="number">5</span>).fit(train_X, train_y)</span><br></pre></td></tr></table></figure>
+<p>For the sake of explanation, our first example uses a Decision Tree which you can see below. In practice, you’ll use more sophistated models for real-world applications.</p>
+<p>我们的第一个例子用了决策树。在现实中你会遇到更复杂的模型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</span><br><span class="line"><span class="keyword">import</span> graphviz</span><br><span class="line"></span><br><span class="line">tree_graph = tree.export_graphviz(tree_model, out_file=<span class="keyword">None</span>, feature_names=feature_names)</span><br><span class="line">graphviz.Source(tree_graph)</span><br></pre></td></tr></table></figure>
+<p><img src="https://github.com/jeremykid/DeepLearningCollection/blob/master/kaggleMachineLearningExplainability/kaggle-tree-model.PNG" alt=""></p>
+<p>As guidance to read the tree:</p>
+<ul>
+<li>Leaves with children show their splitting criterion on the top</li>
+<li>The pair of values at the bottom show the count of True values and False values for the target respectively, of data points in that node of the tree.</li>
+</ul>
+<p>为了更方便去理解决策树</p>
+<ul>
+<li>叶子上面的解释了如何从顶端分离下来的标准</li>
+<li>在最底部上面的值表示了正确还是错误的个数分别有多少</li>
+</ul>
+<p>Here is the code to create the Partial Dependence Plot using the <a href="https://pdpbox.readthedocs.io/en/latest/" target="_blank" rel="noopener">PDPBox library</a>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> pdpbox <span class="keyword">import</span> pdp, get_dataset, info_plots</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create the data that we will plot</span></span><br><span class="line">pdp_goals = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=<span class="string">'Goal Scored'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot it</span></span><br><span class="line">pdp.pdp_plot(pdp_goals, <span class="string">'Goal Scored'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___7_0.png" alt=""></p>
+<p>Here is another example plot:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">from pdpbox import pdp, get_dataset, info_plots</span><br><span class="line"></span><br><span class="line"># Create the data that we will plot</span><br><span class="line">pdp_goals = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=&apos;Goal Scored&apos;)</span><br><span class="line"></span><br><span class="line"># plot it</span><br><span class="line">pdp.pdp_plot(pdp_goals, &apos;Goal Scored&apos;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>A few items are worth pointing out as you interpret this plot</p>
+<ul>
+<li><p>The y axis is interpreted as <strong>change in the prediction</strong> from what it would be predicted at the baseline or leftmost value.</p>
+</li>
+<li><p>A blue shaded area indicates level of confidence</p>
+</li>
+</ul>
+<p>有一些值得在你图上解释的点：</p>
+<ul>
+<li><p>Y 轴被解释成从baseline 或者最左边的值开始 预测上的变量</p>
+</li>
+<li><p>蓝色阴影代表了不同程度的置信区间</p>
+</li>
+</ul>
+<p>From this particular graph, we see that scoring a goal substantially increases your chances of winning “Player of The Game.” But extra goals beyond that appear to have little impact on predictions.</p>
+<p>从这一部分的图，我们不难发现进球得分基本上会增加你得本场比赛MVP的概率。但是多出来的进球反而对增加这个概率帮助并不是太大。</p>
+<p>Here is another example plot:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">feature_to_plot = &apos;Distance Covered (Kms)&apos;</span><br><span class="line">pdp_dist = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=feature_to_plot)</span><br><span class="line"></span><br><span class="line">pdp.pdp_plot(pdp_dist, feature_to_plot)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___9_0.png" alt=""></p>
+<p>This graph seems too simple to represent reality. But that’s because the model is so simple. You should be able to see from the decision tree above that this is representing exactly the model’s structure.</p>
+<p>You can easily compare the structure or implications of different models. Here is the same plot with a Random Forest model.</p>
+<p>这个图看起来吧现实解释得很简单。但是这是因为模型简单。你应该去关注这个是如何解释模型结构的而不局限在决策树。</p>
+<p>你可以很容易得比较不同模型。这里是随机森林模型的图。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Build Random Forest model</span><br><span class="line">rf_model = RandomForestClassifier(random_state=0).fit(train_X, train_y)</span><br><span class="line"></span><br><span class="line">pdp_dist = pdp.pdp_isolate(model=rf_model, dataset=val_X, model_features=feature_names, feature=feature_to_plot)</span><br><span class="line"></span><br><span class="line">pdp.pdp_plot(pdp_dist, feature_to_plot)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___11_0.png" alt=""></p>
+<p>This model thinks you are more likely to win Player of The Game if your players run a total of 100km over the course of the game. Though running much more causes lower predictions.</p>
+<p>In general, the smooth shape of this curve seems more plausible than the step function from the Decision Tree model. Though this dataset is small enough that we would be careful in how we interpret any model.</p>
+<p>在这个模型中，你会更倾向于整场比赛跑了超过100km的队员得MVP，其实这个是比较低准确率的预测。</p>
+<p>普遍来说，这种平稳的图形比决策树模型更加模糊。我们得非常小心去解释一些小数据模型</p>
+<p>2D Partial Dependence Plots</p>
+<p>2维的部分特征图</p>
+<p>If you are curious about interactions between features, 2D partial dependence plots are also useful. An example may clarify what this.</p>
+<p>We will again use the Decision Tree model for this graph. It will create an extremely simple plot, but you should be able to match what you see in the plot to the tree itself.</p>
+<p>如果你对特征之间如何互相影响有兴趣的话，2维的部分特征图会非常有帮助。这里有一个例子可以解释这个。</p>
+<p>我们会重复使用决策树模型。它会创造一个简单的图形，虽然简单，但是足够我们去对比到决策树图形本身。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Similar to previous PDP plot except we use pdp_interact instead of pdp_isolate and pdp_interact_plot instead of pdp_isolate_plot</span><br><span class="line">features_to_plot = [&apos;Goal Scored&apos;, &apos;Distance Covered (Kms)&apos;]</span><br><span class="line">inter1  =  pdp.pdp_interact(model=tree_model, dataset=val_X, model_features=feature_names, features=features_to_plot)</span><br><span class="line"></span><br><span class="line">pdp.pdp_interact_plot(pdp_interact_out=inter1, feature_names=features_to_plot, plot_type=&apos;contour&apos;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___13_0.png" alt=""></p>
+<p>This graph shows predictions for any combination of Goals Scored and Distance covered.</p>
+<p>For example, we see the highest predictions when a team scores at least 1 goal and they run a total distance close to 100km. If they score 0 goals, distance covered doesn’t matter. Can you see this by tracing through the decision tree with 0 goals?</p>
+<p>But distance can impact predictions if they score goals. Make sure you can see this from the 2D partial dependence plot. Can you see this pattern in the decision tree too?</p>
+<p>图形展示了所有的得分与跑动距离的组合。</p>
+<p>比如说我们看到最有可能得mvp的是至少进一个球并且跑步距离接近100km。如果他们得0分的话, 那么跑动距离将没有意义。你能在决策树上去搜索得分0吗？</p>
+<p>一旦他们得分了，那么跑动距离将会影响结果。在2维的部分特征图上你能看到这些，你是否也能在决策树上找到这个呢？</p>
+<p><a href="https://www.kaggle.com/dansbecker/partial-plots" target="_blank" rel="noopener">https://www.kaggle.com/dansbecker/partial-plots</a></p>
 
-      
-        
-          
-          Partial Dependence Plots部分特征图
-While feature importance shows what variables most affect predictions, partial dependence plots show how a feature affec
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/14/partial-plots/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2019/02/26/permutation-Importance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/26/permutation-Importance/" itemprop="url">
-                  Permutation-Importance
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/26/permutation-Importance/" class="post-title-link" itemprop="url">Permutation-Importance</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">Posted on</span>
               
 
               <time title="Created: 2019-02-26 00:41:01 / Modified: 00:46:36" itemprop="dateCreated datePublished" datetime="2019-02-26T00:41:01-07:00">2019-02-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/26/permutation-Importance/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/02/26/permutation-Importance/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -589,158 +370,116 @@ While feature importance shows what variables most affect predictions, partial d
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h2 id="Intro-简介"><a href="#Intro-简介" class="headerlink" title="Intro 简介"></a>Intro 简介</h2><p>One of the most basic questions we might ask of a model is What features have the biggest impact on predictions?</p>
+<p>在数据模型中有一个很基础的问题：哪一个特征对预测结果影响最大。</p>
+<p>This concept is called feature importance. I’ve seen feature importance used effectively many times for every purpose in the list of use cases above.</p>
+<p>这种概念被叫做特征重要性（我觉得跟特征选择或者特征工程这一系列的概念有联系。）根据以往经验，特征重要性这个概念被很有效的利用在跟中不同的项目上。</p>
+<p>There are multiple ways to measure feature importance. Some approaches answer subtly different versions of the question above. Other approaches have documented shortcomings.</p>
+<p>有许多种可以测量特征重要性的方法，有一些方法对问题有不同的解释方法，其他的方法有明显的缺点。（总而言之没有一种万能的方法）</p>
+<p>In this lesson, we’ll focus on permutation importance. Compared to most other approaches, permutation importance is:</p>
+<p>在这门课中，我们会介绍交换排列计算重要性的方法。对比其他方法，交换排列计算重要性可以</p>
+<p>Fast to calculate</p>
+<p>更快计算</p>
+<p>Widely used and understood</p>
+<p>应用更普遍</p>
+<p>Consistent with properties we would want a feature importance measure to have</p>
+<p>保持特征重要性测量的一致性</p>
+<h2 id="How-it-Works-应用"><a href="#How-it-Works-应用" class="headerlink" title="How it Works 应用"></a>How it Works 应用</h2><p>Permutation importance uses models differently than anything you’ve seen so far, and many people find it confusing at first. So we’ll start with an example to make it more concrete.</p>
+<p>交换排列计算重要性和我们之前见到的用model的方法不一样，一开始很多人都会觉得这个很难懂。所以我们会举一个例子让这个更具体，更容易让人接受。</p>
+<p>Consider data with the following format:</p>
+<p><img src="https://i.imgur.com/wjMAysV.png" alt=""></p>
+<p>We want to predict a person’s height when they become 20 years old, using data that is available at age 10.</p>
+<p>我们想用这些人在十岁的数据来越策他们20岁的身高。</p>
+<p>Our data includes useful features (height at age 10), features with little predictive power (socks owned), as well as some other features we won’t focus on in this explanation.</p>
+<p>我们的数据包括很多很有用的特征比如10岁的身高，以及一些很弱的特征，比如他们拥有多少袜子，以及其他，我们并不详述。</p>
+<p><strong>Permutation importance is calculated after a model has been fitted.</strong> So we won’t change the model or change what predictions we’d get for a given value of height, sock-count, etc.</p>
+<p>交换排列计算重要性在训练数据之后被计算。所以我们并不会更改数据或是更改预测结果。</p>
+<p>Instead we will ask the following question: If I randomly shuffle a single column of the validation data, leaving the target and all other columns in place, how would that affect the accuracy of predictions in that now-shuffled data?</p>
+<p>相反我们会问以下的问题，如果我让一列随机排列这些预测数据，然后让其他的数据，特征量都不变，然后比较与原结果有多少准确度上的不同。</p>
+<p><img src="https://i.imgur.com/h17tMUU.png" alt=""></p>
+<p>Randomly re-ordering a single column should cause less accurate predictions, since the resulting data no longer corresponds to anything observed in the real world. Model accuracy especially suffers if we shuffle a column that the model relied on heavily for predictions. In this case, shuffling height at age 10 would cause terrible predictions. If we shuffled socks owned instead, the resulting predictions wouldn’t suffer nearly as much.</p>
+<p>当我们随机重新排列期中一列上的数据，往往会带来更低准确度的预测，因为这个数据和真实世界并不符合。准确度会根据重新排列的那一行对结果影响的权重而降低不同级别。于是我们知道如果重新排列10岁身高哪一行会带来更差的结果预测。如果我们重新排列拥有袜子数量那一列，并不会对结果有多少影响。</p>
+<p>With this insight, the process is as follows:</p>
+<p>根据我们的观察，过程应该是</p>
+<ol>
+<li>Get a trained model</li>
+</ol>
+<p>得到一个训练好的模型</p>
+<ol>
+<li>Shuffle the values in a single column, make predictions using the resulting dataset. Use these predictions and the true target values to calculate how much the loss function suffered from shuffling. That performance deterioration measures the importance of the variable you just shuffled.</li>
+</ol>
+<p>随机排列单独一列的数据，然后来预测结果。通过损失函数来计算有多接近原来的结果。根据我们之前所推论的比较原有结果，表现越差的就代表这个特征对结果正面影响越大。</p>
+<ol>
+<li>Return the data to the original order (undoing the shuffle from step 2.) Now repeat step 2 with the next column in the dataset, until you have calculated the importance of each column.</li>
+</ol>
+<p>然后还原数据，重复第2步直到我们计算出所有特征的结果影响的重要性。</p>
+<h2 id="Code-Example"><a href="#Code-Example" class="headerlink" title="Code Example"></a>Code Example</h2><p>Our example will use a model that predicts whether a soccer/football team will have the “Man of the Game” winner based on the team’s statistics. The “Man of the Game” award is given to the best player in the game. Model-building isn’t our current focus, so the cell below loads the data and builds a rudimentary model.</p>
+<p>关于预测足球队里谁能得到足球先生的预测。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">'../input/fifa-2018-match-statistics/FIFA 2018 Statistics.csv'</span>)</span><br><span class="line">y = (data[<span class="string">'Man of the Match'</span>] == <span class="string">"Yes"</span>)  <span class="comment"># Convert from string "Yes"/"No" to binary</span></span><br><span class="line">feature_names = [i <span class="keyword">for</span> i <span class="keyword">in</span> data.columns <span class="keyword">if</span> data[i].dtype <span class="keyword">in</span> [np.int64]]</span><br><span class="line">X = data[feature_names]</span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line">my_model = RandomForestClassifier(random_state=<span class="number">0</span>).fit(train_X, train_y)</span><br></pre></td></tr></table></figure>
+<p>Here is how to calculate and show importances with the eli5 library:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> eli5</span><br><span class="line"><span class="keyword">from</span> eli5.sklearn <span class="keyword">import</span> PermutationImportance</span><br><span class="line"></span><br><span class="line">perm = PermutationImportance(my_model, random_state=<span class="number">1</span>).fit(val_X, val_y)</span><br><span class="line">eli5.show_weights(perm, feature_names = val_X.columns.tolist())</span><br></pre></td></tr></table></figure>
+<h2 id="Interpreting-Permutation-Importances-解释交换排列计算重要性"><a href="#Interpreting-Permutation-Importances-解释交换排列计算重要性" class="headerlink" title="Interpreting Permutation Importances 解释交换排列计算重要性"></a>Interpreting Permutation Importances 解释交换排列计算重要性</h2><p>The values towards the top are the most important features, and those towards the bottom matter least.</p>
+<p>在这张图中 最上面的是最重要的特征，反之最下面的是最不重要的特征。</p>
+<p>The first number in each row shows how much model performance decreased with a random shuffling (in this case, using “accuracy” as the performance metric).</p>
+<p>每一行中的第一个数字显示在一个随机排列之后整个模型的准确度下降了多少。</p>
+<p>Like most things in data science, there is some randomness to the exact performance change from a shuffling a column. We measure the amount of randomness in our permutation importance calculation by repeating the process with multiple shuffles. The number after the ± measures how performance varied from one-reshuffling to the next.</p>
+<p>和许多在数据科学中发生的事情类似，有很多随机的事情会在随机排列一个特征列的时候发生，我们可以增加随机性通过更多次的随机排列。毕竟每次的随机排列都不会得到同样的结果。</p>
+<p>You’ll occasionally see negative values for permutation importances. In those cases, the predictions on the shuffled (or noisy) data happened to be more accurate than the real data. This happens when the feature didn’t matter (should have had an importance close to 0), but random chance caused the predictions on shuffled data to be more accurate. This is more common with small datasets, like the one in this example, because there is more room for luck/chance.</p>
+<p>有时候你甚至很偶然的可以得到一些负值（意思是随机排列那一列的时候准确度反而上升了）。这种情况往往是因为这个被随机排列这里一列本身就是一些无用的数据。当你用更大的数据去训练，这种幸运也会越来越难发生。</p>
+<p>In our example, the most important feature was Goals scored. That seems sensible. Soccer fans may have some intuition about whether the orderings of other variables are surprising or not.</p>
+<p>在我们的例子中，最重要的特征是进球得分。这非常合理，球迷还是很理性的会把进球数当作选足球先生第一个的参考值。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.kaggle.com/dansbecker/permutation-importance" target="_blank" rel="noopener">https://www.kaggle.com/dansbecker/permutation-importance</a></p>
 
-      
-        
-          
-          Intro 简介One of the most basic questions we might ask of a model is What features have the biggest impact on predictions?
-在数据模型中有一个很基础的问题：哪一个特征对预测结果影响最
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/26/permutation-Importance/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2019/02/21/Use-Cases-for-Model-Insights/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/21/Use-Cases-for-Model-Insights/" itemprop="url">
-                  Use Cases for Model Insights
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/21/Use-Cases-for-Model-Insights/" class="post-title-link" itemprop="url">Use Cases for Model Insights</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">Posted on</span>
               
 
               <time title="Created: 2019-02-21 00:30:11 / Modified: 00:42:03" itemprop="dateCreated datePublished" datetime="2019-02-21T00:30:11-07:00">2019-02-21</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/21/Use-Cases-for-Model-Insights/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/02/21/Use-Cases-for-Model-Insights/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -748,166 +487,98 @@ While feature importance shows what variables most affect predictions, partial d
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p>Use Cases for Model Insights</p>
+<p>在data sciense 里用到的直觉</p>
+<ul>
+<li><p>Debugging </p>
+</li>
+<li><p>Information Feature engineering </p>
+</li>
+<li><p>Directing future data collection</p>
+</li>
+<li><p>Informing human decision-making</p>
+</li>
+<li><p>Building Trust 建立信任</p>
+</li>
+</ul>
+<h3 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h3><p>The world has a lot of unreliable, disorganized and generally dirty data. You add a potential source of errors as you write preprocessing code. Add in the potential for target leakage and it is the norm rather than the exception to have errors at some point in a real data science projects.</p>
+<p>这个世界有许多不现实的，没有很好组织的，普遍的脏数据。当你对代码进行预处理的时候，你要去做一些规则去预防数据上潜在的错误，以及Data Leakage（Data Leakage一些不能用的数据，但是强行用了，使因果关系颠倒）。在真实的数据科学项目上，我们都应该提前制定规则去预防而不是在训练中或者结束用一些exception去去除。</p>
+<p>Given the frequency and potentially disastrous consequences of bugs, debugging is one of the most valuable skills in data science. Understanding the patterns a model is finding will help you identify when those are at odds with your knowledge of the real world, and this is typically the first step in tracking down bugs.</p>
+<p>考虑到这些数据bug经常会引起一系列的灾难，debugging 在数据科学中是最有价值的技能之一。你需要理解这个数据模型以及一部分真实世界的常识去作为定位bug的第一步 </p>
+<h3 id="Informing-Feature-Engineering"><a href="#Informing-Feature-Engineering" class="headerlink" title="Informing Feature Engineering"></a>Informing Feature Engineering</h3><p>Feature engineering is usually the most effective way to improve model accuracy. Feature engineering usually involves repeatedly creating new features using transformations of your raw data or features you have previously created.</p>
+<p>特征上的分析运算往往是加强数据模型最有效的方法。Feature Engineering包括重复不停去利用这些特征做一些变化组合来得到新的特征</p>
+<p>Sometimes you can go through this process using nothing but intuition about the underlying topic. But you’ll need more direction when you have 100s of raw features or when you lack background knowledge about the topic you are working on.</p>
+<p>有时候你只要用你对某一领域或者课题的直觉，但是当你缺少这个领域的知识的时候且有很多特征量，你需要试验更多的方向。</p>
+<p>A Kaggle competition to predict loan defaults gives an extreme example. This competition had 100s of raw features. For privacy reasons, the features had names like f1, f2, f3 rather than common English names. This simulated a scenario where you have little intuition about the raw data.</p>
+<p>有一个kaggle 的竞赛去预测loan defaults（默认贷款之类的），给了一个极端的例子。这次竞赛有一百个原始特征，但是由于一些隐私问题，所有的特征都被命名为f1,f2,f3, 而不是常规的特征名字。这个时候就模拟了一种你并不拥有原始数据的背景知识的情况。</p>
+<p>One competitor found that the difference between two of the features, specificallyf527 - f528, created a very powerful new feature. Models including that difference as a feature were far better than models without it. But how might you think of creating this variable when you start with hundreds of variables?</p>
+<p>有一个参赛者发现有两个特征的差，尤其是f527 - f528，这个差值或者创造的新的特征对结果的影响非常大。但是这也只能说是一个巧合当你需要去分析成百上千的特征</p>
+<p>The techniques you’ll learn in this course would make it transparent that f527 and f528 are important features, and that their role is tightly entangled. This will direct you to consider transformations of these two variables, and likely find the “golden feature” of f527 - f528.</p>
+<p>你从这门课程学到的技巧可以更轻易的分辨出f527 和  f528 是非常重要的特征。并且他们的角色是互相纠缠影响的。这个方向就有利于我们去思考怎么对这两个特征进行变形，然后有可能我们就可以发现那种极品的特征 比如f527 - f528 </p>
+<p>As an increasing number of datasets start with 100s or 1000s of raw features, this approach is becoming increasingly important.</p>
+<p>随着特征量的增加从100 到1000 数量级，这个方法变得尤为重要。</p>
+<h3 id="Directing-Future-Data-Collection"><a href="#Directing-Future-Data-Collection" class="headerlink" title="Directing Future Data Collection"></a>Directing Future Data Collection</h3><p>对收集新数据的指向</p>
+<p>You have no control over datasets you download online. But many businesses and organizations using data science have opportunities to expand what types of data they collect. Collecting new types of data can be expensive or inconvenient, so they only want to do this if they know it will be worthwhile. Model-based insights give you a good understanding of the value of features you currently have, which will help you reason about what new values may be most helpful.</p>
+<p>我们并不能控制我们从网上下载的数据库。但是很多公司或者一些机构会利用数据科学找机会去拓展一部分新数据，当然刚开始获取新数据的代价是非常高的。所以他们往往需要模型结构的帮助去分辨获取新数据是否值得，以及新的数据能给整个项目带来多大的变化。</p>
+<h3 id="Informing-Human-Decision-Making"><a href="#Informing-Human-Decision-Making" class="headerlink" title="Informing Human Decision-Making"></a>Informing Human Decision-Making</h3><p>一些人类的决定</p>
+<p>Some decisions are made automatically by models. Amazon doesn’t have humans (or elves) scurry to decide what to show you whenever you go to their website. But many important decisions are made by humans. For these decisions, insights can be more valuable than predictions.</p>
+<p>模型会自动做出一些决定。Amazon 并没有神仙来时时刻刻决定你到Amazon网站看到了神马。但是很多重要的决定还是由人类决定，直觉有的时候比机器预测做出更有价值的决定。</p>
+<h3 id="Building-Trust"><a href="#Building-Trust" class="headerlink" title="Building Trust"></a>Building Trust</h3><p>建立信任</p>
+<p>Many people won’t assume they can trust your model for important decisions without verifying some basic facts. This is a smart precaution given the frequency of data errors. In practice, showing insights that fit their general understanding of the problem will help build trust, even among people with little deep knowledge of data science.</p>
+<p>许多人并不依靠我们的模型去做一些重要的决定，如果我们的模型没办法符合很基础的事实。人类本能就会预防一些未知的错误，包括数据的错误。在测试中，我们会用直觉去理解这个问题，让整个数据结构变得合理并却让一些没有数据科学训练的人也容易接受。</p>
+<p>Reference:</p>
+<p><a href="https://www.kaggle.com/dansbecker/use-cases-for-model-insights" target="_blank" rel="noopener">https://www.kaggle.com/dansbecker/use-cases-for-model-insights</a></p>
 
-      
-        
-          
-          Use Cases for Model Insights
-在data sciense 里用到的直觉
-
-Debugging 
-
-Information Feature engineering 
-
-Directing future data collection
-
-Informing human dec
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/21/Use-Cases-for-Model-Insights/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2019/01/22/加拿大发现外星信号有感/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/22/加拿大发现外星信号有感/" itemprop="url">
-                  加拿大发现外星信号有感
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/22/加拿大发现外星信号有感/" class="post-title-link" itemprop="url">加拿大发现外星信号有感</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">Posted on</span>
               
 
               <time title="Created: 2019-01-22 19:56:22 / Modified: 23:46:09" itemprop="dateCreated datePublished" datetime="2019-01-22T19:56:22-07:00">2019-01-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/22/加拿大发现外星信号有感/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/01/22/加拿大发现外星信号有感/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -915,174 +586,83 @@ Informing human dec
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p>人類發展史與外星文明</p>
+<p>經過2019 一月份的加拿大天文臺收到疑爲外星文明信號事件，和朋友聊了一下關於爲什麽人類這樣高智慧型的文明存在的最重要的元素。</p>
+<p>由於我并不是個文科生，也沒有豐富的人類學，歷史學等積澱與素養。我的觀點有點奇葩，我覺得就是幸運或者是運氣。可能部分符合<a href="https://baike.baidu.com/item/%E5%A4%A7%E8%BF%87%E6%BB%A4%E5%99%A8/17698306?fr=aladdin" target="_blank" rel="noopener">大過濾器</a>的一些猜想。</p>
+<ul>
+<li><ol>
+<li>太陽這顆恆星非常的穩定，并卻地球在太陽系的位置非常有利於液態水的存在。原諒我是一個三體迷，我深深得同意大劉，地球的確是一個得天獨厚的天堂這一觀點。<a href="https://zh.wikipedia.org/wiki/%E5%9C%B0%E7%90%83%E6%AE%8A%E7%95%B0%E5%81%87%E8%AA%AA" target="_blank" rel="noopener">稀有地球理論</a></li>
+</ol>
+</li>
+<li><ol>
+<li>接下來這一點比較奇葩，也是我不太贊同大劉的所有觀點的地方。</li>
+</ol>
+</li>
+</ul>
+<p>如果按照大劉的兩條邏輯鏈：技術爆炸和黑暗森林法則。那麽我覺得完全按照這兩個邏輯生長的文明社會反而不會擁有最强大的科技。也是被金庸的想法所影響，在天龍八部裏，鳩摩智用小無相功驅動少林七十二絕技。但是按照掃地僧所説的每一種佛法都對應一種絕技，如果只練絕技而不修行佛法就會傷及自身。</p>
+<p>愚以爲這是一種比較大的智慧，如果把這個思想對比到人類社會思想文明和科技水平。如果只是針對科技發展，而不等待社會文明的進步。那麽這個生物文明就會陷入一種岌岌可危自我毀滅的可能性。</p>
+<p>我知道這個比較難以闡述，比如説人人都有可能造出毀滅地球的一種武器，無論是核武器還是生化武器，如果思想道德還沒有到達那種水平比如西方的政治正確人人平等或者是東方孔子的己所不欲勿施於人。那麽一些極端主義就容易生成那種老子活不好你們也別想活的地步。他們手裏又非常容易擁有那種高級的科技。我本人非常相信這種可能性。如同現在小部分的恐怖分子又或者極端主義</p>
+<p>儅大劉的邏輯鏈成立的時候，他是把文明當成個體,但是如果換成每個人都是黑暗森林法則中的個體的時候，科技文明就只剩下隱藏自己，以及儅森林獵人這兩種。</p>
+<p>所以我認爲人類的幸運在於我們的道德文明，又或者社會文明走在了科技文明的前面，我們并沒有2000年前大規模使用電器，1000年前發展出核武器。并沒有讓一個部落文明或者奴隸制社會擁有大規模殺傷性武器。</p>
+<p>當然我朋友也跟我爭論，他認爲社會文明，道德文明是科技文明發展的基礎。我覺得不完全正確，比如歐洲當時很多貴族在容易滿足生理需求的前提下，也經常去研究數學以及其他科學。甚至我認爲即使是奴隸制的社會架構下也是可以誕生高科技產物的。但是這個保留有意見。</p>
+<p>可以預想如果成千上萬的奴隸主都掌握核心技術，和強破壞性武器，按概率學上來説，只要有一個發瘋想制裁別人，那麽這個文明就亡了。</p>
 
-      
-        
-          
-          人類發展史與外星文明
-經過2019 一月份的加拿大天文臺收到疑爲外星文明信號事件，和朋友聊了一下關於爲什麽人類這樣高智慧型的文明存在的最重要的元素。
-由於我并不是個文科生，也沒有豐富的人類學，歷史學等積澱與素養。我的觀點有點奇葩，我覺得就是幸運或者是運氣。可能部分符合大過濾器的一些猜想。
-
-
-太陽這
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/22/加拿大发现外星信号有感/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/12/14/Docker-—-从入门到实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/14/Docker-—-从入门到实践/" itemprop="url">
-                  Docker — 从入门到实践
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/14/Docker-—-从入门到实践/" class="post-title-link" itemprop="url">Docker — 从入门到实践</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="Created: 2018-12-14 04:29:57" itemprop="dateCreated datePublished" datetime="2018-12-14T04:29:57-07:00">2018-12-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
+                <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2019-01-29 11:05:26" itemprop="dateModified" datetime="2019-01-29T11:05:26-07:00">2019-01-29</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/14/Docker-—-从入门到实践/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/12/14/Docker-—-从入门到实践/" itemprop="commentCount"></span>
-                </a>
               </span>
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1090,166 +670,71 @@ Informing human dec
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p>Docker 有三个基本概念：</p>
+<ul>
+<li><p>镜像 Image</p>
+</li>
+<li><p>容器 Container</p>
+</li>
+<li><p>仓库 Repository</p>
+</li>
+</ul>
+<h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><p>Docker 镜像（Image）就相当于是一个 root 文件系统。Docker 镜像 是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
+<h3 id="分层存储"><a href="#分层存储" class="headerlink" title="分层存储"></a>分层存储</h3><p>镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
+<p>镜像构建时，会一层层构建，前一层是后一层的基础。每一层构建完就不会再发生改变，后一层上的任何改变只发生在自己这一层。比如，删除前一层文件的操作，实际不是真的删除前一层的文件，而是仅在当前层标记为该文件已删除。在最终容器运行的时候，虽然不会看到这个文件，但是实际上该文件会一直跟随镜像。因此，在构建镜像的时候，需要额外小心，每一层尽量只包含该层需要添加的东西，任何额外的东西应该在该层构建结束前清理掉。</p>
+<p>分层存储的特征还使得镜像的复用、定制变的更为容易。甚至可以用之前构建好的镜像作为基础层，然后进一步添加新的层，以定制自己所需的内容，构建新的镜像。</p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p><a href="https://yeasy.gitbooks.io/docker_practice" target="_blank" rel="noopener">https://yeasy.gitbooks.io/docker_practice</a></p>
 
-      
-        
-          
-          Docker 有三个基本概念：
-
-镜像 Image
-
-容器 Container
-
-仓库 Repository
-
-
-镜像Docker 镜像（Image）就相当于是一个 root 文件系统。Docker 镜像 是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/14/Docker-—-从入门到实践/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/12/14/Reinforcement-Learning-Note-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/14/Reinforcement-Learning-Note-1/" itemprop="url">
-                  Reinforcement Learning Note 1
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/14/Reinforcement-Learning-Note-1/" class="post-title-link" itemprop="url">Reinforcement Learning Note 1</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">Posted on</span>
               
 
               <time title="Created: 2018-12-14 04:01:30 / Modified: 04:45:46" itemprop="dateCreated datePublished" datetime="2018-12-14T04:01:30-07:00">2018-12-14</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/14/Reinforcement-Learning-Note-1/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/12/14/Reinforcement-Learning-Note-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1257,169 +742,63 @@ Informing human dec
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           
-          
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/14/Reinforcement-Learning-Note-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/30/数学手册/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/30/数学手册/" itemprop="url">
-                  数学手册
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/30/数学手册/" class="post-title-link" itemprop="url">数学手册</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="Created: 2018-07-30 00:01:07" itemprop="dateCreated datePublished" datetime="2018-07-30T00:01:07-06:00">2018-07-30</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
+                <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2018-08-14 21:40:19" itemprop="dateModified" datetime="2018-08-14T21:40:19-06:00">2018-08-14</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/30/数学手册/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/30/数学手册/" itemprop="commentCount"></span>
-                </a>
               </span>
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1427,161 +806,127 @@ Informing human dec
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h1 id="PCA的数学原理"><a href="#PCA的数学原理" class="headerlink" title="PCA的数学原理"></a>PCA的数学原理</h1><p>PCA（Principal Component Analysis）是一种常用的数据分析方法(降维)</p>
+<h2 id="1-数据的向量表示及降维问题"><a href="#1-数据的向量表示及降维问题" class="headerlink" title="1. 数据的向量表示及降维问题"></a>1. 数据的向量表示及降维问题</h2><p>我们要在降维的同时让数据信息资源的损失尽可能降低.</p>
+<p>朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。</p>
+<p>eg: 数据记录为</p>
+<p>(日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) =&gt; （500，240，25，13，2312.15）T</p>
+<p>比如浏览量和访客数是有关联的，可以简单降维</p>
+<h2 id="2-向量的表示及基变换"><a href="#2-向量的表示及基变换" class="headerlink" title="2. 向量的表示及基变换"></a>2. 向量的表示及基变换</h2><h2 id="3-内积与投影"><a href="#3-内积与投影" class="headerlink" title="3. 内积与投影"></a>3. 内积与投影</h2><p><a href="https://zh.wikipedia.org/wiki/%E7%82%B9%E7%A7%AF" target="_blank" rel="noopener">内积</a>, 高中学的叫点乘，或者还看见有人叫点积（Dot Product）</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d7de7b9aa6a9bbc6f6435c24173c0597464c8420" alt=""></p>
+<p>$ \vec A \vec B = a_1 x b_1 + … + a_n x b_n $</p>
+<p>在几何定义为向量A 和 向量B的长度 乘以 cos（夹角）如果B的模长度为1，那么AB 的点乘就是A 投影在B上的长度</p>
+<p>$ \vec A \vec B = \left\lvert \vec A \vec B \right\rvert x cos(\theta) $</p>
+<h2 id="4-基-basis"><a href="#4-基-basis" class="headerlink" title="4. 基 basis)"></a>4. 基 <a href="https://zh.wikipedia.org/wiki/%E5%9F%BA_(%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8" target="_blank" rel="noopener">basis</a>)</h2><p><img src="https://pic2.zhimg.com/80/df6a713c1b97cc55bd20afce46ace718_hd.jpg" alt="(3,2)"></p>
+<p>原理上是在x轴上的投影为3，在y轴上的投影为2。 从代数原理上，（3，2） = 3x（1，0）+2x（0，1）</p>
+<p>（1，0） 和 （0，1） 就是二维空间中的一组基，基的模长度往往为1</p>
+<p>我们可以变换这组基的方向，比如（1，1）， （-1，1），然后把他转化为基，即为 (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})和(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})。 </p>
+<h3 id="基变换-（二维）"><a href="#基变换-（二维）" class="headerlink" title="基变换 （二维）"></a>基变换 （二维）</h3><p>顺时针 theta 角度</p>
+<p>cos(theta) -sin(theta)<br>sin(theta) cos(theta)</p>
+<h2 id="5-基变换的矩阵表示"><a href="#5-基变换的矩阵表示" class="headerlink" title="5. 基变换的矩阵表示"></a>5. 基变换的矩阵表示</h2><p>原坐标 [1 0], [0 1]</p>
+<p>[1 0]  [3]  =&gt; [3]<br>[0 1]  [2]     [2]</p>
+<p>新坐标<br>$$ (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}) $$ </p>
+<p>$$ (-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}) $$</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+3+%5C%5C+2+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+5%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D" alt=""></p>
+<p>当把M个N维向量变换到R个N维向量表示的新空间中去，数学表达式为</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+p_1+%5C%5C+p_2+%5C%5C+%5Cvdots+%5C%5C+p_R+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+a_1+%26+a_2+%26+%5Ccdots+%26+a_M+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+p_1a_1+%26+p_1a_2+%26+%5Ccdots+%26+p_1a_M+%5C%5C+p_2a_1+%26+p_2a_2+%26+%5Ccdots+%26+p_2a_M+%5C%5C+%5Cvdots+%26+%5Cvdots+%26+%5Cddots+%26+%5Cvdots+%5C%5C+p_Ra_1+%26+p_Ra_2+%26+%5Ccdots+%26+p_Ra_M+%5Cend%7Bpmatrix%7D" alt=""></p>
+<p>R是可以小于N的，R是基的数量，可以讲N维数据变换到更低的维度中去。这种矩阵相乘表示为降维变换。</p>
+<h2 id="6-协方差矩阵及优化目标"><a href="#6-协方差矩阵及优化目标" class="headerlink" title="6. 协方差矩阵及优化目标"></a>6. 协方差矩阵及优化目标</h2><p>关于如何选择最优的基，比如从N维向量降维到K。</p>
+<p>例子 把五条2维向量 降维到 1维空间</p>
+<p>(1,1) (1,3) (2,3) (4,4) (2,4)</p>
+<p>先减去均值</p>
+<p>(-1,-2) (-1,0) (0,0) (2,1) (0,1)</p>
+<p><img src="https://pic2.zhimg.com/80/e01296f282109b59e18086843866f81a_hd.jpg" alt=""></p>
+<p>如果选一条线当一维坐标，如果选X轴(0,1) (0,0) 重叠， 如果选y轴(-1,0), (0,0) 重叠</p>
+<p><em>我的理解是应该选一种空间 让每个投影都尽量分散</em></p>
+<h2 id="7-方差"><a href="#7-方差" class="headerlink" title="7. 方差"></a>7. 方差</h2><p>$$ Var(a)=\frac{1}{m}\sum_{i=1}^m{(a_i-\mu)^2} $$</p>
+<p>上面提到的问题变成寻找一个一维基上投影的点方差最大</p>
+<h2 id="8-协方差"><a href="#8-协方差" class="headerlink" title="8. 协方差"></a>8. 协方差</h2><p>如果降到二维，还是坚持最大方差的话那么第二条线会与第一条线重合，但是最理想情况是第二条线和第一条线独立。</p>
+<h3 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h3><p>$$ Cov(a,b)=\frac{1}{m}\sum_{i=1}^m{a_ib_i} $$ 当协方差为0的时候两个向量完全独立，也就是正交（是垂直吗？）</p>
+<p>至此，我们得到了降维问题的优化目标：将一组N维向量降为K维（K大于0，小于N），其目标是选择K个单位（模为1）正交基，使得原始数据变换到这组基上后，各字段两两间协方差为0，而字段的方差则尽可能大（在正交的约束下，取最大的K个方差）。</p>
+<h2 id="9-协方差矩阵"><a href="#9-协方差矩阵" class="headerlink" title="9. 协方差矩阵"></a>9. 协方差矩阵</h2><p>（数学真是太有意思了）</p>
+<p>假设我们有两个字段a,b, 我们把它们按行组成矩阵 X </p>
+<p>$$ X=\begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_m \ b_1 &amp; b_2 &amp; \cdots &amp; b_m \end{pmatrix} $$</p>
+<p>然后自己相乘并乘上系数</p>
+<p>$$ \frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a<em>i^2} &amp; \frac{1}{m}\sum</em>{i=1}^m{a_ib<em>i} \ \frac{1}{m}\sum</em>{i=1}^m{a_ib<em>i} &amp; \frac{1}{m}\sum</em>{i=1}^m{b_i^2} \end{pmatrix} $$</p>
+<p>结果大概是<br>[a方差， 协方差]<br>[协方差,  b方差]</p>
+<h2 id="10-协方差矩阵对角化"><a href="#10-协方差矩阵对角化" class="headerlink" title="10. 协方差矩阵对角化"></a>10. 协方差矩阵对角化</h2><p>于是根据上面的推导，我们要让对角线上的数据尽可能的高，因为方差变大，然后非对角线的协方差尽可能的小，因为每个基要独立。这样就达成了优化的条件。</p>
+<p>接下来有点难懂：我先把每个数据都列下来</p>
+<p>m为字段数(我的理解是需要投影的点)</p>
+<p>n为基的维度 (我的理解是原数据的维度：可能错)</p>
+<p>X 为基组成的矩阵 m x n</p>
+<p>C 为一个对称矩阵</p>
+<p>P 为行向量基组成的矩阵 r x m (r是什么：r可能是下降后的基的数目)</p>
+<p>Y = PX Y是P投影在空间X上，X对P做的基变换</p>
+<p>$$ \begin{array}{l l l} D &amp; = &amp; \frac{1}{m}YY^\mathsf{T} \ &amp; = &amp; \frac{1}{m}(PX)(PX)^\mathsf{T} \ &amp; = &amp; \frac{1}{m}PXX^\mathsf{T}P^\mathsf{T} \ &amp; = &amp; P(\frac{1}{m}XX^\mathsf{T})P^\mathsf{T} \ &amp; = &amp; PCP^\mathsf{T} \end{array} $$</p>
+<p>要找到P，满足 $$ PCP^\mathsf{T} $$ 是一个对角矩阵</p>
+<p>$$ PCP^\mathsf{T} $$ 对角元素从大到小排列，降到K维就取K行</p>
+<h3 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h3><p>协方差矩阵 C 是一个实对成矩阵(还未消化)</p>
+<p>1 - 实对称矩阵不同特征值对应的特征向量必然正交。</p>
+<p>2 - 设特征向量lambda重数为r，则必然存在r个线性无关的特征向量对应于lambda，因此可以将这r个特征向量单位正交化。</p>
+<p>P是协方差矩阵的特征向量单位化后按行排列出的矩阵，其中每一行都是C的一个特征向量,</p>
+<p>P按照D中特征值的从大到小排列，P的前K行组成的矩阵乘以原始数据矩阵X，就得到了我们需要降维后的矩阵Y</p>
+<h2 id="11-算法及实例"><a href="#11-算法及实例" class="headerlink" title="11. 算法及实例"></a>11. 算法及实例</h2><p>总结一下PCA的算法步骤：</p>
+<p>设有m条n维数据。</p>
+<p>1）将原始数据按列组成n行m列矩阵X</p>
+<p>2）将X的每一行（代表一个属性字段）进行零均值化，即减去这一行的均值</p>
+<p>3）$$ 求出协方差矩阵C=\frac{1}{m}XX^\mathsf{T} $$</p>
+<p>4）求出协方差矩阵的特征值及对应的特征向量 <a href="https://blog.csdn.net/u010182633/article/details/45921929" target="_blank" rel="noopener">特征值向量求法</a></p>
+<p>5）将特征向量按对应特征值大小从上到下按行排列成矩阵，取前k行组成矩阵P</p>
+<p>6）Y=PX即为降维到k维后的数据</p>
+<p>举例那个去reference里面看更清楚，准备翻译成 IPython 更清晰解释PCA 降维</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zhuanlan.zhihu.com/p/21580949" target="_blank" rel="noopener">知乎PCA的数学原理 貌似也是转的，找不到原link</a> </p>
 
-      
-        
-          
-          PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维)
-1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低.
-朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。
-eg: 数据记录为
-(日期
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/30/数学手册/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/29/cs231n-note-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/29/cs231n-note-6/" itemprop="url">
-                  cs231n-note-6
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/29/cs231n-note-6/" class="post-title-link" itemprop="url">cs231n-note-6</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">Posted on</span>
               
 
               <time title="Created: 2018-07-29 15:06:19 / Modified: 16:03:15" itemprop="dateCreated datePublished" datetime="2018-07-29T15:06:19-06:00">2018-07-29</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/29/cs231n-note-6/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/29/cs231n-note-6/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1589,171 +934,77 @@ eg: 数据记录为
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h1 id="神经网络笔记2"><a href="#神经网络笔记2" class="headerlink" title="神经网络笔记2"></a>神经网络笔记2</h1><h1 id="设置数据和模型"><a href="#设置数据和模型" class="headerlink" title="设置数据和模型"></a>设置数据和模型</h1><p>神经网络就是进行了一系列的线性映射与非线性激活函数交织的运算, 这些做法共同定义了评分函数(score function)</p>
+<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>3个常用的符号，数据矩阵X，假设其尺寸是[N x D]（N是数据样本的数量，D是数据的维度）</p>
+<h3 id="均值减法-Mean-subtraction"><a href="#均值减法-Mean-subtraction" class="headerlink" title="均值减法(Mean subtraction):"></a>均值减法(Mean subtraction):</h3><p>每个独立特征减去平均值，从几何上可以理解为在每个维度上都将数据云的中心都迁移到原点.</p>
+<p>numpy代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X -= np.mean(X, axis=0)</span><br></pre></td></tr></table></figure>
+<h3 id="归一化（Normalization）"><a href="#归一化（Normalization）" class="headerlink" title="归一化（Normalization）"></a>归一化（Normalization）</h3><p>数据的所有维度都归一化，使其数值范围都近似相等.</p>
+<p>有两种方法：</p>
+<p>第一种是先对数据做零中心化,然后每个维度都除以其标准差</p>
+<p><img src="https://pic2.zhimg.com/80/e743b6777775b1671c3b5503d7afbbc4_hd.jpg" alt=""></p>
+<p>numpy 代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X -= np.mean(X, axis=0)</span><br><span class="line">X /= np.std(X, axis=0)</span><br></pre></td></tr></table></figure>
+<p>第二种方法是对每个维度都做归一化，每个维度最大值1，最小值-1</p>
+<h3 id="PCA和白化（Whitening）To-learning"><a href="#PCA和白化（Whitening）To-learning" class="headerlink" title="PCA和白化（Whitening）To learning"></a>PCA和白化（Whitening）To learning</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 假设输入数据矩阵X的尺寸为[N x D]</span><br><span class="line">X -= np.mean(X, axis = 0) # 对数据进行零中心化(重要)</span><br><span class="line">cov = np.dot(X.T, X) / X.shape[0] # 得到数据的协方差矩阵</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p><a href="https://zhuanlan.zhihu.com/p/21560667" target="_blank" rel="noopener">神经网络笔记 2</a></p>
 
-      
-        
-          
-          神经网络笔记2设置数据和模型神经网络就是进行了一系列的线性映射与非线性激活函数交织的运算, 这些做法共同定义了评分函数(score function)
-数据预处理3个常用的符号，数据矩阵X，假设其尺寸是[N x D]（N是数据样本的数量，D是数据的维度）
-均值减法(Mean subtraction)
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/29/cs231n-note-6/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/16/cs231n-note-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/16/cs231n-note-5/" itemprop="url">
-                  cs231n-note-5
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/16/cs231n-note-5/" class="post-title-link" itemprop="url">cs231n-note-5</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="Created: 2018-07-16 21:03:08" itemprop="dateCreated datePublished" datetime="2018-07-16T21:03:08-06:00">2018-07-16</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
+                <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2018-07-29 14:52:08" itemprop="dateModified" datetime="2018-07-29T14:52:08-06:00">2018-07-29</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/16/cs231n-note-5/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/16/cs231n-note-5/" itemprop="commentCount"></span>
-                </a>
               </span>
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1761,170 +1012,158 @@ eg: 数据记录为
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h1 id="神经网络笔记1"><a href="#神经网络笔记1" class="headerlink" title="神经网络笔记1"></a>神经网络笔记1</h1><h2 id="对比线性代数算法"><a href="#对比线性代数算法" class="headerlink" title="对比线性代数算法"></a>对比线性代数算法</h2><p>基础的线性代数算法 s = Wx, x 是一个输入矩阵 [n <em> 1], W 是一个权重矩阵 [种类 </em> n]，s 为一个评分矩阵。</p>
+<h2 id="神经网络算法简介"><a href="#神经网络算法简介" class="headerlink" title="神经网络算法简介"></a>神经网络算法简介</h2><p>神经网络算法是 s = W_2 max(0, W_1x). 在这种情况下 W_1 广度增加，比如可能为 [100 * n], max 是通过设置熵值来过滤掉所有的小于0的score。其实有其他方法来过滤。</p>
+<p>W_2 是一个[种类 * 100] 的矩阵， 权重W 通过梯度下降来学习。</p>
+<h2 id="单个神经元-建模"><a href="#单个神经元-建模" class="headerlink" title="单个神经元    建模"></a>单个神经元    建模</h2><p>神经网络是从生物上得到的启发。 </p>
+<h4 id="生物动机与连接"><a href="#生物动机与连接" class="headerlink" title="生物动机与连接"></a>生物动机与连接</h4><p>!()[<a href="https://pic4.zhimg.com/80/d0cbce2f2654b8e70fe201fec2982c7d_hd.jpg" target="_blank" rel="noopener">https://pic4.zhimg.com/80/d0cbce2f2654b8e70fe201fec2982c7d_hd.jpg</a>]</p>
+<p>当多个信号传进神经元，与神经元内权重相乘并且相加，如果超过某一个阈值，那么激活神经元。激活函数最早接触的sigmoid，最大优势是将数据控制在【0，1】之间。</p>
+<p>一个神经元前向传播的代码是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Neuron(object):</span><br><span class="line">	# ... </span><br><span class="line">	def forward(inputs):</span><br><span class="line">	  &quot;&quot;&quot; 假设输入和权重是1-D的numpy数组，偏差是一个数字 &quot;&quot;&quot;</span><br><span class="line">	  cell_body_sum = np.sum(inputs * self.weights) + self.bias</span><br><span class="line">	  firing_rate = 1.0 / (1.0 + math.exp(-cell_body_sum)) # sigmoid激活函数</span><br><span class="line">	  return firing_rate</span><br></pre></td></tr></table></figure>
+<p>—- Todo —– </p>
+<h2 id="作为线性分类器的单个神经元"><a href="#作为线性分类器的单个神经元" class="headerlink" title="作为线性分类器的单个神经元"></a>作为线性分类器的单个神经元</h2><p>分类器我的理解还是吧score 转化为正确概率。然后进行一个loss 的计算, 前面有公式</p>
+<h4 id="二分类Softmax分类器"><a href="#二分类Softmax分类器" class="headerlink" title="二分类Softmax分类器"></a>二分类Softmax分类器</h4><h4 id="二分类SVM分类器"><a href="#二分类SVM分类器" class="headerlink" title="二分类SVM分类器"></a>二分类SVM分类器</h4><table>
+<thead>
+<tr>
+<th>分类器</th>
+<th>公式</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Softmax分类器</td>
+<td>softmax函数</td>
+<td>和为1</td>
+<td>较慢的学习曲线，所有的结果都有loss</td>
+</tr>
+<tr>
+<td>SVM分类器</td>
+<td>在0和得分差中选最大值</td>
+<td>更快的去除一些失误值</td>
+<td>有时候学习会卡住</td>
+</tr>
+</tbody>
+</table>
+<h2 id="常用激活函数"><a href="#常用激活函数" class="headerlink" title="常用激活函数"></a>常用激活函数</h2><p>我的理解，激活函数就是通过score 得到概率。</p>
+<p><img src="https://pic3.zhimg.com/80/677187e96671a4cac9c95352743b3806_hd.jpg" alt=""></p>
+<p><img src="https://pic1.zhimg.com/80/83682a138f6224230f5b0292d9c01bd2_hd.jpg" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>激活函数</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sigmoid</td>
+<td>简单，易理解</td>
+<td>Sigmoid函数饱和使梯度消失，输出不是零中心的</td>
+</tr>
+<tr>
+<td>Tanh</td>
+<td>输出不是零中心的，易理解</td>
+<td>有时候会</td>
+</tr>
+<tr>
+<td>ReLU</td>
+<td>1. 线性，非饱和的公式，随机梯度下降的收敛有巨大的加速 2，耗费较少计算资源的操作</td>
+<td>学习率太高的时候，这个ReLU单元在训练中将不可逆转的死亡</td>
+</tr>
+<tr>
+<td>Leaky ReLU</td>
+<td>同上，并且解决了ReLu单元死亡的问题</td>
+<td>然而该激活函数在在不同任务中均有益处的一致性并没有特别清晰（不太懂）</td>
+</tr>
+<tr>
+<td>Maxout</td>
+<td>有以上所有的优点</td>
+<td>参数过多</td>
+</tr>
+</tbody>
+</table>
+<h2 id="神经网络结构"><a href="#神经网络结构" class="headerlink" title="神经网络结构"></a>神经网络结构</h2><p>最普通的层的类型是全连接层（fully-connected layer）</p>
+<ul>
+<li><p>命名规则 N层神经网络 = hidden layer + output layer</p>
+</li>
+<li><p>输出层 大多用于表示分类评分值</p>
+</li>
+<li><p>网络尺寸 标准主要有两个：一个是神经元的个数，另一个是参数的个数</p>
+</li>
+</ul>
+<h2 id="前向传播"><a href="#前向传播" class="headerlink" title="前向传播"></a>前向传播</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一个3层神经网络的前向传播:</span><br><span class="line">f = lambda x: 1.0/(1.0 + np.exp(-x)) # 激活函数(用的sigmoid)</span><br><span class="line">x = np.random.randn(3, 1) # 含3个数字的随机输入向量(3x1)</span><br><span class="line">h1 = f(np.dot(W1, x) + b1) # 计算第一个隐层的激活数据(4x1)</span><br><span class="line">h2 = f(np.dot(W2, h1) + b2) # 计算第二个隐层的激活数据(4x1)</span><br><span class="line">out = np.dot(W3, h2) + b3 # 神经元输出(1x1)</span><br></pre></td></tr></table></figure>
+<p>神经网络最后一层通常是没有激活函数的, 得出一个实数值的评分</p>
+<h2 id="表达能力"><a href="#表达能力" class="headerlink" title="表达能力"></a>表达能力</h2><p>至少拥有一个隐层(hidden)的神经网络是一个通用的近似器，神经网络可以近似任何连续函数。</p>
+<p>实践而言，构建更多层的神经网络所表达出来的函数不仅平滑，而且更容易学习（利用最优化）</p>
+<h2 id="设置层的数量和尺寸"><a href="#设置层的数量和尺寸" class="headerlink" title="设置层的数量和尺寸"></a>设置层的数量和尺寸</h2><p><img src="https://pic4.zhimg.com/80/cf3fc543bf1dc81e2083530a4492b0ec_hd.jpg" alt="每层的神经元数目不同：只有一个隐层"></p>
+<p>更大的神经网络可以表达出更复杂的函数,但是缺点是过拟合(overfitting),只是重视数据在复杂情况中的分类，而忽略了潜在关系。</p>
+<p>这时候合适的layer可以在测试数据里获得更好的泛化(generalization)能力</p>
+<p><img src="https://pic3.zhimg.com/80/4f8af027d6059549d160199a1717df14_hd.jpg" alt="不同正则化强度控制过拟合"></p>
+<p>然而, 防止神经网络过拟合的方法有很多(To learn), 选择其他过拟合的解决方法，而不应该去选择小的神经网络。</p>
+<p>这个是提供的测试的链接<a href="https://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html" target="_blank" rel="noopener">convnetjs DEMO</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html" target="_blank" rel="noopener">convnetjs DEMO</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21462488" target="_blank" rel="noopener">神经网络笔记1（上）</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21513367" target="_blank" rel="noopener">神经网络笔记1（下）</a></p>
 
-      
-        
-          
-          神经网络笔记1对比线性代数算法基础的线性代数算法 s = Wx, x 是一个输入矩阵 [n  1], W 是一个权重矩阵 [种类  n]，s 为一个评分矩阵。
-神经网络算法简介神经网络算法是 s = W_2 max(0, W_1x). 在这种情况下 W_1 广度增加，比如可能为 [100 * n],
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/16/cs231n-note-5/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/02/中国剩余定理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
       <meta itemprop="name" content="Weijie Sun">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Weijie Sun Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/02/中国剩余定理/" itemprop="url">
-                  中国剩余定理
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/02/中国剩余定理/" class="post-title-link" itemprop="url">中国剩余定理</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="Created: 2018-07-02 22:32:36" itemprop="dateCreated datePublished" datetime="2018-07-02T22:32:36-06:00">2018-07-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-29 16:06:55" itemprop="dateModified" datetime="2018-07-29T16:06:55-06:00">2018-07-29</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/02/中国剩余定理/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/02/中国剩余定理/" itemprop="commentCount"></span>
-                </a>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-03-31 18:27:50" itemprop="dateModified" datetime="2019-03-31T18:27:50-06:00">2019-03-31</time>
               </span>
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1932,63 +1171,35 @@ eg: 数据记录为
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p>在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。</p>
+<p>比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少</p>
+<p>x = 2 mod 3</p>
+<p>x = 3 mod 5</p>
+<p>x = 2 mod 7</p>
+<p>这个时候分成3个mod 部分分别求基础解。</p>
+<p>比如第一部分 另外两个mod的乘积为 5 x 7 = 35</p>
+<p>然后在mod 3 中求 35 的倒数</p>
+<p>35 x 2 = 1 mod 3</p>
+<p>再把 倒数 x 一开始余的数 x 另外两个mod 的乘积 = 2 x 2 x 35 = 140</p>
+<p>然后同理，求出另外两个mod的结果再加在一起 = 233，</p>
+<p>那么所有233 + (3x5x7) x k 的数都满足这个条件</p>
+<p>接下来我想尝试写一个python 程序解决所有诸如此类的问题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inverseMod</span><span class="params">(number, mod)</span>:</span></span><br><span class="line">    total = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(mod):</span><br><span class="line">        <span class="keyword">if</span> (total%number) == <span class="number">0</span>: </span><br><span class="line">            <span class="keyword">return</span> total/number</span><br><span class="line">        total = total + mod</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chineseRemainingTheory</span><span class="params">(remainList, modList)</span>:</span></span><br><span class="line">    inverserModList = []</span><br><span class="line">    allProduct = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> modList:</span><br><span class="line">        allProduct = allProduct * i</span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> range(len(remainList)):</span><br><span class="line">        products = (allProduct/modList[index])</span><br><span class="line">        inverse = inverseMod(products%modList[index], modList[index])</span><br><span class="line">        result = result + (inverse * products * remainList[index])</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	remainList = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>]</span><br><span class="line">	modList = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>]</span><br><span class="line">	result = chineseRemainingTheory(remainList, modList)</span><br><span class="line">	<span class="keyword">print</span> (result, <span class="string">"should = 233"</span>)</span><br></pre></td></tr></table></figure>
 
-      
-        
-          
-          在去年曾经tutor过一些数学竞赛，很多题目有关一个数除x余y， 然后求这个数是多少的。
-比如 一个数当除以3余2，除以5余3，除以7余2，那么这个数是多少
-x = 2 mod 3
-x = 3 mod 5
-x = 2 mod 7
-这个时候分成3个mod 部分分别求基础解。
-比如第一部分 另外两个mo
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/02/中国剩余定理/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
 
   
   <nav class="pagination">
@@ -2000,181 +1211,111 @@ x = 2 mod 7
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpeg"
-                alt="Weijie Sun" />
-            
-              <p class="site-author-name" itemprop="name">Weijie Sun</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">posts</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">categories</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">tags</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/jeremykid" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://www.linkedin.com/in/weijie-sun-8760648a?trk=hp-identity-name" target="_blank" title="Linkedin"><i class="fa fa-fw fa-globe"></i>Linkedin</a>
-                  
-                </span>
-              
-            </div>
-          
-
-          
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">weijiesun</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Weijie Sun"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">Weijie Sun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Weijie Sun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
 
         
 
@@ -2185,530 +1326,97 @@ x = 2 mod 7
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
   }
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="true"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
-
-
-
-  
-
-  
-    <script id="dsq-count-scr" src="https://weijiesun-1.disqus.com/count.js" async></script>
-  
-
-  
-
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-        
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-  
-    
-      <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
-  
-
-
-  
-  
 
   
 
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
