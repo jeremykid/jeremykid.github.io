@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jeremykid.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Deep learning Neural Networks and Deep Learning Improving Deep Neural Network: Hyperparameter tunning, Regularization and Optimization Strucutring your Machine Learning projects Convonlutional Neural">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Weijie Sun Blog">
+<meta property="og:url" content="http://jeremykid.github.io/Deep learning.html">
+<meta property="og:site_name" content="Weijie Sun Blog">
+<meta property="og:description" content="Deep learning Neural Networks and Deep Learning Improving Deep Neural Network: Hyperparameter tunning, Regularization and Optimization Strucutring your Machine Learning projects Convonlutional Neural">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/33/Sigmoid_function_01.png">
+<meta property="og:updated_time" content="2020-08-21T06:24:07.665Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Weijie Sun Blog">
+<meta name="twitter:description" content="Deep learning Neural Networks and Deep Learning Improving Deep Neural Network: Hyperparameter tunning, Regularization and Optimization Strucutring your Machine Learning projects Convonlutional Neural">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/3/33/Sigmoid_function_01.png">
+
+<link rel="canonical" href="http://jeremykid.github.io/Deep learning">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title> | Weijie Sun Blog
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Weijie Sun Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To elegant code</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-presentations">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Presentations</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h1 id="Deep-learning"><a href="#Deep-learning" class="headerlink" title="Deep learning"></a>Deep learning</h1><ol>
+<li>Neural Networks and Deep Learning</li>
+<li>Improving Deep Neural Network: Hyperparameter tunning, Regularization and Optimization</li>
+<li>Strucutring your Machine Learning projects</li>
+<li>Convonlutional Neural Networks</li>
+<li>Natural Language Processing: Building Sequence Models</li>
+</ol>
+<p>Supervised Machine Learning</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Input(x)</th>
+<th style="text-align:center">Output(y)</th>
+<th style="text-align:center">Application</th>
+<th style="text-align:center">possible structure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Home features</td>
+<td style="text-align:center">Price</td>
+<td style="text-align:center">Real Estate</td>
+<td style="text-align:center">standard NN</td>
+</tr>
+<tr>
+<td style="text-align:center">Ad, user info</td>
+<td style="text-align:center">Click on ad? (0/1)</td>
+<td style="text-align:center">Online Advertising</td>
+<td style="text-align:center">standard NN</td>
+</tr>
+<tr>
+<td style="text-align:center">Image</td>
+<td style="text-align:center">Object(1, …, 1000)</td>
+<td style="text-align:center">Photo tagging</td>
+<td style="text-align:center">CNN</td>
+</tr>
+<tr>
+<td style="text-align:center">Audio</td>
+<td style="text-align:center">Text transcript</td>
+<td style="text-align:center">Speech recognition</td>
+<td style="text-align:center">RNN</td>
+</tr>
+<tr>
+<td style="text-align:center">English</td>
+<td style="text-align:center">Chinese</td>
+<td style="text-align:center">Machine translation</td>
+<td style="text-align:center">RNN</td>
+</tr>
+<tr>
+<td style="text-align:center">Image, Radar info</td>
+<td style="text-align:center">Position of other cars</td>
+<td style="text-align:center">autonomous driving</td>
+<td style="text-align:center">Custom/Hybrid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Structured-Data-vs-Unstructured-Data"><a href="#Structured-Data-vs-Unstructured-Data" class="headerlink" title="Structured Data vs Unstructured Data"></a>Structured Data vs Unstructured Data</h2><p>Structured Data: Features 像个表格一样</p>
+<p>Unstructured Data: Audio/Image/Text 每一小段数据都可以当成feature</p>
+<h2 id="Scale-drives-deep-learning-progress"><a href="#Scale-drives-deep-learning-progress" class="headerlink" title="Scale drives deep learning progress"></a>Scale drives deep learning progress</h2><ul>
+<li>Data</li>
+<li>Computation</li>
+<li>Algorithm</li>
+</ul>
+<p><em>research cycle Idea/Code/Experiment</em></p>
+<h1 id="Binary-CLassification"><a href="#Binary-CLassification" class="headerlink" title="Binary CLassification"></a>Binary CLassification</h1><p>output y: could only be 0 or 1</p>
+<p>input x: image: 64 x 64 x 3 (pixel x pixel x channel(RGB))</p>
+<p>n_x = 12288 = 64 x 64 x 3</p>
+<p><em>logistcal regression</em> </p>
+<p>(X, y), X \in R^{n_x}, y = {0, 1}</p>
+<p>m trainning examples: {(X^{1}, y^(1)), …}</p>
+<p>M = M_train M_test = #test examples</p>
+<p>X = [x(1), x(2), x(m)] = n_{x} x m matrix</p>
+<p>Y = [y(1), y(2), … y(n)] = 1 x m matrix</p>
+<h1 id="Logistical-Regression"><a href="#Logistical-Regression" class="headerlink" title="Logistical Regression"></a>Logistical Regression</h1><p>Given x, want y^hat = P(y=1|x)</p>
+<p>x \in R^{n_x}</p>
+<p>Parameters: w \in R^{n_x}, b \in R</p>
+<p>Output y^hat = W^T x + b , we except y^hat in [0, 1]</p>
+<p>Since the W^T x + b could be negative or &gt; 1. then it loss the meaning.</p>
+<p>then we use the sigmoid function</p>
+<p>y^hat = sigmoid(W^T x + b)</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Sigmoid_function_01.png" alt=""></p>
+<p>sigmoid(Z) = \frac{1}{1+e^{-z}}</p>
+<h2 id="another-notation"><a href="#another-notation" class="headerlink" title="another notation"></a>another notation</h2><p>x_0 = 1, x \in R^{n_x + 1}</p>
+<p>y^hat = sigmoid(\theta^T x)</p>
+<p>theta = [theta_0] &lt;- b<br>        [theta_1] &lt;- w<br>        [theta_2] &lt;- w<br>        ….<br>        [theta_n_x] &lt;- w</p>
+<h1 id="Logistc-Regression-cost-function"><a href="#Logistc-Regression-cost-function" class="headerlink" title="Logistc Regression cost function"></a>Logistc Regression cost function</h1><p>Given {(x^(1), y(1)), …, (x^(m), y^(m))}, want y^hat(i) = y^(i).</p>
+<p>Loss(error) function: (for single one)</p>
+<p>L(y^hat, y) = 1/2(y^hat - y)^2, It is a reasonable loss function, but Gradient decent could not work well.</p>
+<p>L(y^hat, y) = - (y \log(y^hat) + (1-y) \log(1-y^hat))</p>
+<p>if y = 1, L(y^hat, y) = -\log(y^hat), we want y^hat large</p>
+<p>if y = 0, L(y^hat, y) = -\log(1-y^hat), we want log(1-y^hat) large</p>
+<p>Cost function: for Group loss estimation</p>
+<h1 id="ECG"><a href="#ECG" class="headerlink" title="ECG:"></a>ECG:</h1><p>Optimizer<br>Adam/Adamax/RMSprop</p>
+<p>Pretrain/non_Pretrain</p>
+<p>drop_out rate</p>
+<p>It is not the graident exploring</p>
+<p>loss decreasing then nan</p>
+<p>I could not find the dirty data.</p>
+<p>Test, makes</p>
+<p><a href="http://ce.sharif.edu/courses/93-94/2/ce957-1/resources/root/Point%20Processes/Temporal%20point%20processes%20-%20the%20conditional%20intensity%20function-2011.pdf" target="_blank" rel="noopener">http://ce.sharif.edu/courses/93-94/2/ce957-1/resources/root/Point%20Processes/Temporal%20point%20processes%20-%20the%20conditional%20intensity%20function-2011.pdf</a><br>A few ML papers in this area:<br><a href="http://papers.nips.cc/paper/4395-a-model-for-temporal-dependencies-in-event-streams.pdf" target="_blank" rel="noopener">http://papers.nips.cc/paper/4395-a-model-for-temporal-dependencies-in-event-streams.pdf</a><br><a href="https://link.springer.com/content/pdf/10.1007/978-3-642-40994-3_35.pdf" target="_blank" rel="noopener">https://link.springer.com/content/pdf/10.1007/978-3-642-40994-3_35.pdf</a><br><a href="http://papers.nips.cc/paper/7252-the-neural-hawkes-process-a-neurally-self-modulating-multivariate-point-process.pdf" target="_blank" rel="noopener">http://papers.nips.cc/paper/7252-the-neural-hawkes-process-a-neurally-self-modulating-multivariate-point-process.pdf</a></p>
+<p>multiple events </p>
+<p>design algorithm / eveluating because censoring.</p>
+<p>D-Calibration</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3143507/" target="_blank" rel="noopener">Informing sequential clinical decision-making through reinforcement learning: an empirical study</a></p>
+<p><a href="https://arxiv.org/pdf/1801.09271.pdf" target="_blank" rel="noopener">Deep Reinforcement Learning for Dynamic<br>Treatment Regimes on Medical Registry Data</a></p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Deep-learning"><span class="nav-number">1.</span> <span class="nav-text">Deep learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Structured-Data-vs-Unstructured-Data"><span class="nav-number">1.1.</span> <span class="nav-text">Structured Data vs Unstructured Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scale-drives-deep-learning-progress"><span class="nav-number">1.2.</span> <span class="nav-text">Scale drives deep learning progress</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Binary-CLassification"><span class="nav-number">2.</span> <span class="nav-text">Binary CLassification</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logistical-Regression"><span class="nav-number">3.</span> <span class="nav-text">Logistical Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#another-notation"><span class="nav-number">3.1.</span> <span class="nav-text">another notation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logistc-Regression-cost-function"><span class="nav-number">4.</span> <span class="nav-text">Logistc Regression cost function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ECG"><span class="nav-number">5.</span> <span class="nav-text">ECG:</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Weijie Sun"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">Weijie Sun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Weijie Sun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://jeremykid.github.io/Deep learning.html";
+    this.page.identifier = "Deep learning.html";
+    this.page.title = "";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-jeremykid-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

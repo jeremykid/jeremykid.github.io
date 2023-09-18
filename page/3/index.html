@@ -117,12 +117,17 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+    <a href="/about" rel="section"><i class="user fa-fw"></i>About</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-tags">
 
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-presentations">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Presentations</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -180,6 +185,100 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/06/Learn-PyMOL-for-Biology-Research-1/" class="post-title-link" itemprop="url">Learn-PyMOL-for-Biology-Research-1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-08-06 16:37:41" itemprop="dateCreated datePublished" datetime="2016-08-06T16:37:41-06:00">2016-08-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2016-08-24 00:36:23" itemprop="dateModified" datetime="2016-08-24T00:36:23-06:00">2016-08-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Updated-in-Aug-22-2016"><a href="#Updated-in-Aug-22-2016" class="headerlink" title="Updated in Aug/22/2016"></a>Updated in Aug/22/2016</h1><p>Here I will teach How to set the environment in Mac</p>
+<ol>
+<li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">http://railsapps.github.io/xcode-command-line-tools.html</a>]</p>
+</li>
+<li><p>(install the MacPort)[<a href="https://www.macports.org/install.php" target="_blank" rel="noopener">https://www.macports.org/install.php</a>]<br> update MacPort by this command</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Tried to install PyMOL by MacPort</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure>
+<p> And following the tips in the warning to install the python</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~/ -type f -name &quot;_cmd.so&quot;</span><br></pre></td></tr></table></figure>
+<p> eg: return </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</span><br></pre></td></tr></table></figure>
+<p> Try to add the path of folder of pymol in the PYTHONPATH<br> eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
+<p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
+<h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
+<p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="noopener">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure></p>
+<p>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
+<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="noopener">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
+<p>Try this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure></p>
+<p>The other issue make me so annoying is that<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure></p>
+<p>I in my<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure></p>
+<p>It only has these following files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure></p>
+<p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
+<p>See you tomorrow. Hopefully, I could setup the environment.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="noopener">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="noopener">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -990,7 +1089,7 @@ Miller-Rabin is only judge the prime not find the factors.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1000,7 +1099,8 @@ Miller-Rabin is only judge the prime not find the factors.
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+          
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1027,7 +1127,7 @@ Miller-Rabin is only judge the prime not find the factors.
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

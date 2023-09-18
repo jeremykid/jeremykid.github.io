@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jeremykid.github.io/about/index.html</loc>
+    
+    <lastmod>2023-09-18T02:35:21.524Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeremykid.github.io/categories/index.html</loc>
+    
+    <lastmod>2023-09-18T02:24:42.999Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeremykid.github.io/Deep%20learning.html</loc>
+    
+    <lastmod>2020-08-21T06:24:07.665Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeremykid.github.io/2020/06/23/Survival-Analysis-note-0/</loc>
+    
+    <lastmod>2020-08-06T19:00:42.714Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jeremykid.github.io/2018/07/02/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</loc>
     
     <lastmod>2019-04-01T00:27:50.178Z</lastmod>
@@ -107,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://jeremykid.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-06-18T04:26:03.546Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jeremykid.github.io/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/</loc>
     
     <lastmod>2018-06-05T07:39:07.250Z</lastmod>
@@ -131,13 +152,6 @@
     <loc>http://jeremykid.github.io/2018/05/20/cs231n-note-1/</loc>
     
     <lastmod>2018-05-28T02:25:25.950Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeremykid.github.io/about/index.html</loc>
-    
-    <lastmod>2018-05-25T02:14:04.579Z</lastmod>
     
   </url>
   
