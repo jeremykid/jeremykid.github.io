@@ -1,443 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
-    
-    
-    
   <url>
     <loc>http://jeremykid.github.io/2020/06/23/Survival-Analysis-note-0/</loc>
-    <lastmod>2020-08-06T19:00:42.714Z</lastmod>
-    <data>
-        <display>
-        <title>Survival Analysis - note 0</title>
-        <pubTime>2020-06-24T03:16:51.000Z</pubTime>
-        
-        <tag>Machine_Learning, Survival_Analysis</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2024-07-26</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/07/02/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</loc>
-    <lastmod>2019-04-01T00:27:50.178Z</lastmod>
-    <data>
-        <display>
-        <title>中国剩余定理</title>
-        <pubTime>2018-07-03T04:32:36.000Z</pubTime>
-        
-        <tag>math</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-01</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2019/03/14/partial-plots/</loc>
-    <lastmod>2019-03-15T03:47:28.775Z</lastmod>
-    <data>
-        <display>
-        <title>partial-plots</title>
-        <pubTime>2019-03-15T03:46:58.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-15</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2019/02/26/permutation-Importance/</loc>
-    <lastmod>2019-02-26T07:46:36.190Z</lastmod>
-    <data>
-        <display>
-        <title>Permutation-Importance</title>
-        <pubTime>2019-02-26T07:41:01.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-26</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2019/02/21/Use-Cases-for-Model-Insights/</loc>
-    <lastmod>2019-02-21T07:42:03.796Z</lastmod>
-    <data>
-        <display>
-        <title>Use Cases for Model Insights</title>
-        <pubTime>2019-02-21T07:30:11.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-21</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/12/14/Docker-%E2%80%94-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2019-01-29T18:05:26.116Z</lastmod>
-    <data>
-        <display>
-        <title>Docker — 从入门到实践</title>
-        <pubTime>2018-12-14T11:29:57.000Z</pubTime>
-        
-        <tag>Docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-29</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2019/01/22/%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%8F%91%E7%8E%B0%E5%A4%96%E6%98%9F%E4%BF%A1%E5%8F%B7%E6%9C%89%E6%84%9F/</loc>
-    <lastmod>2019-01-23T06:46:09.780Z</lastmod>
-    <data>
-        <display>
-        <title>加拿大发现外星信号有感</title>
-        <pubTime>2019-01-23T02:56:22.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-23</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/12/14/Reinforcement-Learning-Note-1/</loc>
-    <lastmod>2018-12-14T11:45:46.425Z</lastmod>
-    <data>
-        <display>
-        <title>Reinforcement Learning Note 1</title>
-        <pubTime>2018-12-14T11:01:30.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
+    <lastmod>2018-12-14</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/07/30/%E6%95%B0%E5%AD%A6%E6%89%8B%E5%86%8C/</loc>
-    <lastmod>2018-08-15T03:40:19.548Z</lastmod>
-    <data>
-        <display>
-        <title>数学手册</title>
-        <pubTime>2018-07-30T06:01:07.000Z</pubTime>
-        
-        <tag>Math</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-15</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/05/24/Install-python-library/</loc>
-    <lastmod>2018-07-29T22:34:14.302Z</lastmod>
-    <data>
-        <display>
-        <title>Install python library</title>
-        <pubTime>2018-05-25T05:01:30.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-29</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/07/29/cs231n-note-6/</loc>
-    <lastmod>2018-07-29T22:03:15.859Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n-note-6</title>
-        <pubTime>2018-07-29T21:06:19.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-29</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/07/16/cs231n-note-5/</loc>
-    <lastmod>2018-07-29T20:52:08.248Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n-note-5</title>
-        <pubTime>2018-07-17T03:03:08.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-29</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/06/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%9F%E7%89%A9%E7%81%B5%E9%AD%82/</loc>
-    <lastmod>2018-07-17T02:55:00.244Z</lastmod>
-    <data>
-        <display>
-        <title>有趣的生物灵魂</title>
-        <pubTime>2018-06-23T21:20:06.000Z</pubTime>
-        
-        <tag>Biology</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-17</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/06/18/cs231n-note-4/</loc>
-    <lastmod>2018-07-11T04:33:39.544Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n-note-4</title>
-        <pubTime>2018-06-19T04:23:21.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-11</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/06/04/cs231n-note-3/</loc>
-    <lastmod>2018-06-19T04:21:53.413Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n-note-3</title>
-        <pubTime>2018-06-04T06:38:22.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-06-19</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/06/04/sequelize-cli-NodeJs-Learning-Notes/</loc>
-    <lastmod>2018-06-05T07:39:07.250Z</lastmod>
-    <data>
-        <display>
-        <title>sequelize cli NodeJs Learning Notes</title>
-        <pubTime>2018-06-04T06:52:04.000Z</pubTime>
-        
-        <tag>NodeJs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-06-05</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/05/21/cs231n-note-2/</loc>
-    <lastmod>2018-06-04T06:43:39.190Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n note - 2</title>
-        <pubTime>2018-05-21T20:56:48.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-06-04</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/05/20/cs231n-note-1/</loc>
-    <lastmod>2018-05-28T02:25:25.950Z</lastmod>
-    <data>
-        <display>
-        <title>cs231n note - 1</title>
-        <pubTime>2018-05-20T23:26:44.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-05-28</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/</loc>
-    <lastmod>2018-05-24T07:07:22.969Z</lastmod>
-    <data>
-        <display>
-        <title>Machine Learning Notes - 1</title>
-        <pubTime>2018-05-20T22:15:11.000Z</pubTime>
-        
-        <tag>Machine_Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-05-24</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2017/06/13/Docker-Notes/</loc>
-    <lastmod>2017-06-14T05:12:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>Docker Notes</title>
-        <pubTime>2017-06-14T04:40:16.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-06-14</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/</loc>
-    <lastmod>2016-08-24T06:36:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Learn-PyMOL-for-Biology-Research-1</title>
-        <pubTime>2016-08-06T22:37:41.000Z</pubTime>
-        
-        <tag>Research</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2016-08-24</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/</loc>
-    <lastmod>2016-08-02T22:14:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>Machine Learning Project[1]-Weijie Sun</title>
-        <pubTime>2016-08-02T21:37:01.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Machine-Learning</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2016-08-02</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2016/07/27/My%20Ionic-Hybrid%20Experience%5B1%5D/</loc>
-    <lastmod>2016-07-28T19:04:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>My Ionic-Hybrid Experience[1]</title>
-        <pubTime>2016-07-27T19:26:54.000Z</pubTime>
-        
-        <tag>Web, Mobile</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
+    <lastmod>2016-07-28</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2016/07/18/Algorithm/</loc>
-    <lastmod>2016-07-21T07:12:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>Algorithm - Weijie Sun</title>
-        <pubTime>2016-07-18T22:54:34.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="Algorithm" url="http://jeremykid.github.io/categories/Algorithm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2016-07-21</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2016/07/18/HIV-project/</loc>
-    <lastmod>2016-07-19T23:37:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>HIV_project - Weijie Sun</title>
-        <pubTime>2016-07-18T21:32:18.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2016-07-19</lastmod>
+  </url>
   <url>
     <loc>http://jeremykid.github.io/2016/07/15/hello-world/</loc>
-    <lastmod>2016-07-15T22:43:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-07-15T22:43:52.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-</urlset>
+    <lastmod>2016-07-15</lastmod>
+  </url>
+</urlset> 

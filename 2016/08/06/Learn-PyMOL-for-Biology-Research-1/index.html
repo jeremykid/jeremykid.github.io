@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"jeremykid.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Updated in Aug/22/2016Here I will teach How to set the environment in Mac  (install the Xcode and Xcode-command-tool.)[http://railsapps.github.io/xcode-command-line-tools.html]  (install the MacPort)[">
-<meta name="keywords" content="Research">
+  <meta name="description" content="Updated in Aug&#x2F;22&#x2F;2016Here I will teach How to set the environment in Mac  (install the Xcode and Xcode-command-tool.)[http:&#x2F;&#x2F;railsapps.github.io&#x2F;xcode-command-line-tools.html]  (install the MacPort)[">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn-PyMOL-for-Biology-Research-1">
 <meta property="og:url" content="http://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:description" content="Updated in Aug/22/2016Here I will teach How to set the environment in Mac  (install the Xcode and Xcode-command-tool.)[http://railsapps.github.io/xcode-command-line-tools.html]  (install the MacPort)[">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2016-08-24T06:36:23.000Z">
+<meta property="og:description" content="Updated in Aug&#x2F;22&#x2F;2016Here I will teach How to set the environment in Mac  (install the Xcode and Xcode-command-tool.)[http:&#x2F;&#x2F;railsapps.github.io&#x2F;xcode-command-line-tools.html]  (install the MacPort)[">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2016-08-06T22:37:41.000Z">
+<meta property="article:modified_time" content="2016-08-24T06:36:23.000Z">
+<meta property="article:author" content="Weijie Sun">
+<meta property="article:tag" content="Research">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learn-PyMOL-for-Biology-Research-1">
-<meta name="twitter:description" content="Updated in Aug/22/2016Here I will teach How to set the environment in Mac  (install the Xcode and Xcode-command-tool.)[http://railsapps.github.io/xcode-command-line-tools.html]  (install the MacPort)[">
 
 <link rel="canonical" href="http://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/">
 
@@ -77,10 +77,14 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,34 +245,32 @@
       
         <h1 id="Updated-in-Aug-22-2016"><a href="#Updated-in-Aug-22-2016" class="headerlink" title="Updated in Aug/22/2016"></a>Updated in Aug/22/2016</h1><p>Here I will teach How to set the environment in Mac</p>
 <ol>
-<li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">http://railsapps.github.io/xcode-command-line-tools.html</a>]</p>
+<li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html]">http://railsapps.github.io/xcode-command-line-tools.html]</a></p>
 </li>
-<li><p>(install the MacPort)[<a href="https://www.macports.org/install.php" target="_blank" rel="noopener">https://www.macports.org/install.php</a>]<br> update MacPort by this command</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
+<li><p>(install the MacPort)[<a href="https://www.macports.org/install.php]">https://www.macports.org/install.php]</a><br> update MacPort by this command</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Tried to install PyMOL by MacPort</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure>
 <p> And following the tips in the warning to install the python</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~/ -type f -name &quot;_cmd.so&quot;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~/ -type f -name &quot;_cmd.so&quot;</span><br></pre></td></tr></table></figure>
 <p> eg: return </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</span><br></pre></td></tr></table></figure>
 <p> Try to add the path of folder of pymol in the PYTHONPATH<br> eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
 <p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
 <h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
-<p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="noopener">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure></p>
-<p>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
-<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="noopener">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
-<p>Try this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure></p>
-<p>The other issue make me so annoying is that<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure></p>
-<p>I in my<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure></p>
-<p>It only has these following files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure></p>
-<p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
+<p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure><br>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
+<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
+<p>Try this<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure></p>
+<p>The other issue make me so annoying is that<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure></p>
+<p>I in my<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure></p>
+<p>It only has these following files:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure><br>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
 <p>See you tomorrow. Hopefully, I could setup the environment.</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="noopener">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="noopener">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
 
     </div>
 
@@ -359,7 +361,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Updated-in-Aug-22-2016"><span class="nav-number">1.</span> <span class="nav-text">Updated in Aug/22/2016</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">2.</span> <span class="nav-text">Abstract:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setup-Environment"><span class="nav-number">3.</span> <span class="nav-text">Setup Environment.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Updated-in-Aug-22-2016"><span class="nav-number">1.</span> <span class="nav-text">Updated in Aug&#x2F;22&#x2F;2016</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">2.</span> <span class="nav-text">Abstract:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setup-Environment"><span class="nav-number">3.</span> <span class="nav-text">Setup Environment.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -413,7 +415,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -439,9 +441,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -450,7 +460,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -488,7 +500,7 @@
       (d.head || d.body).appendChild(s);
     }
   });
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

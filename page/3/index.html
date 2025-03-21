@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -24,9 +24,9 @@
 <meta property="og:title" content="Weijie Sun Blog">
 <meta property="og:url" content="http://jeremykid.github.io/page/3/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Weijie Sun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weijie Sun Blog">
 
 <link rel="canonical" href="http://jeremykid.github.io/page/3/">
 
@@ -72,10 +72,14 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,34 +240,32 @@
       
           <h1 id="Updated-in-Aug-22-2016"><a href="#Updated-in-Aug-22-2016" class="headerlink" title="Updated in Aug/22/2016"></a>Updated in Aug/22/2016</h1><p>Here I will teach How to set the environment in Mac</p>
 <ol>
-<li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">http://railsapps.github.io/xcode-command-line-tools.html</a>]</p>
+<li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html]">http://railsapps.github.io/xcode-command-line-tools.html]</a></p>
 </li>
-<li><p>(install the MacPort)[<a href="https://www.macports.org/install.php" target="_blank" rel="noopener">https://www.macports.org/install.php</a>]<br> update MacPort by this command</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
+<li><p>(install the MacPort)[<a href="https://www.macports.org/install.php]">https://www.macports.org/install.php]</a><br> update MacPort by this command</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Tried to install PyMOL by MacPort</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure>
 <p> And following the tips in the warning to install the python</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~/ -type f -name &quot;_cmd.so&quot;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~/ -type f -name &quot;_cmd.so&quot;</span><br></pre></td></tr></table></figure>
 <p> eg: return </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</span><br></pre></td></tr></table></figure>
 <p> Try to add the path of folder of pymol in the PYTHONPATH<br> eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
 <p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
 <h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
-<p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="noopener">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure></p>
-<p>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
-<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="noopener">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
-<p>Try this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure></p>
-<p>The other issue make me so annoying is that<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure></p>
-<p>I in my<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure></p>
-<p>It only has these following files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure></p>
-<p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
+<p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure><br>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
+<p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
+<p>Try this<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure></p>
+<p>The other issue make me so annoying is that<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure></p>
+<p>I in my<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure></p>
+<p>It only has these following files:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure><br>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
 <p>See you tomorrow. Hopefully, I could setup the environment.</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/" target="_blank" rel="noopener">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install" target="_blank" rel="noopener">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
 
       
     </div>
@@ -322,15 +324,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I have taken a Machine Learning Course at the University of Alberta. Our professor is <a href="https://en.wikipedia.org/wiki/Russell_Greiner" target="_blank" rel="noopener">Russell Greiner</a>. We need to make a project and do some researches by Machine Learning method with our coach <a href="https://sites.ualberta.ca/~golmoham/" target="_blank" rel="noopener">Koosha Golmohammadi</a>. Since this is my first Machine Learning project. Soooo, this is not as good as some projects made by Machine Learning experts. However, we achieve a result is 90% accuracy which is closed to some the U.S agency in Boston.</p>
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I have taken a Machine Learning Course at the University of Alberta. Our professor is <a href="https://en.wikipedia.org/wiki/Russell_Greiner">Russell Greiner</a>. We need to make a project and do some researches by Machine Learning method with our coach <a href="https://sites.ualberta.ca/~golmoham/">Koosha Golmohammadi</a>. Since this is my first Machine Learning project. Soooo, this is not as good as some projects made by Machine Learning experts. However, we achieve a result is 90% accuracy which is closed to some the U.S agency in Boston.</p>
 <h1 id="1-Scraping-Data"><a href="#1-Scraping-Data" class="headerlink" title="1 Scraping Data."></a>1 Scraping Data.</h1><p>We scraped some real estate data from real estate data website from Edmonton and marked in Edmonton Map.</p>
 <p><img src="/images/MachineLearning-data2.png" alt=""></p>
-<h1 id="2-Matching-Data"><a href="#2-Matching-Data" class="headerlink" title="2 Matching Data"></a>2 Matching Data</h1><p>Then we tried to match the real estate data with over 110 features in <a href="https://data.edmonton.ca/" target="_blank" rel="noopener">Open City Edmonton Data</a></p>
+<h1 id="2-Matching-Data"><a href="#2-Matching-Data" class="headerlink" title="2 Matching Data"></a>2 Matching Data</h1><p>Then we tried to match the real estate data with over 110 features in <a href="https://data.edmonton.ca/">Open City Edmonton Data</a></p>
 <p>It is a tough work there are different names for an address which is easier for the human to understand than a machine. After a little of the algorithm in nature language process(very basic). </p>
 <p>we got the following useful data.<br><img src="/images/MachineLearning-data1.png" alt=""></p>
 <p>This is our first step for collating data and scraping data.</p>
 <p>I will keep updating for Machine learning.<br>See you next time.</p>
-<p><a href="https://github.com/koosha/property_values" target="_blank" rel="noopener">Our code resource</a></p>
+<p><a href="https://github.com/koosha/property_values">Our code resource</a></p>
 
       
     </div>
@@ -350,7 +352,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/27/My Ionic-Hybrid Experience[1]/">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/27/My%20Ionic-Hybrid%20Experience[1]/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -364,7 +366,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2016/07/27/My Ionic-Hybrid Experience[1]/" class="post-title-link" itemprop="url">My Ionic-Hybrid Experience[1]</a>
+            <a href="/2016/07/27/My%20Ionic-Hybrid%20Experience%5B1%5D/" class="post-title-link" itemprop="url">My Ionic-Hybrid Experience[1]</a>
         </h2>
 
         <div class="post-meta">
@@ -821,9 +823,9 @@ Miller-Rabin is only judge the prime not find the factors.
 </tr>
 </tbody>
 </table>
-<h2 id="3-How-to-run-the-code"><a href="#3-How-to-run-the-code" class="headerlink" title="3 How to run the code:"></a>3 How to run the code:</h2><p>There is a easy way to run by<br><figure class="highlight python"><figcaption><span>runner.py```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Then following the introduction. </span><br><span class="line"></span><br><span class="line">Firstly, you will see this introduction format.</span><br></pre></td></tr></table></figure></p>
-<p>integer factorization algorithm<br>type the number you want to run the algorithm<br>eg: 1<br>then will run the Trial division<br>1.Trial division<br>2.Euler’s factorization method<br>3.Fermat’s factorization method<br>4.Pollard’s rho algorithm<br>input the number:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Then input the id of factorization method.</span><br><span class="line"></span><br><span class="line">for the 3rd and 4th, you also need to choose the id of the prime generate method.</span><br></pre></td></tr></table></figure></p>
-<p>runner.py<br>  -+—-1 “Trial division”—-+—“type number of testcases”<br>   |                          +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-2 “Euler’s factorization method”—+—“type number of testcases”<br>   |                                       +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-3 “Fermat’s factorization method”—+—“type the prime generate method”<br>   |                                        +—1 “trivial prime”<br>   |                                          +       +—“type number of testcases”<br>   |                                        |    +—“input the number which needs factorization”<br>   |                                        |<br>   |                                        +—2 “Miller-Rabin primality test”<br>   |                                             +—“type number of testcases”<br>   |                                             +—“input the number which needs factorization”<br>   |<br>   |<br>   +—-4 “Pollard’s rho algorithm”—+—“type the prime generate method”<br>                                      +—1 “trivial prime”<br>                                      |        +—“type number of testcases”<br>                                      |     +—“input the number which needs factorization”<br>                                     |<br>                                      +—2 “Miller-Rabin primality test”<br>                                               +—“type number of testcases”<br>                                            +—“input the number which needs factorization”<br>```<br>Or </p>
+<h2 id="3-How-to-run-the-code"><a href="#3-How-to-run-the-code" class="headerlink" title="3 How to run the code:"></a>3 How to run the code:</h2><p>There is a easy way to run by<br><code>python runner.py</code><br>Then following the introduction. </p>
+<p>Firstly, you will see this introduction format.<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">integer factorization algorithm</span><br><span class="line">type the number you want to run the algorithm</span><br><span class="line">eg: 1</span><br><span class="line">then will run the Trial division</span><br><span class="line">1.Trial division</span><br><span class="line">2.Euler&#x27;s factorization method</span><br><span class="line">3.Fermat&#x27;s factorization method</span><br><span class="line">4.Pollard&#x27;s rho algorithm </span><br><span class="line">input the number:</span><br></pre></td></tr></table></figure><br>Then input the id of factorization method.</p>
+<p>for the 3rd and 4th, you also need to choose the id of the prime generate method.<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">runner.py </span><br><span class="line">  -+----1 &quot;Trial division&quot;----+---&quot;type number of testcases&quot;</span><br><span class="line">   |					      +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |						  </span><br><span class="line">   |</span><br><span class="line">   +----2 &quot;Euler&#x27;s factorization method&quot;---+---&quot;type number of testcases&quot;</span><br><span class="line">   |									   +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |</span><br><span class="line">   |</span><br><span class="line">   +----3 &quot;Fermat&#x27;s factorization method&quot;---+---&quot;type the prime generate method&quot;</span><br><span class="line">   |									    +---1 &quot;trivial prime&quot;</span><br><span class="line">   |										  +	   +---&quot;type number of testcases&quot;</span><br><span class="line">   |									    |    +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |									    |</span><br><span class="line">   |									    +---2 &quot;Miller-Rabin primality test&quot;</span><br><span class="line">   |											 +---&quot;type number of testcases&quot;</span><br><span class="line">   |									         +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |</span><br><span class="line">   |</span><br><span class="line">   +----4 &quot;Pollard&#x27;s rho algorithm&quot;---+---&quot;type the prime generate method&quot;</span><br><span class="line">    								  +---1 &quot;trivial prime&quot;</span><br><span class="line">    						  		|	    +---&quot;type number of testcases&quot;</span><br><span class="line">    								  |     +---&quot;input the number which needs factorization&quot;</span><br><span class="line">    						     	|</span><br><span class="line">    								  +---2 &quot;Miller-Rabin primality test&quot;</span><br><span class="line">    								  	 	+---&quot;type number of testcases&quot;</span><br><span class="line">    									    +---&quot;input the number which needs factorization&quot;</span><br></pre></td></tr></table></figure><br>Or </p>
 <p>You can runner each single file<br>which has been listed:</p>
 <table>
 <thead>
@@ -858,15 +860,15 @@ Miller-Rabin is only judge the prime not find the factors.
 </table>
 <h2 id="Anything-else-you-deem-relevant"><a href="#Anything-else-you-deem-relevant" class="headerlink" title="Anything else you deem relevant."></a>Anything else you deem relevant.</h2><p>1 I used the trivial prime:<br>    which judge if a number is a prime.</p>
 <p>2 I used another prime test called Miller-Rabin primality test:<br>    which is much quicker and I have referenced in all my test cases. Prime test is correct.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.bigprimes.net/archive/prime/10/" target="_blank" rel="noopener">http://www.bigprimes.net/archive/prime/10/</a></p>
-<p><a href="https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers" target="_blank" rel="noopener">https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Integer_factorization" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Integer_factorization</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Trial_division" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Trial_division</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Fermat%27s_factorization_method" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Fermat%27s_factorization_method</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Euler%27s_factorization_method" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euler%27s_factorization_method</a></p>
-<p><a href="http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html" target="_blank" rel="noopener">http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html</a></p>
-<p><a href="http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html" target="_blank" rel="noopener">http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.bigprimes.net/archive/prime/10/">http://www.bigprimes.net/archive/prime/10/</a></p>
+<p><a href="https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers">https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Integer_factorization">https://en.wikipedia.org/wiki/Integer_factorization</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Trial_division">https://en.wikipedia.org/wiki/Trial_division</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Fermat%27s_factorization_method">https://en.wikipedia.org/wiki/Fermat%27s_factorization_method</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm">https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Euler%27s_factorization_method">https://en.wikipedia.org/wiki/Euler%27s_factorization_method</a></p>
+<p><a href="http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html">http://mathworld.wolfram.com/PollardRhoFactorizationMethod.html</a></p>
+<p><a href="http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html">http://kadinumberprops.blogspot.ca/2012/11/fermats-factorization-running-time.html</a></p>
 
       
     </div>
@@ -936,7 +938,7 @@ Miller-Rabin is only judge the prime not find the factors.
 <h2 id="The-main-structure"><a href="#The-main-structure" class="headerlink" title="The main structure."></a>The main structure.</h2><p>If the point B rotated point A and get point C, I named points A is the father or root of B and C. As I mentioned that HIV virus’s surfaces protines order like a hexagen, protine will rotated 120 degree to get another protine. </p>
 <p>There are a K_keepers list of points which generated and a Pivot list of points.</p>
 <p>Use a Queue push in the points generated by the other 2 points, and push out the points which is already generated 2 points. When the distance is less than the protine’s radius, then the protines should not be placed at that coordination.</p>
-<p>Reference:<br><a href="https://en.wikipedia.org/wiki/Rotation_matrix" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Rotation_matrix</a></p>
+<p>Reference:<br><a href="https://en.wikipedia.org/wiki/Rotation_matrix">https://en.wikipedia.org/wiki/Rotation_matrix</a></p>
 
       
     </div>
@@ -994,15 +996,15 @@ Miller-Rabin is only judge the prime not find the factors.
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
 
       
     </div>
@@ -1127,7 +1129,7 @@ Miller-Rabin is only judge the prime not find the factors.
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1153,9 +1155,17 @@ Miller-Rabin is only judge the prime not find the factors.
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -1164,7 +1174,9 @@ Miller-Rabin is only judge the prime not find the factors.
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
 
 

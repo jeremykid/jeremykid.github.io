@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -20,26 +20,26 @@
     var CONFIG = {"hostname":"jeremykid.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维) 1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低. 朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。 eg: 数据记录为 (日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) =&amp;gt; （500，240，25，13，2">
-<meta name="keywords" content="Math">
+  <meta name="description" content="PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维) 1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低. 朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。 eg: 数据记录为 (日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) &#x3D;&gt; （500，240，25，13，2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学手册">
-<meta property="og:url" content="http://jeremykid.github.io/2018/07/30/数学手册/index.html">
+<meta property="og:url" content="http://jeremykid.github.io/2018/07/30/%E6%95%B0%E5%AD%A6%E6%89%8B%E5%86%8C/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:description" content="PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维) 1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低. 朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。 eg: 数据记录为 (日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) =&amp;gt; （500，240，25，13，2">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维) 1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低. 朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。 eg: 数据记录为 (日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) &#x3D;&gt; （500，240，25，13，2">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/d7de7b9aa6a9bbc6f6435c24173c0597464c8420">
 <meta property="og:image" content="https://pic2.zhimg.com/80/df6a713c1b97cc55bd20afce46ace718_hd.jpg">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%26+1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+3+%5C%5C+2+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+5%2F%5Csqrt%7B2%7D+%5C%5C+-1%2F%5Csqrt%7B2%7D+%5Cend%7Bpmatrix%7D">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+p_1+%5C%5C+p_2+%5C%5C+%5Cvdots+%5C%5C+p_R+%5Cend%7Bpmatrix%7D+%5Cbegin%7Bpmatrix%7D+a_1+%26+a_2+%26+%5Ccdots+%26+a_M+%5Cend%7Bpmatrix%7D+%3D+%5Cbegin%7Bpmatrix%7D+p_1a_1+%26+p_1a_2+%26+%5Ccdots+%26+p_1a_M+%5C%5C+p_2a_1+%26+p_2a_2+%26+%5Ccdots+%26+p_2a_M+%5C%5C+%5Cvdots+%26+%5Cvdots+%26+%5Cddots+%26+%5Cvdots+%5C%5C+p_Ra_1+%26+p_Ra_2+%26+%5Ccdots+%26+p_Ra_M+%5Cend%7Bpmatrix%7D">
 <meta property="og:image" content="https://pic2.zhimg.com/80/e01296f282109b59e18086843866f81a_hd.jpg">
-<meta property="og:updated_time" content="2018-08-15T03:40:19.548Z">
+<meta property="article:published_time" content="2018-07-30T06:01:07.000Z">
+<meta property="article:modified_time" content="2018-08-15T03:40:19.548Z">
+<meta property="article:author" content="Weijie Sun">
+<meta property="article:tag" content="Math">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数学手册">
-<meta name="twitter:description" content="PCA的数学原理PCA（Principal Component Analysis）是一种常用的数据分析方法(降维) 1. 数据的向量表示及降维问题我们要在降维的同时让数据信息资源的损失尽可能降低. 朴素降维思考，比如男女column， M F，可以去掉一列，因为非黑即白。 eg: 数据记录为 (日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) =&amp;gt; （500，240，25，13，2">
 <meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/d7de7b9aa6a9bbc6f6435c24173c0597464c8420">
 
-<link rel="canonical" href="http://jeremykid.github.io/2018/07/30/数学手册/">
+<link rel="canonical" href="http://jeremykid.github.io/2018/07/30/%E6%95%B0%E5%AD%A6%E6%89%8B%E5%86%8C/">
 
 
 <script id="page-configurations">
@@ -83,10 +83,14 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -201,7 +205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/30/数学手册/">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/30/%E6%95%B0%E5%AD%A6%E6%89%8B%E5%86%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -251,12 +255,12 @@
 <p>eg: 数据记录为</p>
 <p>(日期, 浏览量, 访客数, 下单数, 成交数, 成交金额) =&gt; （500，240，25，13，2312.15）T</p>
 <p>比如浏览量和访客数是有关联的，可以简单降维</p>
-<h2 id="2-向量的表示及基变换"><a href="#2-向量的表示及基变换" class="headerlink" title="2. 向量的表示及基变换"></a>2. 向量的表示及基变换</h2><h2 id="3-内积与投影"><a href="#3-内积与投影" class="headerlink" title="3. 内积与投影"></a>3. 内积与投影</h2><p><a href="https://zh.wikipedia.org/wiki/%E7%82%B9%E7%A7%AF" target="_blank" rel="noopener">内积</a>, 高中学的叫点乘，或者还看见有人叫点积（Dot Product）</p>
+<h2 id="2-向量的表示及基变换"><a href="#2-向量的表示及基变换" class="headerlink" title="2. 向量的表示及基变换"></a>2. 向量的表示及基变换</h2><h2 id="3-内积与投影"><a href="#3-内积与投影" class="headerlink" title="3. 内积与投影"></a>3. 内积与投影</h2><p><a href="https://zh.wikipedia.org/wiki/%E7%82%B9%E7%A7%AF">内积</a>, 高中学的叫点乘，或者还看见有人叫点积（Dot Product）</p>
 <p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d7de7b9aa6a9bbc6f6435c24173c0597464c8420" alt=""></p>
 <p>$ \vec A \vec B = a_1 x b_1 + … + a_n x b_n $</p>
 <p>在几何定义为向量A 和 向量B的长度 乘以 cos（夹角）如果B的模长度为1，那么AB 的点乘就是A 投影在B上的长度</p>
 <p>$ \vec A \vec B = \left\lvert \vec A \vec B \right\rvert x cos(\theta) $</p>
-<h2 id="4-基-basis"><a href="#4-基-basis" class="headerlink" title="4. 基 basis)"></a>4. 基 <a href="https://zh.wikipedia.org/wiki/%E5%9F%BA_(%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8" target="_blank" rel="noopener">basis</a>)</h2><p><img src="https://pic2.zhimg.com/80/df6a713c1b97cc55bd20afce46ace718_hd.jpg" alt="(3,2)"></p>
+<h2 id="4-基-basis"><a href="#4-基-basis" class="headerlink" title="4. 基 basis)"></a>4. 基 <a href="https://zh.wikipedia.org/wiki/%E5%9F%BA_(%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8">basis</a>)</h2><p><img src="https://pic2.zhimg.com/80/df6a713c1b97cc55bd20afce46ace718_hd.jpg" alt="(3,2)"></p>
 <p>原理上是在x轴上的投影为3，在y轴上的投影为2。 从代数原理上，（3，2） = 3x（1，0）+2x（0，1）</p>
 <p>（1，0） 和 （0，1） 就是二维空间中的一组基，基的模长度往往为1</p>
 <p>我们可以变换这组基的方向，比如（1，1）， （-1，1），然后把他转化为基，即为 (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})和(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})。 </p>
@@ -287,7 +291,7 @@
 <p>假设我们有两个字段a,b, 我们把它们按行组成矩阵 X </p>
 <p>$$ X=\begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_m \ b_1 &amp; b_2 &amp; \cdots &amp; b_m \end{pmatrix} $$</p>
 <p>然后自己相乘并乘上系数</p>
-<p>$$ \frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a<em>i^2} &amp; \frac{1}{m}\sum</em>{i=1}^m{a_ib<em>i} \ \frac{1}{m}\sum</em>{i=1}^m{a_ib<em>i} &amp; \frac{1}{m}\sum</em>{i=1}^m{b_i^2} \end{pmatrix} $$</p>
+<p>$$ \frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a_i^2} &amp; \frac{1}{m}\sum_{i=1}^m{a_ib_i} \ \frac{1}{m}\sum_{i=1}^m{a_ib_i} &amp; \frac{1}{m}\sum_{i=1}^m{b_i^2} \end{pmatrix} $$</p>
 <p>结果大概是<br>[a方差， 协方差]<br>[协方差,  b方差]</p>
 <h2 id="10-协方差矩阵对角化"><a href="#10-协方差矩阵对角化" class="headerlink" title="10. 协方差矩阵对角化"></a>10. 协方差矩阵对角化</h2><p>于是根据上面的推导，我们要让对角线上的数据尽可能的高，因为方差变大，然后非对角线的协方差尽可能的小，因为每个基要独立。这样就达成了优化的条件。</p>
 <p>接下来有点难懂：我先把每个数据都列下来</p>
@@ -310,11 +314,11 @@
 <p>1）将原始数据按列组成n行m列矩阵X</p>
 <p>2）将X的每一行（代表一个属性字段）进行零均值化，即减去这一行的均值</p>
 <p>3）$$ 求出协方差矩阵C=\frac{1}{m}XX^\mathsf{T} $$</p>
-<p>4）求出协方差矩阵的特征值及对应的特征向量 <a href="https://blog.csdn.net/u010182633/article/details/45921929" target="_blank" rel="noopener">特征值向量求法</a></p>
+<p>4）求出协方差矩阵的特征值及对应的特征向量 <a href="https://blog.csdn.net/u010182633/article/details/45921929">特征值向量求法</a></p>
 <p>5）将特征向量按对应特征值大小从上到下按行排列成矩阵，取前k行组成矩阵P</p>
 <p>6）Y=PX即为降维到k维后的数据</p>
 <p>举例那个去reference里面看更清楚，准备翻译成 IPython 更清晰解释PCA 降维</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zhuanlan.zhihu.com/p/21580949" target="_blank" rel="noopener">知乎PCA的数学原理 貌似也是转的，找不到原link</a> </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zhuanlan.zhihu.com/p/21580949">知乎PCA的数学原理 貌似也是转的，找不到原link</a> </p>
 
     </div>
 
@@ -405,7 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PCA的数学原理"><span class="nav-number">1.</span> <span class="nav-text">PCA的数学原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数据的向量表示及降维问题"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数据的向量表示及降维问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-向量的表示及基变换"><span class="nav-number">1.2.</span> <span class="nav-text">2. 向量的表示及基变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-内积与投影"><span class="nav-number">1.3.</span> <span class="nav-text">3. 内积与投影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-基-basis"><span class="nav-number">1.4.</span> <span class="nav-text">4. 基 basis)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基变换-（二维）"><span class="nav-number">1.4.1.</span> <span class="nav-text">基变换 （二维）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-基变换的矩阵表示"><span class="nav-number">1.5.</span> <span class="nav-text">5. 基变换的矩阵表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-协方差矩阵及优化目标"><span class="nav-number">1.6.</span> <span class="nav-text">6. 协方差矩阵及优化目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-方差"><span class="nav-number">1.7.</span> <span class="nav-text">7. 方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-协方差"><span class="nav-number">1.8.</span> <span class="nav-text">8. 协方差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#协方差"><span class="nav-number">1.8.1.</span> <span class="nav-text">协方差</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-协方差矩阵"><span class="nav-number">1.9.</span> <span class="nav-text">9. 协方差矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-协方差矩阵对角化"><span class="nav-number">1.10.</span> <span class="nav-text">10. 协方差矩阵对角化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实对称矩阵"><span class="nav-number">1.10.1.</span> <span class="nav-text">实对称矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-算法及实例"><span class="nav-number">1.11.</span> <span class="nav-text">11. 算法及实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.12.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PCA%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">PCA的数学原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%95%B0%E6%8D%AE%E7%9A%84%E5%90%91%E9%87%8F%E8%A1%A8%E7%A4%BA%E5%8F%8A%E9%99%8D%E7%BB%B4%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数据的向量表示及降维问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%90%91%E9%87%8F%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%8F%8A%E5%9F%BA%E5%8F%98%E6%8D%A2"><span class="nav-number">1.2.</span> <span class="nav-text">2. 向量的表示及基变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%86%85%E7%A7%AF%E4%B8%8E%E6%8A%95%E5%BD%B1"><span class="nav-number">1.3.</span> <span class="nav-text">3. 内积与投影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%9F%BA-basis"><span class="nav-number">1.4.</span> <span class="nav-text">4. 基 basis)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%8F%98%E6%8D%A2-%EF%BC%88%E4%BA%8C%E7%BB%B4%EF%BC%89"><span class="nav-number">1.4.1.</span> <span class="nav-text">基变换 （二维）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%9F%BA%E5%8F%98%E6%8D%A2%E7%9A%84%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.5.</span> <span class="nav-text">5. 基变换的矩阵表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E5%8F%8A%E4%BC%98%E5%8C%96%E7%9B%AE%E6%A0%87"><span class="nav-number">1.6.</span> <span class="nav-text">6. 协方差矩阵及优化目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%96%B9%E5%B7%AE"><span class="nav-number">1.7.</span> <span class="nav-text">7. 方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%8D%8F%E6%96%B9%E5%B7%AE"><span class="nav-number">1.8.</span> <span class="nav-text">8. 协方差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE"><span class="nav-number">1.8.1.</span> <span class="nav-text">协方差</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5"><span class="nav-number">1.9.</span> <span class="nav-text">9. 协方差矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%8C%96"><span class="nav-number">1.10.</span> <span class="nav-text">10. 协方差矩阵对角化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5"><span class="nav-number">1.10.1.</span> <span class="nav-text">实对称矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.11.</span> <span class="nav-text">11. 算法及实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.12.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -459,7 +463,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -485,9 +489,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -496,7 +508,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -570,7 +584,7 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "http://jeremykid.github.io/2018/07/30/数学手册/";
+    this.page.url = "http://jeremykid.github.io/2018/07/30/%E6%95%B0%E5%AD%A6%E6%89%8B%E5%86%8C/";
     this.page.identifier = "2018/07/30/数学手册/";
     this.page.title = "数学手册";
     };
@@ -587,7 +601,7 @@
       (d.head || d.body).appendChild(s);
     }
   });
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

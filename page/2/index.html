@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -24,9 +24,9 @@
 <meta property="og:title" content="Weijie Sun Blog">
 <meta property="og:url" content="http://jeremykid.github.io/page/2/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Weijie Sun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weijie Sun Blog">
 
 <link rel="canonical" href="http://jeremykid.github.io/page/2/">
 
@@ -72,10 +72,14 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -189,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/02/中国剩余定理/">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/07/02/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -203,7 +207,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/07/02/中国剩余定理/" class="post-title-link" itemprop="url">中国剩余定理</a>
+            <a href="/2018/07/02/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/" class="post-title-link" itemprop="url">中国剩余定理</a>
         </h2>
 
         <div class="post-meta">
@@ -247,7 +251,7 @@
 <p>然后同理，求出另外两个mod的结果再加在一起 = 233，</p>
 <p>那么所有233 + (3x5x7) x k 的数都满足这个条件</p>
 <p>接下来我想尝试写一个python 程序解决所有诸如此类的问题</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inverseMod</span><span class="params">(number, mod)</span>:</span></span><br><span class="line">    total = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(mod):</span><br><span class="line">        <span class="keyword">if</span> (total%number) == <span class="number">0</span>: </span><br><span class="line">            <span class="keyword">return</span> total/number</span><br><span class="line">        total = total + mod</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chineseRemainingTheory</span><span class="params">(remainList, modList)</span>:</span></span><br><span class="line">    inverserModList = []</span><br><span class="line">    allProduct = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> modList:</span><br><span class="line">        allProduct = allProduct * i</span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> range(len(remainList)):</span><br><span class="line">        products = (allProduct/modList[index])</span><br><span class="line">        inverse = inverseMod(products%modList[index], modList[index])</span><br><span class="line">        result = result + (inverse * products * remainList[index])</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	remainList = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>]</span><br><span class="line">	modList = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>]</span><br><span class="line">	result = chineseRemainingTheory(remainList, modList)</span><br><span class="line">	<span class="keyword">print</span> (result, <span class="string">"should = 233"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">inverseMod</span>(<span class="params">number, mod</span>):</span><br><span class="line">    total = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(mod):</span><br><span class="line">        <span class="keyword">if</span> (total%number) == <span class="number">0</span>: </span><br><span class="line">            <span class="keyword">return</span> total/number</span><br><span class="line">        total = total + mod</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">chineseRemainingTheory</span>(<span class="params">remainList, modList</span>):</span><br><span class="line">    inverserModList = []</span><br><span class="line">    allProduct = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> modList:</span><br><span class="line">        allProduct = allProduct * i</span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(remainList)):</span><br><span class="line">        products = (allProduct/modList[index])</span><br><span class="line">        inverse = inverseMod(products%modList[index], modList[index])</span><br><span class="line">        result = result + (inverse * products * remainList[index])</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">	remainList = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>]</span><br><span class="line">	modList = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>]</span><br><span class="line">	result = chineseRemainingTheory(remainList, modList)</span><br><span class="line">	<span class="built_in">print</span> (result, <span class="string">&quot;should = 233&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -267,7 +271,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/06/23/有趣的生物灵魂/">
+    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/06/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%9F%E7%89%A9%E7%81%B5%E9%AD%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -281,7 +285,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/06/23/有趣的生物灵魂/" class="post-title-link" itemprop="url">有趣的生物灵魂</a>
+            <a href="/2018/06/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%9F%E7%89%A9%E7%81%B5%E9%AD%82/" class="post-title-link" itemprop="url">有趣的生物灵魂</a>
         </h2>
 
         <div class="post-meta">
@@ -315,14 +319,14 @@
           <h1 id="变性之差一段DNA"><a href="#变性之差一段DNA" class="headerlink" title="变性之差一段DNA"></a>变性之差一段DNA</h1><p>30 年前就有一支生物团队发现一段Sry 基因，可以使雌性小白鼠发育成雄性。</p>
 <p>最近有新的进展发现Sry 基因可以控制合成SOX9的蛋白，动物会在这段蛋白的影响下发育出雄性的生殖器官。</p>
 <p>反之如果雄性缺少这段蛋白也能变成雌性。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p>(Evidence to exclude SOX9 as a candidate gene for XY sex reversal without skeletal malformation)[<a href="http://jmg.bmj.com/content/jmedgenet/33/9/800.full.pdf" target="_blank" rel="noopener">http://jmg.bmj.com/content/jmedgenet/33/9/800.full.pdf</a>]</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p>(Evidence to exclude SOX9 as a candidate gene for XY sex reversal without skeletal malformation)[<a href="http://jmg.bmj.com/content/jmedgenet/33/9/800.full.pdf]">http://jmg.bmj.com/content/jmedgenet/33/9/800.full.pdf]</a></p>
 <h1 id="非双螺旋的新DNA结构"><a href="#非双螺旋的新DNA结构" class="headerlink" title="非双螺旋的新DNA结构"></a>非双螺旋的新DNA结构</h1><p>新的结构命名为“i-motif”, 类似于结。研究人员发现i-motif-随着时间的推移而出现和消失，所以它们正在形成，溶解并再次形成。</p>
 <p>I-基序（i-motif） 可能帮助开启或关闭基因，并影响基因是否被主动读取。</p>
 <p>另外一种天然的结构</p>
 <p>G四联体（G quadruplex，又称G-tetrads或G4-DNA）</p>
 <p><img src="https://pic4.zhimg.com/v2-15a84b7be9cc709a932a465f524db957_b.gif" alt=""></p>
 <p>其中研究较为深入的区域，是染色体末端的端粒（telomere）。</p>
-<p>(DNA可不只有双螺旋结构)[<a href="https://zhuanlan.zhihu.com/p/36216255" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/36216255</a>]</p>
+<p>(DNA可不只有双螺旋结构)[<a href="https://zhuanlan.zhihu.com/p/36216255]">https://zhuanlan.zhihu.com/p/36216255]</a></p>
 
       
     </div>
@@ -426,7 +430,7 @@ dw = [x[0] * ddot, x[1] * ddot, 1.0 * ddot] # 回传到w
 <h2 id="用向量化操作计算梯度"><a href="#用向量化操作计算梯度" class="headerlink" title="用向量化操作计算梯度"></a>用向量化操作计算梯度</h2><p>其实就是矩阵相乘之类，作者建议通过维度来推测计算是否正确</p>
 <h2 id="Summary："><a href="#Summary：" class="headerlink" title="Summary："></a>Summary：</h2><p>对梯度的含义有了直观理解，知道了梯度是如何在网络中反向传播的，知道了它们是如何与网络的不同部分通信并控制其升高或者降低，并使得最终输出值更高的。(梯度如何计算)</p>
 <p>讨论了分段计算在反向传播的实现中的重要性。应该将函数分成不同的模块，这样计算局部梯度相对容易，然后基于链式法则将其“链”起来。重要的是，不需要把这些表达式写在纸上然后演算它的完整求导公式，因为实际上并不需要关于输入变量的梯度的数学公式。只需要将表达式分成不同的可以求导的模块（模块可以是矩阵向量的乘法操作，或者取最大值操作，或者加法操作等），然后在反向传播中一步一步地计算梯度。（不难理解，但是不知道实际操作是否需要，我感觉每一层都会有自己计算梯度的方法）</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h1><p><a href="https://zhuanlan.zhihu.com/p/21407711?refer=intelligentunit" target="_blank" rel="noopener">反向传播</a></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h1><p><a href="https://zhuanlan.zhihu.com/p/21407711?refer=intelligentunit">反向传播</a></p>
 
       
     </div>
@@ -505,21 +509,21 @@ dw = [x[0] * ddot, x[1] * ddot, 1.0 * ddot] # 回传到w
 <pre><code>node_modules/.bin/sequelize seed:generate --name demo-user
 </code></pre><p>在seeder 文件里</p>
 <pre><code>&apos;use strict&apos;;
-module.exports = {
-  up: (queryInterface, Sequelize) =&gt; {
-    return queryInterface.bulkInsert(&apos;Users&apos;, [{
+module.exports = &#123;
+  up: (queryInterface, Sequelize) =&gt; &#123;
+    return queryInterface.bulkInsert(&apos;Users&apos;, [&#123;
         firstName: &apos;John&apos;,
         lastName: &apos;Doe&apos;,
         email: &apos;demo@demo.com&apos;
-      }], {});
-  },
+      &#125;], &#123;&#125;);
+  &#125;,
 
-  down: (queryInterface, Sequelize) =&gt; {
-    return queryInterface.bulkDelete(&apos;Users&apos;, null, {});
-  }
-};
+  down: (queryInterface, Sequelize) =&gt; &#123;
+    return queryInterface.bulkDelete(&apos;Users&apos;, null, &#123;&#125;);
+  &#125;
+&#125;;
 </code></pre><p>Reference： </p>
-<p><a href="http://docs.sequelizejs.com/manual/tutorial/migrations.html" target="_blank" rel="noopener">Sequelize 手册</a></p>
+<p><a href="http://docs.sequelizejs.com/manual/tutorial/migrations.html">Sequelize 手册</a></p>
 
       
     </div>
@@ -673,7 +677,7 @@ for i in xrange(1000):
     it.iternext() # 到下个维度
 
   return grad
-</code></pre><p>实际中用中心差值公式（centered difference formula）[f(x+h)-f(x-h)]/2h 效果较好 <a href="https://en.wikipedia.org/wiki/Numerical_differentiation" target="_blank" rel="noopener">Numerical_differentiation</a></p>
+</code></pre><p>实际中用中心差值公式（centered difference formula）[f(x+h)-f(x-h)]/2h 效果较好 <a href="https://en.wikipedia.org/wiki/Numerical_differentiation">Numerical_differentiation</a></p>
 <pre><code># 要使用上面的代码我们需要一个只有一个参数的函数
 # (在这里参数就是权重)所以也包含了X_train和Y_train
 def CIFAR10_loss_fun(W):
@@ -702,7 +706,7 @@ for step_size_log in [-10, -9, -8, -7, -6, -5,-4,-3,-2,-1]:
 # for step size 1.000000e-02 new loss: 2539.370888
 # for step size 1.000000e-01 new loss: 25392.214036
 </code></pre><p>步长的影响：梯度指明了函数在哪个方向?是变化率最大的 步长(也叫作学习率)</p>
-<p>小步长下降稳定但进度慢 &lt;-&gt; 大步长进展快但是风险更大</p>
+<p>小步长下降稳定但进度慢 <-> 大步长进展快但是风险更大</p>
 <p>在本例中有30730个参数，所以损失函数每走一步就需要计算30731次损失函数的梯度, 效率太低</p>
 <h2 id="分析梯度法-（计算迅速，结果精确）-微分分析计算梯度"><a href="#分析梯度法-（计算迅速，结果精确）-微分分析计算梯度" class="headerlink" title="分析梯度法 （计算迅速，结果精确） 微分分析计算梯度"></a>分析梯度法 （计算迅速，结果精确） 微分分析计算梯度</h2><p>用公式计算梯度速度很快，唯一不好的就是实现的时候容易出错. 于是我们需要将分析梯度法的结果于数值梯度法作比较， 这个步骤叫做梯度检查。</p>
 <p>eg: SVM lossfunction</p>
@@ -722,8 +726,8 @@ while True:
 </code></pre><h4 id="随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><a href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）" class="headerlink" title="随机梯度下降（Stochastic Gradient Descent 简称SGD）"></a>随机梯度下降（Stochastic Gradient Descent 简称SGD）</h4><p>如果小批量数据中每个批量只有1个数据样本</p>
 <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h1><p><img src="https://pic2.zhimg.com/80/03b3eccf18ee3760e219f9f95ec14305_hd.jpg" alt=""></p>
 <p>x,y 是给定的，weight 从一个随机开始，可以随时改变。 损失函数包含两个部分：数据损失和正则化损失，在梯度下降中，计算权重的维度实现参数的更新。</p>
-<h1 id="Reference："><a href="#Reference：" class="headerlink" title="Reference："></a>Reference：</h1><p><a href="https://zhuanlan.zhihu.com/p/21360434" target="_blank" rel="noopener">最优化上</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/21387326" target="_blank" rel="noopener">最优化下</a></p>
+<h1 id="Reference："><a href="#Reference：" class="headerlink" title="Reference："></a>Reference：</h1><p><a href="https://zhuanlan.zhihu.com/p/21360434">最优化上</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21387326">最优化下</a></p>
 
       
     </div>
@@ -788,9 +792,9 @@ while True:
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Pyenv"><a href="#Pyenv" class="headerlink" title="Pyenv"></a>Pyenv</h1><p>因为之前用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> node 的版本管理器</p>
+          <h1 id="Pyenv"><a href="#Pyenv" class="headerlink" title="Pyenv"></a>Pyenv</h1><p>因为之前用<a href="https://github.com/creationix/nvm">nvm</a> node 的版本管理器</p>
 <p>所以pyenv 应该也是python 的版本管理器</p>
-<p>运行 curl -L <a href="https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer" target="_blank" rel="noopener">https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer</a> | bash</p>
+<p>运行 curl -L <a href="https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer">https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer</a> | bash</p>
 <p>然后打开 vim ~/.bash_profile </p>
 <p>添加了三行</p>
 <pre><code>export PATH=&quot;~/.pyenv/bin:$PATH&quot;
@@ -798,10 +802,10 @@ eval &quot;$(pyenv init -)&quot;
 eval &quot;$(pyenv virtualenv-init -)&quot;
 </code></pre><p>我原来的是</p>
 <pre><code>export XAMPP_HOME=/Applications/xampp/xamppfiles
-export PATH=${XAMPP_HOME}/bin:${PATH}
+export PATH=$&#123;XAMPP_HOME&#125;/bin:$&#123;PATH&#125;
 </code></pre><p>最后变成</p>
 <pre><code>export XAMPP_HOME=/Applications/xampp/xamppfiles
-export PATH=/Users/weijiesun/.pyenv/bin:${PATH}:${XAMPP_HOME}/bin
+export PATH=/Users/weijiesun/.pyenv/bin:$&#123;PATH&#125;:$&#123;XAMPP_HOME&#125;/bin
 
 eval &quot;$(pyenv init -)&quot;
 eval &quot;$(pyenv virtualenv-init -)&quot;
@@ -809,7 +813,7 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 <p>然后运行 </p>
 <pre><code>source ~/.bash_profile     
 </code></pre><p>就好了</p>
-<p>Cheating sheet：<a href="https://github.com/eteplus/blog/issues/4" target="_blank" rel="noopener">reference</a></p>
+<p>Cheating sheet：<a href="https://github.com/eteplus/blog/issues/4">reference</a></p>
 <ul>
 <li><p>安装和查看pyenv 和 python</p>
 <p>  #查看pyenv版本<br>  pyenv –version</p>
@@ -824,7 +828,7 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 </ul>
 <p>我在安装的时候遇到了一下描述的问题</p>
 <pre><code>Last 10 log lines:   File &quot;/private/var/folders/py/3006ng_x6x3g5c42jx_gznlc0000gn/T/python-build.20180618223416.3806/Python-3.6.3/Lib/ensurepip/__main__.py&quot;, line 4, in &lt;module&gt;     ensurepip._main()
-</code></pre><p><a href="http://www.cnblogs.com/mingaixin/p/6295799.html" target="_blank" rel="noopener">解决方法</a></p>
+</code></pre><p><a href="http://www.cnblogs.com/mingaixin/p/6295799.html">解决方法</a></p>
 <h1 id="Kears"><a href="#Kears" class="headerlink" title="Kears"></a>Kears</h1><pre><code># GPU 版本
 &gt;&gt;&gt; pip install --upgrade tensorflow-gpu
 
@@ -836,8 +840,8 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 
 import keras
 #然后就显示tensorflow work on backend
-</code></pre><h1 id="pyecharts"><a href="#pyecharts" class="headerlink" title="pyecharts"></a>pyecharts</h1><p><a href="https://github.com/pyecharts/pyecharts" target="_blank" rel="noopener">github pyecharts</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pyecharts</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ pip install echarts-countries-pypkg</span><br><span class="line">$ pip install echarts-china-provinces-pypkg</span><br><span class="line">$ pip install echarts-china-cities-pypkg</span><br><span class="line">$ pip install echarts-china-counties-pypkg</span><br><span class="line">$ pip install echarts-china-misc-pypkg</span><br></pre></td></tr></table></figure>
+</code></pre><h1 id="pyecharts"><a href="#pyecharts" class="headerlink" title="pyecharts"></a>pyecharts</h1><p><a href="https://github.com/pyecharts/pyecharts">github pyecharts</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pyecharts</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ pip install echarts-countries-pypkg</span><br><span class="line">$ pip install echarts-china-provinces-pypkg</span><br><span class="line">$ pip install echarts-china-cities-pypkg</span><br><span class="line">$ pip install echarts-china-counties-pypkg</span><br><span class="line">$ pip install echarts-china-misc-pypkg</span><br></pre></td></tr></table></figure>
 <p>$ pip install echarts-united-kingdom-pypkg</p>
 
       
@@ -904,9 +908,9 @@ import keras
 
       
           <p>Reference:</p>
-<p><a href="https://zhuanlan.zhihu.com/p/20918580" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20918580</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/20945670" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20945670</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/21102293" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/21102293</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/20918580">https://zhuanlan.zhihu.com/p/20918580</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/20945670">https://zhuanlan.zhihu.com/p/20945670</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21102293">https://zhuanlan.zhihu.com/p/21102293</a></p>
 <h1 id="Linear-Classification"><a href="#Linear-Classification" class="headerlink" title="Linear Classification"></a>Linear Classification</h1><h2 id="score-function-评分函数"><a href="#score-function-评分函数" class="headerlink" title="score function (评分函数)"></a>score function (评分函数)</h2><p>原始图片到各个类别的评分情况， 分越高越接近</p>
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+f%28x_i%2CW%2Cb%29%3DWx_i%2Bb" alt=""></p>
 <p>每个图像都是 [D x 1] D = pixel X pixel X 3(RGB)</p>
@@ -1020,7 +1024,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 </li>
 </ul>
 <p>—-sad—-<br>Test Mathjax, 但是公式实在太复杂。</p>
-<p>$$<br>L<em>{i}=f</em>{y<em>i}+\log (\sum</em>{j} e^{f_j})<br>$$</p>
+<p>$$<br>L_{i}=f_{y_i}+\log (\sum_{j} e^{f_j})<br>$$</p>
 <p>$L_{i} = -\log \frac {e^{f_y}} {e^{f_j}}$</p>
 <p>$\sum_{j=0}$</p>
 <p>$$<br>a+b=c<br>$$</p>
@@ -1090,8 +1094,8 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 
       
           <p>Reference：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/20894041" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20894041</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/20900216" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20900216</a> </p>
+<p><a href="https://zhuanlan.zhihu.com/p/20894041">https://zhuanlan.zhihu.com/p/20894041</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/20900216">https://zhuanlan.zhihu.com/p/20900216</a> </p>
 <h1 id="图像分类"><a href="#图像分类" class="headerlink" title="图像分类"></a>图像分类</h1><p>颜色channel 有三个 red green blue， RGB</p>
 <p>流程就是 输入 -&gt; 学习 -&gt; 评价</p>
 <h1 id="K-Nearest-Neighbor-分类器"><a href="#K-Nearest-Neighbor-分类器" class="headerlink" title="K Nearest Neighbor 分类器"></a>K Nearest Neighbor 分类器</h1><p>k 越高 generalization 能力越好</p>
@@ -1102,7 +1106,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 <p><img src="https://www.zhihu.com/equation?tex=%5Cdisplaystyle+d_2%28I_1%2CI_2%29%3D%5Csqrt%7B+%5Csum_p%28I%5Ep_1-I%5Ep_2%29%5E2%7D" alt=""></p>
 <p><code>distances = np.sqrt(np.sum(np.square(self.Xtr - X[i,:]), axis = 1))</code></p>
 <p>L1和L2比较。。在面对两个向量之间的差异时，L2比L1更加不能容忍这些差异。也就是说，相对于1个巨大的差异，L2距离更倾向于接受多个中等程度的差异。L1和L2都是在p-norm常用的特殊形式。</p>
-<h2 id="hyperparameter-超参数，需要去测试调整"><a href="#hyperparameter-超参数，需要去测试调整" class="headerlink" title="hyperparameter: 超参数，需要去测试调整"></a>hyperparameter: 超参数，需要去测试调整</h2><h2 id="validation-set-测试集-只能使用一次"><a href="#validation-set-测试集-只能使用一次" class="headerlink" title="validation set: 测试集 只能使用一次"></a>validation set: 测试集 只能使用一次</h2><h2 id="Cross-validation-train-lt-gt-test"><a href="#Cross-validation-train-lt-gt-test" class="headerlink" title="Cross validation: train &lt;-&gt; test"></a>Cross validation: train &lt;-&gt; test</h2><p>##k Nearest Neighbor 优缺点:</p>
+<h2 id="hyperparameter-超参数，需要去测试调整"><a href="#hyperparameter-超参数，需要去测试调整" class="headerlink" title="hyperparameter: 超参数，需要去测试调整"></a>hyperparameter: 超参数，需要去测试调整</h2><h2 id="validation-set-测试集-只能使用一次"><a href="#validation-set-测试集-只能使用一次" class="headerlink" title="validation set: 测试集 只能使用一次"></a>validation set: 测试集 只能使用一次</h2><h2 id="Cross-validation-train-test"><a href="#Cross-validation-train-test" class="headerlink" title="Cross validation: train  test"></a>Cross validation: train <-> test</h2><p>##k Nearest Neighbor 优缺点:</p>
 <p>Advantange:易于理解，实现简单。</p>
 <p>Disadvantage: 算法的训练不需要花时间，因为其训练过程只是将训练集数据存储起来。然而测试要花费大量时间计算，因为每个测试图像需要和所有存储的训练图像进行比较，这显然是一个缺点。在实际应用中，我们关注测试效率远远高于训练效率</p>
 
@@ -1169,7 +1173,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Reference: <a href="https://zhuanlan.zhihu.com/p/36287950" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/36287950</a></p>
+          <p>Reference: <a href="https://zhuanlan.zhihu.com/p/36287950">https://zhuanlan.zhihu.com/p/36287950</a></p>
 <h1 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h1><ul>
 <li>[X] - 01 - Overview<br>P1-15 Machine learning background and flow</li>
 </ul>
@@ -1261,7 +1265,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 <p>Stop container</p>
 <p>docker stop {containerId} (Stop one container)</p>
 <p>Docker-Compose</p>
-<p>Create a docker-compose.yml <a href="https://docs.docker.com/compose/compose-file/compose-file-v2/#build" target="_blank" rel="noopener">document</a></p>
+<p>Create a docker-compose.yml <a href="https://docs.docker.com/compose/compose-file/compose-file-v2/#build">document</a></p>
 <p>To be continue</p>
 
       
@@ -1387,7 +1391,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1413,9 +1417,17 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -1424,7 +1436,9 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -1490,7 +1504,7 @@ p = np.exp(f) / np.sum(np.exp(f)) # 现在OK了，将给出正确结果
     MathJax.texReset();
     MathJax.typeset();
   }
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
     
 

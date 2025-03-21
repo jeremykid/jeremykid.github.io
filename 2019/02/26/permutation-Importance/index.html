@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -26,13 +26,13 @@
 <meta property="og:url" content="http://jeremykid.github.io/2019/02/26/permutation-Importance/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
 <meta property="og:description" content="Intro 简介One of the most basic questions we might ask of a model is What features have the biggest impact on predictions? 在数据模型中有一个很基础的问题：哪一个特征对预测结果影响最大。 This concept is called feature importance. I’ve">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/wjMAysV.png">
 <meta property="og:image" content="https://i.imgur.com/h17tMUU.png">
-<meta property="og:updated_time" content="2019-02-26T07:46:36.190Z">
+<meta property="article:published_time" content="2019-02-26T07:41:01.000Z">
+<meta property="article:modified_time" content="2019-02-26T07:46:36.190Z">
+<meta property="article:author" content="Weijie Sun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Permutation-Importance">
-<meta name="twitter:description" content="Intro 简介One of the most basic questions we might ask of a model is What features have the biggest impact on predictions? 在数据模型中有一个很基础的问题：哪一个特征对预测结果影响最大。 This concept is called feature importance. I’ve">
 <meta name="twitter:image" content="https://i.imgur.com/wjMAysV.png">
 
 <link rel="canonical" href="http://jeremykid.github.io/2019/02/26/permutation-Importance/">
@@ -79,10 +79,14 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,17 +274,17 @@
 <li>Get a trained model</li>
 </ol>
 <p>得到一个训练好的模型</p>
-<ol>
+<ol start="2">
 <li>Shuffle the values in a single column, make predictions using the resulting dataset. Use these predictions and the true target values to calculate how much the loss function suffered from shuffling. That performance deterioration measures the importance of the variable you just shuffled.</li>
 </ol>
 <p>随机排列单独一列的数据，然后来预测结果。通过损失函数来计算有多接近原来的结果。根据我们之前所推论的比较原有结果，表现越差的就代表这个特征对结果正面影响越大。</p>
-<ol>
+<ol start="3">
 <li>Return the data to the original order (undoing the shuffle from step 2.) Now repeat step 2 with the next column in the dataset, until you have calculated the importance of each column.</li>
 </ol>
 <p>然后还原数据，重复第2步直到我们计算出所有特征的结果影响的重要性。</p>
 <h2 id="Code-Example"><a href="#Code-Example" class="headerlink" title="Code Example"></a>Code Example</h2><p>Our example will use a model that predicts whether a soccer/football team will have the “Man of the Game” winner based on the team’s statistics. The “Man of the Game” award is given to the best player in the game. Model-building isn’t our current focus, so the cell below loads the data and builds a rudimentary model.</p>
 <p>关于预测足球队里谁能得到足球先生的预测。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">'../input/fifa-2018-match-statistics/FIFA 2018 Statistics.csv'</span>)</span><br><span class="line">y = (data[<span class="string">'Man of the Match'</span>] == <span class="string">"Yes"</span>)  <span class="comment"># Convert from string "Yes"/"No" to binary</span></span><br><span class="line">feature_names = [i <span class="keyword">for</span> i <span class="keyword">in</span> data.columns <span class="keyword">if</span> data[i].dtype <span class="keyword">in</span> [np.int64]]</span><br><span class="line">X = data[feature_names]</span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line">my_model = RandomForestClassifier(random_state=<span class="number">0</span>).fit(train_X, train_y)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;../input/fifa-2018-match-statistics/FIFA 2018 Statistics.csv&#x27;</span>)</span><br><span class="line">y = (data[<span class="string">&#x27;Man of the Match&#x27;</span>] == <span class="string">&quot;Yes&quot;</span>)  <span class="comment"># Convert from string &quot;Yes&quot;/&quot;No&quot; to binary</span></span><br><span class="line">feature_names = [i <span class="keyword">for</span> i <span class="keyword">in</span> data.columns <span class="keyword">if</span> data[i].dtype <span class="keyword">in</span> [np.int64]]</span><br><span class="line">X = data[feature_names]</span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line">my_model = RandomForestClassifier(random_state=<span class="number">0</span>).fit(train_X, train_y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>Here is how to calculate and show importances with the eli5 library:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> eli5</span><br><span class="line"><span class="keyword">from</span> eli5.sklearn <span class="keyword">import</span> PermutationImportance</span><br><span class="line"></span><br><span class="line">perm = PermutationImportance(my_model, random_state=<span class="number">1</span>).fit(val_X, val_y)</span><br><span class="line">eli5.show_weights(perm, feature_names = val_X.columns.tolist())</span><br></pre></td></tr></table></figure>
 <h2 id="Interpreting-Permutation-Importances-解释交换排列计算重要性"><a href="#Interpreting-Permutation-Importances-解释交换排列计算重要性" class="headerlink" title="Interpreting Permutation Importances 解释交换排列计算重要性"></a>Interpreting Permutation Importances 解释交换排列计算重要性</h2><p>The values towards the top are the most important features, and those towards the bottom matter least.</p>
@@ -293,7 +297,7 @@
 <p>有时候你甚至很偶然的可以得到一些负值（意思是随机排列那一列的时候准确度反而上升了）。这种情况往往是因为这个被随机排列这里一列本身就是一些无用的数据。当你用更大的数据去训练，这种幸运也会越来越难发生。</p>
 <p>In our example, the most important feature was Goals scored. That seems sensible. Soccer fans may have some intuition about whether the orderings of other variables are surprising or not.</p>
 <p>在我们的例子中，最重要的特征是进球得分。这非常合理，球迷还是很理性的会把进球数当作选足球先生第一个的参考值。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.kaggle.com/dansbecker/permutation-importance" target="_blank" rel="noopener">https://www.kaggle.com/dansbecker/permutation-importance</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.kaggle.com/dansbecker/permutation-importance">https://www.kaggle.com/dansbecker/permutation-importance</a></p>
 
     </div>
 
@@ -381,7 +385,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-简介"><span class="nav-number">1.</span> <span class="nav-text">Intro 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-it-Works-应用"><span class="nav-number">2.</span> <span class="nav-text">How it Works 应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Example"><span class="nav-number">3.</span> <span class="nav-text">Code Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interpreting-Permutation-Importances-解释交换排列计算重要性"><span class="nav-number">4.</span> <span class="nav-text">Interpreting Permutation Importances 解释交换排列计算重要性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Intro 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-it-Works-%E5%BA%94%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">How it Works 应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Example"><span class="nav-number">3.</span> <span class="nav-text">Code Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interpreting-Permutation-Importances-%E8%A7%A3%E9%87%8A%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%88%97%E8%AE%A1%E7%AE%97%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">Interpreting Permutation Importances 解释交换排列计算重要性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -435,7 +439,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -461,9 +465,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -472,7 +484,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -510,7 +524,7 @@
       (d.head || d.body).appendChild(s);
     }
   });
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
