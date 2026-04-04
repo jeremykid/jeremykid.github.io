@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionHeading from '../../../components/SectionHeading.astro';
+import { formatDate, getAllPosts, getPostPath } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  const years = [...new Set(posts.map((post) => String(post.data.date.getUTCFullYear())))];
+
+  return years.map((year) => ({ params: { year } }));
+}
+
+const { year } = Astro.params;
+const posts = (await getAllPosts()).filter((post) => String(post.data.date.getUTCFullYear()) === year);
+---
+
+<BaseLayout title={`Archives ${year}`}>
+  <section class="page-shell page-intro">
+    <SectionHeading eyebrow="Archives" title={`Posts from ${year}`} description="Year-based compatibility archive." />
+    <ul class="archive-list">
+      {posts.map((post) => (
+        <li>
+          <span>{formatDate(post.data.date)}</span>
+          <a href={getPostPath(post)}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

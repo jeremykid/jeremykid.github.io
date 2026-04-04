@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { getCategoryMap } from '../../utils/posts';
+
+const categoryMap = await getCategoryMap();
+const categories = [...categoryMap.entries()];
+---
+
+<BaseLayout title="Categories">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Compatibility taxonomy"
+      title="Categories are preserved as thin archive pages."
+      description="The site no longer depends on categories for top-level navigation, but old category URLs still work."
+    />
+    <ul class="taxonomy-list">
+      {categories.map(([slug, value]) => (
+        <li><a href={`/categories/${slug}/`}>{value.label}</a> <span>{value.posts.length}</span></li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

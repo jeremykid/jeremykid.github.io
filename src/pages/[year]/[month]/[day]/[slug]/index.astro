@@ -1,0 +1,67 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { formatDate, getAllPosts } from '../../../../../utils/posts';
+import { siteMeta } from '../../../../../utils/site';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+
+  return posts.map((post) => ({
+    params: {
+      year: String(post.data.date.getUTCFullYear()),
+      month: String(post.data.date.getUTCMonth() + 1).padStart(2, '0'),
+      day: String(post.data.date.getUTCDate()).padStart(2, '0'),
+      slug: post.slug
+    },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const disqusPath = Astro.url.pathname;
+---
+
+<BaseLayout title={post.data.title} description={post.data.summary}>
+  <article class="page-shell page-intro post-shell">
+    <p class="eyebrow">Blog archive</p>
+    <h1>{post.data.title}</h1>
+    <div class="post-shell__meta">
+      <span>{formatDate(post.data.date)}</span>
+      {post.data.category && <span>{post.data.category}</span>}
+    </div>
+
+    {post.data.tags.length > 0 && (
+      <ul class="pill-list">
+        {post.data.tags.map((tag) => (
+          <li><a href={`/tags/${tag.trim().replace(/[_,]+/g, ' ').replace(/\s+/g, '-')}/`}>{tag}</a></li>
+        ))}
+      </ul>
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+
+  <section class="page-shell page-shell--tight">
+    <div class="comments-shell">
+      <h2>Comments</h2>
+      <p>Legacy Disqus comments remain available on article pages.</p>
+      <div id="disqus_thread"></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline define:vars={{ disqusPath, disqusShortname: siteMeta.disqusShortname }}>
+  window.disqus_config = function () {
+    this.page.url = new URL(disqusPath, window.location.origin).toString();
+    this.page.identifier = disqusPath;
+  };
+
+  const script = document.createElement('script');
+  script.src = `https://${disqusShortname}.disqus.com/embed.js`;
+  script.setAttribute('data-timestamp', String(+new Date()));
+  document.head.appendChild(script);
+</script>

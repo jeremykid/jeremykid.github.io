@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { formatDate, getAllPosts, getPostPath, groupPostsByYear } from '../../utils/posts';
+
+const posts = await getAllPosts();
+const postsByYear = groupPostsByYear(posts);
+const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+---
+
+<BaseLayout title="Archives">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Archives"
+      title="Chronological archive of the preserved blog."
+      description="This route stays reachable for compatibility and for readers who still prefer a time-based browsing surface."
+    />
+
+    <div class="archive-grid">
+      {years.map((year) => (
+        <section class="archive-year">
+          <div class="archive-year__header">
+            <h2><a href={`/archives/${year}/`}>{year}</a></h2>
+            <span>{postsByYear[year].length} posts</span>
+          </div>
+
+          <ul class="archive-list">
+            {postsByYear[year].map((post) => (
+              <li>
+                <span>{formatDate(post.data.date)}</span>
+                <a href={getPostPath(post)}>{post.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

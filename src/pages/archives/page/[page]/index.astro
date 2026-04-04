@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import RedirectPage from '../../../../components/RedirectPage.astro';
+
+export function getStaticPaths() {
+  return ['2', '3'].map((page) => ({ params: { page } }));
+}
+---
+
+<BaseLayout title="Legacy archive pagination">
+  <RedirectPage
+    title="Legacy archive pagination"
+    description="The new archive is single-page. This compatibility route now redirects to `/archives/`."
+    target="/archives/"
+  />
+</BaseLayout>

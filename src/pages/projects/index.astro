@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+
+const projects = await getCollection('projects');
+---
+
+<BaseLayout title="Projects">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Projects"
+      title="Research threads, systems work, and paper-adjacent projects."
+      description="Projects are modeled separately from blog posts so the homepage can stay focused and curated."
+    />
+
+    <div class="project-grid">
+      {projects.map((project) => (
+        <article class="project-card">
+          {project.data.image && <img src={project.data.image} alt={project.data.title} />}
+          <div class="project-card__body">
+            <p class="detail-card__meta">{project.data.period} · {project.data.role}</p>
+            <h2>{project.data.title}</h2>
+            <p>{project.data.summary}</p>
+            {project.body && <p>{project.body}</p>}
+            {project.data.links.length > 0 && (
+              <div class="link-row">
+                {project.data.links.map((link) => (
+                  <a href={link.href}>{link.label}</a>
+                ))}
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

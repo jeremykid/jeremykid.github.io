@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionHeading from '../../../components/SectionHeading.astro';
+import PostList from '../../../components/PostList.astro';
+import { getTagMap } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const tags = await getTagMap();
+  return [...tags.keys()].map((tag) => ({ params: { tag } }));
+}
+
+const { tag } = Astro.params;
+const tagMap = await getTagMap();
+const entry = tagMap.get(tag || '');
+const posts = entry?.posts ?? [];
+const label = entry?.label ?? tag ?? 'Tag';
+---
+
+<BaseLayout title={`Tag: ${label}`}>
+  <section class="page-shell page-intro">
+    <SectionHeading eyebrow="Tag archive" title={label} description="Legacy taxonomy page retained as a compatibility layer." />
+    <PostList posts={posts} />
+  </section>
+</BaseLayout>

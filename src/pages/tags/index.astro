@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { getTagMap } from '../../utils/posts';
+
+const tagMap = await getTagMap();
+const tags = [...tagMap.entries()].sort((a, b) => b[1].posts.length - a[1].posts.length);
+---
+
+<BaseLayout title="Tags">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Compatibility taxonomy"
+      title="Tags are preserved as lightweight archive filters."
+      description="Tags are no longer central navigation, but the old routes still resolve."
+    />
+    <ul class="taxonomy-list">
+      {tags.map(([slug, value]) => (
+        <li><a href={`/tags/${slug}/`}>{value.label}</a> <span>{value.posts.length}</span></li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

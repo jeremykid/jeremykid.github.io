@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+
+const publications = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
+---
+
+<BaseLayout title="Publications">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Publications"
+      title="Journal, conference, and workshop publications."
+      description="Structured publication data replaces the old hand-maintained HTML list."
+    />
+
+    <div class="stack-grid">
+      {publications.map((publication) => (
+        <article class="detail-card">
+          <p class="detail-card__meta">{publication.data.year} · {publication.data.venue}</p>
+          <h2>{publication.data.title}</h2>
+          <p>{publication.data.authors}</p>
+          {publication.body && <p>{publication.body}</p>}
+          {publication.data.links.length > 0 && (
+            <div class="link-row">
+              {publication.data.links.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))}
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

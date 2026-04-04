@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RedirectPage from '../../components/RedirectPage.astro';
+---
+
+<BaseLayout title="About">
+  <RedirectPage
+    title="About now lives on the homepage"
+    description="The previous long-form About page has been folded into a research-first homepage. This route remains only for compatibility."
+    target="/"
+  />
+</BaseLayout>

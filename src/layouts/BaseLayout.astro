@@ -1,0 +1,68 @@
+---
+import 'katex/dist/katex.min.css';
+import '../styles/global.css';
+
+import { navigation, siteMeta } from '../utils/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = siteMeta.description } = Astro.props;
+const pageTitle = title ? `${title} | ${siteMeta.siteName}` : siteMeta.siteName;
+const pathname = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#f5f1ea" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={siteMeta.siteName} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(pathname, siteMeta.url).toString()} />
+    <link rel="canonical" href={new URL(pathname, siteMeta.url).toString()} />
+    <link rel="icon" href="/images/favicon-32x32-next.png" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-brand" href="/">
+            <span class="site-brand__mark">WS</span>
+            <span>
+              <strong>{siteMeta.siteName}</strong>
+              <small>Academic homepage</small>
+            </span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary">
+            {navigation.map((item) => (
+              <a class:list={['site-nav__link', pathname === item.href && 'is-active']} href={item.href}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p>Single-source Astro rebuild for `jeremykid.github.io`, preserving the legacy blog archive.</p>
+          <p>Built with Astro and deployed via GitHub Pages.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

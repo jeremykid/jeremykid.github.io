@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import SectionHeading from '../../../../components/SectionHeading.astro';
+import { formatDate, getAllPosts, getPostPath } from '../../../../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  const entries = new Map();
+
+  for (const post of posts) {
+    const year = String(post.data.date.getUTCFullYear());
+    const month = String(post.data.date.getUTCMonth() + 1).padStart(2, '0');
+    entries.set(`${year}-${month}`, { year, month });
+  }
+
+  return [...entries.values()].map((params) => ({ params }));
+}
+
+const { year, month } = Astro.params;
+const posts = (await getAllPosts()).filter(
+  (post) =>
+    String(post.data.date.getUTCFullYear()) === year &&
+    String(post.data.date.getUTCMonth() + 1).padStart(2, '0') === month
+);
+---
+
+<BaseLayout title={`Archives ${year}-${month}`}>
+  <section class="page-shell page-intro">
+    <SectionHeading eyebrow="Archives" title={`Posts from ${year}-${month}`} description="Legacy month archive compatibility." />
+    <ul class="archive-list">
+      {posts.map((post) => (
+        <li>
+          <span>{formatDate(post.data.date)}</span>
+          <a href={getPostPath(post)}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import PostList from '../../components/PostList.astro';
+import { getAllPosts } from '../../utils/posts';
+
+const posts = await getAllPosts();
+---
+
+<BaseLayout title="Blog" description="Preserved writing archive with lightweight local search.">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Blog"
+      title="Preserved legacy writing, with a lighter interface."
+      description="The dated Hexo workflow is gone, but the posts and their original URLs stay intact. Search is local and static."
+    />
+
+    <div class="search-shell">
+      <label class="search-shell__label" for="search-input">Search the archive</label>
+      <input id="search-input" class="search-shell__input" type="search" placeholder="Search titles, tags, or summaries" />
+      <p class="search-shell__hint">Searching a local JSON index generated at build time.</p>
+    </div>
+
+    <PostList posts={posts} />
+    <div id="search-results" class="search-results"></div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  const input = document.querySelector('#search-input');
+  const postList = document.querySelector('.post-list');
+  const resultShell = document.querySelector('#search-results');
+  let searchIndex = [];
+
+  async function loadIndex() {
+    if (searchIndex.length) return searchIndex;
+    const response = await fetch('/search.json');
+    searchIndex = await response.json();
+    return searchIndex;
+  }
+
+  function renderResults(matches) {
+    if (!resultShell) return;
+    if (!matches.length) {
+      resultShell.innerHTML = '<p class="search-results__empty">No posts matched this query.</p>';
+      return;
+    }
+
+    resultShell.innerHTML = matches
+      .map(
+        (entry) => `
+          <article class="post-card">
+            <div class="post-card__meta"><span>${entry.date}</span>${entry.category ? `<span>${entry.category}</span>` : ''}</div>
+            <h3><a href="${entry.href}">${entry.title}</a></h3>
+            <p>${entry.summary}</p>
+          </article>
+        `
+      )
+      .join('');
+  }
+
+  async function handleSearch(event) {
+    const query = event.target.value.trim().toLowerCase();
+    if (!query) {
+      if (postList) postList.hidden = false;
+      if (resultShell) resultShell.innerHTML = '';
+      return;
+    }
+
+    const entries = await loadIndex();
+    const matches = entries.filter((entry) =>
+      [entry.title, entry.summary, ...(entry.tags || [])]
+        .join(' ')
+        .toLowerCase()
+        .includes(query)
+    );
+
+    if (postList) postList.hidden = true;
+    renderResults(matches);
+  }
+
+  input?.addEventListener('input', handleSearch);
+</script>

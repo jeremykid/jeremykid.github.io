@@ -1,0 +1,31 @@
+---
+import type { PostEntry } from '../utils/posts';
+import { formatDate, getPostPath } from '../utils/posts';
+
+interface Props {
+  posts: PostEntry[];
+  compact?: boolean;
+}
+
+const { posts, compact = false } = Astro.props;
+---
+
+<div class:list={['post-list', compact && 'post-list--compact']}>
+  {posts.map((post) => (
+    <article class="post-card">
+      <div class="post-card__meta">
+        <span>{formatDate(post.data.date)}</span>
+        {post.data.category && <span>{post.data.category}</span>}
+      </div>
+      <h3><a href={getPostPath(post)}>{post.data.title}</a></h3>
+      <p>{post.data.summary}</p>
+      {post.data.tags.length > 0 && (
+        <ul class="pill-list">
+          {post.data.tags.slice(0, compact ? 2 : 4).map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+      )}
+    </article>
+  ))}
+</div>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import RedirectPage from '../../../components/RedirectPage.astro';
+
+export function getStaticPaths() {
+  return ['2', '3'].map((page) => ({ params: { page } }));
+}
+---
+
+<BaseLayout title="Legacy pagination">
+  <RedirectPage
+    title="Legacy blog pagination"
+    description="The old Hexo home pagination route is preserved as a redirect into the new blog landing page."
+    target="/blog/"
+  />
+</BaseLayout>

@@ -1,0 +1,31 @@
+{
+  "name": "jeremykid.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "migrate": "node scripts/migrate-legacy-content.mjs",
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "test": "npm run build && npm run verify:dist"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.0.0",
+    "cheerio": "^1.1.0",
+    "gray-matter": "^4.0.3",
+    "katex": "^0.16.21",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

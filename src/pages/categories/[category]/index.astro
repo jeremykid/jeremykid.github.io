@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionHeading from '../../../components/SectionHeading.astro';
+import PostList from '../../../components/PostList.astro';
+import { getCategoryMap } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const categories = await getCategoryMap();
+  return [...categories.keys()].map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params;
+const categoryMap = await getCategoryMap();
+const entry = categoryMap.get(category || '');
+const posts = entry?.posts ?? [];
+const label = entry?.label ?? category ?? 'Category';
+---
+
+<BaseLayout title={`Category: ${label}`}>
+  <section class="page-shell page-intro">
+    <SectionHeading eyebrow="Category archive" title={label} description="Compatibility route for legacy category links." />
+    <PostList posts={posts} />
+  </section>
+</BaseLayout>

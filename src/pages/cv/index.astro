@@ -1,0 +1,33 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+
+const pdfRelativePath = '/files/weijie-sun-cv.pdf';
+const pdfExists = fs.existsSync(path.join(process.cwd(), 'public', pdfRelativePath.slice(1)));
+---
+
+<BaseLayout title="CV">
+  <section class="page-shell page-intro">
+    <SectionHeading
+      eyebrow="Curriculum vitae"
+      title="CV route wired into the new homepage."
+      description="The route exists now so the homepage can link to a stable CV surface, even before the final PDF is committed."
+    />
+
+    <div class="detail-card">
+      {pdfExists ? (
+        <>
+          <p>The latest CV is available as a PDF.</p>
+          <a class="button" href={pdfRelativePath}>Download CV</a>
+        </>
+      ) : (
+        <>
+          <p>The PDF slot is ready. Drop `public/files/weijie-sun-cv.pdf` into the repo to activate the download button.</p>
+          <a class="button button--secondary" href="/">Return to homepage</a>
+        </>
+      )}
+    </div>
+  </section>
+</BaseLayout>

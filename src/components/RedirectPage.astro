@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  target: string;
+}
+
+const { title, description, target } = Astro.props;
+---
+
+<section class="page-shell redirect-shell">
+  <div class="redirect-card">
+    <p class="eyebrow">Compatibility route</p>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <p class="redirect-card__hint">
+      If the browser does not redirect automatically, continue to <a href={target}>{target}</a>.
+    </p>
+  </div>
+</section>
+
+<meta http-equiv="refresh" content={`0;url=${target}`} />
+<script is:inline define:vars={{ target }}>
+  window.location.replace(target);
+</script>

@@ -1,0 +1,200 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import PostList from '../components/PostList.astro';
+import { contactLinks, hero, homepageSections } from '../utils/site';
+import { getAllPosts } from '../utils/posts';
+
+const posts = await getAllPosts();
+const publications = (await getCollection('publications'))
+  .filter((entry) => entry.data.selected)
+  .sort((a, b) => b.data.year - a.data.year)
+  .slice(0, 5);
+const projects = (await getCollection('projects')).filter((entry) => entry.data.featured);
+const news = (await getCollection('news')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
+const recentPosts = posts.slice(0, 4);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <figure class="hero__feature">
+      <img src="/images/Vascular_2023_banner.jpg" alt="Weijie Sun presenting research at a conference lectern" />
+      <figcaption>Presenting cardiovascular ML research at Vascular 2023.</figcaption>
+    </figure>
+
+    <div class="hero__body">
+      <div class="hero__copy hero__copy--stacked">
+        <p class="eyebrow">{hero.eyebrow}</p>
+        <h1>{hero.title}</h1>
+        <p class="hero__headline">{hero.headline}</p>
+        <p class="hero__description">{hero.description}</p>
+
+        <div class="hero__highlights">
+          <span>University of Alberta</span>
+          <span>ECG modeling</span>
+          <span>Survival analysis</span>
+        </div>
+
+        <div class="hero__actions">
+          {hero.ctas.map((cta, index) => (
+            <a class:list={['button', index === 1 && 'button--secondary']} href={cta.href}>{cta.label}</a>
+          ))}
+        </div>
+      </div>
+
+      <ul class="hero__stats">
+        {hero.stats.map((stat) => (
+          <li>
+            <strong>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div class="hero__aside-card">
+        <p class="eyebrow">Current position</p>
+        <h2>Computing Science Ph.D.</h2>
+        <ul class="hero__aside-list">
+          <li>University of Alberta, Edmonton</li>
+          <li>Advised by Russ Greiner and Abram Hindle</li>
+          <li>Researching ECG modeling, survival analysis, and multimodal clinical prediction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-shell page-shell--tight">
+    <SectionHeading
+      eyebrow="Short bio"
+      title="Research-first academic homepage, with the full blog preserved underneath."
+      description="The homepage stays concise and curated. The detailed writing archive remains accessible through the blog and archive routes."
+    />
+
+    <div class="two-column-copy">
+      <div>
+        {homepageSections.bio.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+      <div class="focus-card">
+        <p class="eyebrow">Current focus</p>
+        <ul>
+          {homepageSections.focusAreas.map((area) => (
+            <li>{area}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-shell">
+    <SectionHeading
+      eyebrow="Selected publications"
+      title="Recent papers and research outputs."
+      description="A curated subset is surfaced on the homepage, with the full list collected on the publications page."
+    />
+
+    <div class="stack-grid">
+      {publications.map((publication) => (
+        <article class="detail-card">
+          <p class="detail-card__meta">{publication.data.year} · {publication.data.venue}</p>
+          <h3>{publication.data.title}</h3>
+          <p>{publication.data.authors}</p>
+          {publication.body && <p>{publication.body}</p>}
+          {publication.data.links.length > 0 && (
+            <div class="link-row">
+              {publication.data.links.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))}
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+
+    <p class="section-footer">
+      <a href="/publications/">Browse all publications</a>
+    </p>
+  </section>
+
+  <section class="page-shell">
+    <SectionHeading
+      eyebrow="Projects"
+      title="Selected research projects and technical threads."
+      description="These project cards summarize the work that currently defines the site more than the legacy blog theme does."
+    />
+
+    <div class="project-grid">
+      {projects.map((project) => (
+        <article class="project-card">
+          {project.data.image && <img src={project.data.image} alt={project.data.title} />}
+          <div class="project-card__body">
+            <p class="detail-card__meta">{project.data.period} · {project.data.role}</p>
+            <h3>{project.data.title}</h3>
+            <p>{project.data.summary}</p>
+            {project.data.links.length > 0 && (
+              <div class="link-row">
+                {project.data.links.map((link) => (
+                  <a href={link.href}>{link.label}</a>
+                ))}
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="section-footer">
+      <a href="/projects/">See all projects</a>
+    </p>
+  </section>
+
+  <section class="page-shell">
+    <SectionHeading
+      eyebrow="Awards and news"
+      title="Recent milestones, awards, and research updates."
+    />
+
+    <div class="timeline">
+      {news.map((item) => (
+        <article class="timeline__item">
+          <p class="timeline__date">{item.data.date.toISOString().slice(0, 10)}</p>
+          <div>
+            <h3>{item.data.label}</h3>
+            <p>{item.data.summary}</p>
+            {item.data.link && <a href={item.data.link}>Read more</a>}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="page-shell">
+    <SectionHeading
+      eyebrow="From the archive"
+      title="Recent writing from the preserved blog."
+      description="The blog remains fully browsable, but it is intentionally secondary to the homepage."
+    />
+
+    <PostList posts={recentPosts} compact />
+    <p class="section-footer">
+      <a href="/blog/">Open the blog</a>
+    </p>
+  </section>
+
+  <section class="page-shell page-shell--tight">
+    <SectionHeading
+      eyebrow="Contact"
+      title="Links and contact surfaces."
+      description="The site keeps contact simple and durable: canonical profiles, archive access, and a dedicated CV route."
+    />
+
+    <div class="contact-strip">
+      {contactLinks.map((link) => (
+        <a class="contact-strip__item" href={link.href}>{link.label}</a>
+      ))}
+      <a class="contact-strip__item" href="/cv/">CV</a>
+    </div>
+  </section>
+</BaseLayout>
