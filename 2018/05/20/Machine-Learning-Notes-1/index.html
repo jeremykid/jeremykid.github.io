@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.3.0">
@@ -13,27 +13,27 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"jeremykid.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Reference: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;36287950 Todo List [X] - 01 - OverviewP1-15 Machine learning background and flow  P16-42  Machine learning flow  [ ] - 02 - Business Understanding   [X] - 03 -">
+  <meta name="description" content="Reference: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;36287950 Todo List   01 - OverviewP1-15 Machine learning background and flow    P16-42  Machine learning flow     02 - Business Understanding      03 - Data Und">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning Notes - 1">
-<meta property="og:url" content="http://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/index.html">
+<meta property="og:url" content="https://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
-<meta property="og:description" content="Reference: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;36287950 Todo List [X] - 01 - OverviewP1-15 Machine learning background and flow  P16-42  Machine learning flow  [ ] - 02 - Business Understanding   [X] - 03 -">
+<meta property="og:description" content="Reference: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;36287950 Todo List   01 - OverviewP1-15 Machine learning background and flow    P16-42  Machine learning flow     02 - Business Understanding      03 - Data Und">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-05-20T22:15:11.000Z">
-<meta property="article:modified_time" content="2018-05-24T07:07:22.969Z">
+<meta property="article:modified_time" content="2026-09-07T21:32:44.983Z">
 <meta property="article:author" content="Weijie Sun">
 <meta property="article:tag" content="Machine_Learning">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/">
+<link rel="canonical" href="https://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/">
 
 
 <script id="page-configurations">
@@ -77,14 +77,122 @@
   </style>
 </noscript>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -118,30 +226,30 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-presentations">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Presentations</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-presentations">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Presentations</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -199,7 +307,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -218,7 +326,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -226,10 +334,10 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
+                  <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2018-05-24 01:07:22" itemprop="dateModified" datetime="2018-05-24T01:07:22-06:00">2018-05-24</time>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
               </span>
 
           
@@ -245,16 +353,29 @@
       
         <p>Reference: <a href="https://zhuanlan.zhihu.com/p/36287950">https://zhuanlan.zhihu.com/p/36287950</a></p>
 <h1 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h1><ul>
-<li>[X] - 01 - Overview<br>P1-15 Machine learning background and flow</li>
+<li><input checked="" disabled="" type="checkbox"> <ul>
+<li>01 - Overview<br>P1-15 Machine learning background and flow</li>
+</ul>
+</li>
 </ul>
 <p>P16-42  Machine learning flow</p>
 <ul>
-<li><p>[ ] - 02 - Business Understanding </p>
+<li><p><input disabled="" type="checkbox"> </p>
+<ul>
+<li>02 - Business Understanding</li>
+</ul>
 </li>
-<li><p>[X] - 03 - Data Understanding p56 - 62</p>
-<p>To learn about data analysis, it is right that each of us try many things that do not work – that we tackle more problems than we make expert analyses of. We often learn less from an expertly done analysis than from one where, by not trying something, we missed an opportunity to learn more</p>
+<li><p><input checked="" disabled="" type="checkbox"> </p>
+<ul>
+<li>03 - Data Understanding p56 - 62</li>
+</ul>
 </li>
-<li><p>[ ] - 04 - Data Preparation -p63</p>
+</ul>
+<p> To learn about data analysis, it is right that each of us try many things that do not work – that we tackle more problems than we make expert analyses of. We often learn less from an expertly done analysis than from one where, by not trying something, we missed an opportunity to learn more</p>
+<ul>
+<li><input disabled="" type="checkbox"> <ul>
+<li>04 - Data Preparation -p63</li>
+</ul>
 </li>
 </ul>
 <p>Prepare data is time consuming </p>
@@ -263,11 +384,10 @@
 <p>Data binning 分级</p>
 <p>Reduce Data, Clean Data</p>
 <p>Feature Engineering: 从raw data 提取出 feature</p>
-<h3 id="Feature-Selection-Filter-Wrapper-Embedded-method"><a href="#Feature-Selection-Filter-Wrapper-Embedded-method" class="headerlink" title="Feature Selection: Filter/Wrapper/Embedded method"></a>Feature Selection: Filter/Wrapper/Embedded method</h3><p>Traditional approaches 传统方法</p>
+<h3 id="Feature-Selection-Filter-Wrapper-Embedded-method"><a href="#Feature-Selection-Filter-Wrapper-Embedded-method" class="headerlink" title="Feature Selection: Filter&#x2F;Wrapper&#x2F;Embedded method"></a>Feature Selection: Filter&#x2F;Wrapper&#x2F;Embedded method</h3><p>Traditional approaches 传统方法</p>
 <h4 id="Forward-selection"><a href="#Forward-selection" class="headerlink" title="Forward selection"></a>Forward selection</h4><p>一开始模型里面没有variable， 然后往里面加入variable，直到accuracy 没有任何的增长</p>
 <h4 id="Backward-elimination"><a href="#Backward-elimination" class="headerlink" title="Backward elimination"></a>Backward elimination</h4><p>和前一种相反，一开始有所有的variable, 然后去除，直到accuracy 有明显的下降</p>
-<h4 id="Stepwise-regression"><a href="#Stepwise-regression" class="headerlink" title="Stepwise regression"></a>Stepwise regression</h4><p>这种是用在选k-best feature， 一开始有k个，然后加入更好的，并且去除最差的，直到经历过所有的feature</p>
-<p>P100</p>
+<h4 id="Stepwise-regression"><a href="#Stepwise-regression" class="headerlink" title="Stepwise regression"></a>Stepwise regression</h4><p>这种是用在选k-best feature， 一开始有k个，然后加入更好的，并且去除最差的，直到经历过所有的feature<br>	<br>P100</p>
 
     </div>
 
@@ -305,13 +425,6 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -374,18 +487,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -412,13 +525,13 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Weijie Sun</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
@@ -475,29 +588,6 @@
   
 
   
-
-  
-
-<script>
-  var disqus_config = function() {
-    this.page.url = "http://jeremykid.github.io/2018/05/20/Machine-Learning-Notes-1/";
-    this.page.identifier = "2018/05/20/Machine-Learning-Notes-1/";
-    this.page.title = "Machine Learning Notes - 1";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-jeremykid-github-io.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.3.0">
@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -22,13 +22,13 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Weijie Sun Blog">
-<meta property="og:url" content="http://jeremykid.github.io/page/3/index.html">
+<meta property="og:url" content="https://jeremykid.github.io/page/3/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Weijie Sun">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://jeremykid.github.io/page/3/">
+<link rel="canonical" href="https://jeremykid.github.io/page/3/">
 
 
 <script id="page-configurations">
@@ -72,14 +72,122 @@
   </style>
 </noscript>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -113,30 +221,30 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-presentations">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Presentations</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-presentations">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Presentations</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -193,7 +301,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2017/06/13/Docker-Notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Weijie Sun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weijie Sun Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/13/Docker-Notes/" class="post-title-link" itemprop="url">Docker Notes</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-13 22:40:16" itemprop="dateCreated datePublished" datetime="2017-06-13T22:40:16-06:00">2017-06-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Containers </p>
+<p>List Containers</p>
+<p>docker ps (show all the running container)</p>
+<p>docker ps -a (show all the container include which is not running)</p>
+<p>Start container</p>
+<p>docker start {containerId} (start one container)</p>
+<p>Stop container</p>
+<p>docker stop {containerId} (Stop one container)</p>
+<p>Docker-Compose</p>
+<p>Create a docker-compose.yml <a href="https://docs.docker.com/compose/compose-file/compose-file-v2/#build">document</a></p>
+<p>To be continue</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2016/08/06/Learn-PyMOL-for-Biology-Research-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -213,7 +396,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -221,10 +404,10 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
+                  <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2016-08-24 00:36:23" itemprop="dateModified" datetime="2016-08-24T00:36:23-06:00">2016-08-24</time>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
               </span>
 
           
@@ -238,7 +421,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Updated-in-Aug-22-2016"><a href="#Updated-in-Aug-22-2016" class="headerlink" title="Updated in Aug/22/2016"></a>Updated in Aug/22/2016</h1><p>Here I will teach How to set the environment in Mac</p>
+          <h1 id="Updated-in-Aug-22-2016"><a href="#Updated-in-Aug-22-2016" class="headerlink" title="Updated in Aug&#x2F;22&#x2F;2016"></a>Updated in Aug&#x2F;22&#x2F;2016</h1><p>Here I will teach How to set the environment in Mac</p>
 <ol>
 <li><p>(install the Xcode and Xcode-command-tool.)[<a href="http://railsapps.github.io/xcode-command-line-tools.html]">http://railsapps.github.io/xcode-command-line-tools.html]</a></p>
 </li>
@@ -251,19 +434,28 @@
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~/ -type f -name &quot;_cmd.so&quot;</span><br></pre></td></tr></table></figure>
 <p> eg: return </p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymol/_cmd.so</span><br></pre></td></tr></table></figure>
-<p> Try to add the path of folder of pymol in the PYTHONPATH<br> eg: /opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure>
-</li>
+<p> Try to add the path of folder of pymol in the PYTHONPATH<br> eg: &#x2F;opt&#x2F;&#x2F;local&#x2F;Library&#x2F;Frameworks&#x2F;Python.framework&#x2F;Versions&#x2F;2.7&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PYTHONPATH=&quot;/opt//local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages&quot;</span><br><span class="line">export PYTHONPATH</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL/Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>This Series of blog pages is about the Script of PyMOL. If you are an expert of PyMOL&#x2F;Python and give me some suggestions or find some errors in this page, I will be very happpppy. This is my First time to use PyMOL</p>
 <p>Since the Dr.Marcelo Marcet-Palacios only provide a exist file of PyMOL software without a PyMOL API for Python. I am starting to setup the environment of Open-Source PyMOL, which take a long time(take care).</p>
 <h1 id="Setup-Environment"><a href="#Setup-Environment" class="headerlink" title="Setup Environment."></a>Setup Environment.</h1><p>Dr.Marcelo Marcet-Palacios helped me to install the PyMOL by a Mac-package. However, I found the python script cannot load the PyMOL module. I started to find the reason. </p>
-<p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a> helps a lot. If you want to<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure><br>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
+<p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a> helps a lot. If you want to </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymol</span><br></pre></td></tr></table></figure>
+<p>in your script, you wish you can install the pymol following the steps of installing an Open-Source PyMOL.</p>
 <p>So I started to follow the <a href="http://www.pymolwiki.org/index.php/MAC_Install">http://www.pymolwiki.org/index.php/MAC_Install</a> to install an Open-Source PyMOL. If your mac is over 10.5, my feedback is not use the fink, which is not easy to install.</p>
-<p>Try this<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure></p>
-<p>The other issue make me so annoying is that<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure></p>
-<p>I in my<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure></p>
-<p>It only has these following files:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure><br>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
+<p>Try this</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo port install tcl -corefoundation</span><br><span class="line">sudo port install tk -quartz</span><br><span class="line"></span><br><span class="line">sudo port install pymol</span><br></pre></td></tr></table></figure>
+
+<p>The other issue make me so annoying is that</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 72, in &lt;module&gt;</span><br><span class="line">    import pymol</span><br><span class="line">  File &quot;/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/__init__.py&quot;, line 536, in &lt;module&gt;</span><br><span class="line">    import pymol._cmd</span><br><span class="line">ImportError: dlopen(/usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so, 2): Library not loaded: /usr/local/opt/glew/lib/libGLEW.2.0.0.dylib</span><br><span class="line">  Referenced from: /usr/local/Cellar/pymol/1.8.2.1/libexec/lib/python2.7/site-packages/pymol/_cmd.so</span><br><span class="line">  Reason: image not found</span><br></pre></td></tr></table></figure>
+
+<p>I in my </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/opt/glew/lib</span><br></pre></td></tr></table></figure>
+
+<p>It only has these following files:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libGLEW.1.13.0.dylib	libGLEW.dylib		libGLEWmx.a</span><br><span class="line">libGLEW.1.13.dylib	libGLEWmx.1.13.0.dylib	libGLEWmx.dylib</span><br><span class="line">libGLEW.a		libGLEWmx.1.13.dylib	pkgconfig</span><br></pre></td></tr></table></figure>
+<p>The brew cannot upgrade the openGL. I have to update the XOs to the newest version. So I am downloading the package for 6 GB.</p>
 <p>See you tomorrow. Hopefully, I could setup the environment.</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.biostars.org/p/113328/">https://www.biostars.org/p/113328/</a><br><a href="http://www.pymolwiki.org/index.php/MAC_Install">http://www.pymolwiki.org/index.php/MAC_Install</a></p>
 
@@ -285,7 +477,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2016/08/02/Machine-Learning-Project-1-Weijie-Sun/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -305,13 +497,19 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2016-08-02 15:37:01 / Modified: 16:14:45" itemprop="dateCreated datePublished" datetime="2016-08-02T15:37:01-06:00">2016-08-02</time>
+              <time title="Created: 2016-08-02 15:37:01" itemprop="dateCreated datePublished" datetime="2016-08-02T15:37:01-06:00">2016-08-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
+              </span>
 
           
 
@@ -326,10 +524,10 @@
       
           <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I have taken a Machine Learning Course at the University of Alberta. Our professor is <a href="https://en.wikipedia.org/wiki/Russell_Greiner">Russell Greiner</a>. We need to make a project and do some researches by Machine Learning method with our coach <a href="https://sites.ualberta.ca/~golmoham/">Koosha Golmohammadi</a>. Since this is my first Machine Learning project. Soooo, this is not as good as some projects made by Machine Learning experts. However, we achieve a result is 90% accuracy which is closed to some the U.S agency in Boston.</p>
 <h1 id="1-Scraping-Data"><a href="#1-Scraping-Data" class="headerlink" title="1 Scraping Data."></a>1 Scraping Data.</h1><p>We scraped some real estate data from real estate data website from Edmonton and marked in Edmonton Map.</p>
-<p><img src="/images/MachineLearning-data2.png" alt=""></p>
+<p><img src="/images/MachineLearning-data2.png"></p>
 <h1 id="2-Matching-Data"><a href="#2-Matching-Data" class="headerlink" title="2 Matching Data"></a>2 Matching Data</h1><p>Then we tried to match the real estate data with over 110 features in <a href="https://data.edmonton.ca/">Open City Edmonton Data</a></p>
 <p>It is a tough work there are different names for an address which is easier for the human to understand than a machine. After a little of the algorithm in nature language process(very basic). </p>
-<p>we got the following useful data.<br><img src="/images/MachineLearning-data1.png" alt=""></p>
+<p>we got the following useful data.<br><img src="/images/MachineLearning-data1.png"></p>
 <p>This is our first step for collating data and scraping data.</p>
 <p>I will keep updating for Machine learning.<br>See you next time.</p>
 <p><a href="https://github.com/koosha/property_values">Our code resource</a></p>
@@ -352,7 +550,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/27/My%20Ionic-Hybrid%20Experience[1]/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2016/07/27/My%20Ionic-Hybrid%20Experience[1]/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -372,7 +570,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -380,10 +578,10 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
+                  <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2016-07-28 13:04:37" itemprop="dateModified" datetime="2016-07-28T13:04:37-06:00">2016-07-28</time>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
               </span>
 
           
@@ -403,7 +601,7 @@
 <p>Then one of my team member ask his sister’s boyfriend who works in Google. He recommand the Ionic + Parse for our mobile application. That is the first time I heard about the Ionic.</p>
 <p>Then I use Ionic + Parse to develop 3 Mobile Applications inculde one course project. It is not easy until we fully understand what the structure in the Ionic. Trust me! Ionic is a very clear Structure.</p>
 <h3 id="The-Structure"><a href="#The-Structure" class="headerlink" title="The Structure"></a>The Structure</h3><p>In my Understanding the Ionic Stucture is like this form.</p>
-<p><img src="/images/ionic-Structure.png" alt=""></p>
+<p><img src="/images/ionic-Structure.png"></p>
 <p>See you in next time.</p>
 
       
@@ -424,7 +622,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/18/Algorithm/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2016/07/18/Algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -444,7 +642,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -452,14 +650,14 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
+                  <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2016-07-21 01:12:33" itemprop="dateModified" datetime="2016-07-21T01:12:33-06:00">2016-07-21</time>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
+                <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -482,386 +680,363 @@
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">trial_division.py</td>
-<td style="text-align:right">note0</td>
+<td align="center">trial_division.py</td>
+<td align="right">note0</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">euler_trivial.py note2</td>
-<td style="text-align:right">note1</td>
+<td align="center">euler_trivial.py note2</td>
+<td align="right">note1</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">fermatfactor_trivial.py</td>
-<td style="text-align:right">fermatfactor_improved_prime.py</td>
+<td align="center">fermatfactor_trivial.py</td>
+<td align="right">fermatfactor_improved_prime.py</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">Pollards_rho_trivial.py</td>
-<td style="text-align:right">Pollards_rho_improved_prime.py</td>
-<td>note3</td>
+<td align="center">Pollards_rho_trivial.py</td>
+<td align="right">Pollards_rho_improved_prime.py</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
 <li>note0 : Trivial Division use the trivial prime, which cannot use Miller-Rabin primality test</li>
-<li>note1 : Euler’s factorization method stops the algorithm<pre><code>when a number cannot found number = a^2 + b^2 = c^2 + d^2. 
-Miller-Rabin is only judge the prime not find the factors.
-</code></pre></li>
-<li>note2 : Since I have not find a better way to find a number = a^2 + b^2 = c^2 + d^2. <pre><code>So Euler&apos;s spend on the this function I will list after that 
-</code></pre></li>
-<li>note3 : In Pollards_rho Miller-Rabin primality test, inorder to handle some base cases. I use the <pre><code>trial_division to handle some special cases.
-</code></pre></li>
+<li>note1 : Euler’s factorization method stops the algorithm<br>    when a number cannot found number &#x3D; a^2 + b^2 &#x3D; c^2 + d^2.<br>    Miller-Rabin is only judge the prime not find the factors.</li>
+<li>note2 : Since I have not find a better way to find a number &#x3D; a^2 + b^2 &#x3D; c^2 + d^2.<br>    So Euler’s spend on the this function I will list after that </li>
+<li>note3 : In Pollards_rho Miller-Rabin primality test, inorder to handle some base cases. I use the<br>    trial_division to handle some special cases.</li>
 </ul>
 <p>#Integer factorization:</p>
 <h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p>Trial division: (Baseline)<br>This is a base line in my integer factorization algorithm project. It is using<br>a prime sieve for prime number generation which can judge a number is a prime or<br>continue do factorization.</p>
-<p>Running time: in the worst case it is O(2^(n/2)/((n/2)*ln2)) </p>
+<p>Running time: in the worst case it is O(2^(n&#x2F;2)&#x2F;((n&#x2F;2)*ln2)) </p>
 <ul>
 <li>n is base-2 n digit number.</li>
 </ul>
-<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3><p>Euler’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Euler’s factorization is if<br>a number = a^2 + b^2 = c^2 + d^2. There is a quickly way to seperate into 2 factors.</p>
+<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3><p>Euler’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Euler’s factorization is if<br>a number &#x3D; a^2 + b^2 &#x3D; c^2 + d^2. There is a quickly way to seperate into 2 factors.</p>
 <p>Running time: It is very slow, worst case is greater than trial division,<br>only quick in some special cases and has potient quick.</p>
-<h3 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h3><p>Fermat’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Fermat’s factorization method:<br> is if a number = a^2 - b^2 There is a quickly way to seperate into 2 factors.</p>
-<p>Running time: Worst case is O(N^{1/2})<br>              General case is O(N^{1/3}) time.</p>
+<h3 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h3><p>Fermat’s factorization method:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Fermat’s factorization method:<br> is if a number &#x3D; a^2 - b^2 There is a quickly way to seperate into 2 factors.</p>
+<p>Running time: Worst case is O(N^{1&#x2F;2})<br>			  General case is O(N^{1&#x2F;3}) time.</p>
 <h3 id="1-4"><a href="#1-4" class="headerlink" title="1.4"></a>1.4</h3><p>Pollard’s rho algorithm:<br>This is an implementation factorization algorithm, which solves the following problem. Given an number, then find all prime factors. The base knowledge of Pollard’s rho algorithm is if a find<br>the abs(x^2+1-x) mod N if not 1 then it is a factor of N.</p>
-<p>Running time: General case by the Birthday paradox in O(\sqrt p)\ &lt;= O(n^{1/4})<br>              but this is a heuristic claim, and rigorous analysis of the algorithm remains open.</p>
-<h2 id="2-A-description-of-what-sort-of-tests-I-have-included"><a href="#2-A-description-of-what-sort-of-tests-I-have-included" class="headerlink" title="2 A description of what sort of tests I have included"></a>2 A description of what sort of tests I have included</h2><h1 id="1-St-2-primes-production-each-prime-gt-million"><a href="#1-St-2-primes-production-each-prime-gt-million" class="headerlink" title="1 St: 2 primes production (each prime &gt; million)"></a>1 St: 2 primes production (each prime &gt; million)</h1><p>When the prime is very big, test the speed of each methods.</p>
-<p>###1.1<br>The testcases: 15485867*32452867 = 502560782130689</p>
+<p>Running time: General case by the Birthday paradox in O(\sqrt p)\ &lt;&#x3D; O(n^{1&#x2F;4})<br>			  but this is a heuristic claim, and rigorous analysis of the algorithm remains open.</p>
+<h2 id="2-A-description-of-what-sort-of-tests-I-have-included"><a href="#2-A-description-of-what-sort-of-tests-I-have-included" class="headerlink" title="2 A description of what sort of tests I have included"></a>2 A description of what sort of tests I have included</h2><h1 id="1-St-2-primes-production-each-prime-million"><a href="#1-St-2-primes-production-each-prime-million" class="headerlink" title="1 St: 2 primes production (each prime &gt; million)"></a>1 St: 2 primes production (each prime &gt; million)</h1><p>When the prime is very big, test the speed of each methods.</p>
+<p>###1.1<br>The testcases: 15485867*32452867 &#x3D; 502560782130689</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">31.0308229923</td>
-<td style="text-align:right">null</td>
+<td align="center">31.0308229923</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">32.3473279476+3.276534002</td>
-<td style="text-align:right">null</td>
+<td align="center">32.3473279476+3.276534002</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">2.5645339489</td>
-<td style="text-align:right">3.19916701317</td>
+<td align="center">2.5645339489</td>
+<td align="right">3.19916701317</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0414018630981</td>
-<td style="text-align:right">0.0358607769012</td>
+<td align="center">0.0414018630981</td>
+<td align="right">0.0358607769012</td>
 </tr>
-</tbody>
-</table>
-<p>###1.2<br>The testcases: 15487019*15487469 = 239854726664911</p>
+</tbody></table>
+<p>###1.2<br>The testcases: 15487019*15487469 &#x3D; 239854726664911</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">22.700715065</td>
-<td style="text-align:right">null</td>
+<td align="center">22.700715065</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">21.358424902+3.0871624554</td>
-<td style="text-align:right">null</td>
+<td align="center">21.358424902+3.0871624554</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">3.99884200096</td>
-<td style="text-align:right">2.206387043</td>
+<td align="center">3.99884200096</td>
+<td align="right">2.206387043</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0165410041809</td>
-<td style="text-align:right">0.0110921859741</td>
+<td align="center">0.0165410041809</td>
+<td align="right">0.0110921859741</td>
 </tr>
-</tbody>
-</table>
-<p>###1.3<br>The testcases: 15490781*67869427 = 1051350430252487</p>
+</tbody></table>
+<p>###1.3<br>The testcases: 15490781*67869427 &#x3D; 1051350430252487</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">53.9460468292</td>
-<td style="text-align:right">null</td>
+<td align="center">53.9460468292</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">47.7404336929+8.194948196</td>
-<td style="text-align:right">null</td>
+<td align="center">47.7404336929+8.194948196</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">8.05504488945</td>
-<td style="text-align:right">9.30907988548</td>
+<td align="center">8.05504488945</td>
+<td align="right">9.30907988548</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0999021530151</td>
-<td style="text-align:right">0.0918011665344</td>
+<td align="center">0.0999021530151</td>
+<td align="right">0.0918011665344</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h1 id="2-nd-4-primes-production-each-prime-between-1000-9999"><a href="#2-nd-4-primes-production-each-prime-between-1000-9999" class="headerlink" title="2 nd: 4 primes production (each prime between[1000,9999])"></a>2 nd: 4 primes production (each prime between[1000,9999])</h1><p>When the prime is big and more factors, test the speed of each methods.</p>
-<p>###2.1<br>The testcases: 8147 <em> 8369 </em> 8623 * 7127 = 4190216175859403</p>
+<p>###2.1<br>The testcases: 8147 * 8369 * 8623 * 7127 &#x3D; 4190216175859403</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">109.196480989</td>
-<td style="text-align:right">null</td>
+<td align="center">109.196480989</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">105.0888099666+5.89233399</td>
-<td style="text-align:right">null</td>
+<td align="center">105.0888099666+5.89233399</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">2.5645339489</td>
-<td style="text-align:right">3.19916701317</td>
+<td align="center">2.5645339489</td>
+<td align="right">3.19916701317</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0414018630981</td>
-<td style="text-align:right">0.0358607769012</td>
+<td align="center">0.0414018630981</td>
+<td align="right">0.0358607769012</td>
 </tr>
-</tbody>
-</table>
-<p>###2.2<br>The testcases: 1259 <em> 1451 </em> 1613 * 1811 = 5336370322687</p>
+</tbody></table>
+<p>###2.2<br>The testcases: 1259 * 1451 * 1613 * 1811 &#x3D; 5336370322687</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">2.96865296364</td>
-<td style="text-align:right">null</td>
+<td align="center">2.96865296364</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">3.3992729187+0.5768110752</td>
-<td style="text-align:right">null</td>
+<td align="center">3.3992729187+0.5768110752</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">5.54617881775</td>
-<td style="text-align:right">3.116948843</td>
+<td align="center">5.54617881775</td>
+<td align="right">3.116948843</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.00448799133301</td>
-<td style="text-align:right">0.00167012214661</td>
+<td align="center">0.00448799133301</td>
+<td align="right">0.00167012214661</td>
 </tr>
-</tbody>
-</table>
-<p>###2.3<br>The testcases: 6277 <em> 5351 </em> 8831 * 9733 = 2886979418455921</p>
+</tbody></table>
+<p>###2.3<br>The testcases: 6277 * 5351 * 8831 * 9733 &#x3D; 2886979418455921</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">77.4180650711</td>
-<td style="text-align:right">null</td>
+<td align="center">77.4180650711</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">72.7111520767+13.2122049</td>
-<td style="text-align:right">null</td>
+<td align="center">72.7111520767+13.2122049</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">2.87196207047</td>
-<td style="text-align:right">3.24289989471</td>
+<td align="center">2.87196207047</td>
+<td align="right">3.24289989471</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.479516983032</td>
-<td style="text-align:right">0.00454497337341</td>
+<td align="center">0.479516983032</td>
+<td align="right">0.00454497337341</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h1 id="3-rd-over-6-small-prime-product"><a href="#3-rd-over-6-small-prime-product" class="headerlink" title="3 rd: over 6 small prime product"></a>3 rd: over 6 small prime product</h1><p>When the prime is not that big, but we have more factors for the number which need to be factorization.</p>
-<p>###3.1<br>The testcases: 13 <em> 127 </em> 263 <em> 419 </em> 17 <em> 131 </em> 269 = 108990674873561</p>
+<p>###3.1<br>The testcases: 13 * 127 * 263 * 419 * 17 * 131 * 269 &#x3D; 108990674873561</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">12.9187300205</td>
-<td style="text-align:right">null</td>
+<td align="center">12.9187300205</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">12.9247641563+2.445067882</td>
-<td style="text-align:right">null</td>
+<td align="center">12.9247641563+2.445067882</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">3.29201412201</td>
-<td style="text-align:right">2.98240017891</td>
+<td align="center">3.29201412201</td>
+<td align="right">2.98240017891</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.00494313240051</td>
-<td style="text-align:right">0.00559782981873</td>
+<td align="center">0.00494313240051</td>
+<td align="right">0.00559782981873</td>
 </tr>
-</tbody>
-</table>
-<p>###3.2<br>The testcases: 13 <em> 17 </em> 2 <em> 1123 </em> 1426499 * 5 = 3540328013170</p>
+</tbody></table>
+<p>###3.2<br>The testcases: 13 * 17 * 2 * 1123 * 1426499 * 5 &#x3D; 3540328013170</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">4.11624193192</td>
-<td style="text-align:right">null</td>
+<td align="center">4.11624193192</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">4.38335967064+0.452334165</td>
-<td style="text-align:right">null</td>
+<td align="center">4.38335967064+0.452334165</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">3.39200806618</td>
-<td style="text-align:right">2.18938994408</td>
+<td align="center">3.39200806618</td>
+<td align="right">2.18938994408</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.00471496582031</td>
-<td style="text-align:right">0.00225687026978</td>
+<td align="center">0.00471496582031</td>
+<td align="right">0.00225687026978</td>
 </tr>
-</tbody>
-</table>
-<p>###3.3<br>The testcases: 547 <em> 701 </em> 29 <em> 149 </em> 5 * 2 = 16568744870</p>
+</tbody></table>
+<p>###3.3<br>The testcases: 547 * 701 * 29 * 149 * 5 * 2 &#x3D; 16568744870</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">3.92766094208</td>
-<td style="text-align:right">null</td>
+<td align="center">3.92766094208</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">2.42819094658+0.031641006</td>
-<td style="text-align:right">null</td>
+<td align="center">2.42819094658+0.031641006</td>
+<td align="right">null</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">3.00680112839</td>
-<td style="text-align:right">4.95704817772</td>
+<td align="center">3.00680112839</td>
+<td align="right">4.95704817772</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">0.0637471675873</td>
-<td style="text-align:right">0.000675916671753</td>
+<td align="center">0.0637471675873</td>
+<td align="right">0.000675916671753</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="3-How-to-run-the-code"><a href="#3-How-to-run-the-code" class="headerlink" title="3 How to run the code:"></a>3 How to run the code:</h2><p>There is a easy way to run by<br><code>python runner.py</code><br>Then following the introduction. </p>
-<p>Firstly, you will see this introduction format.<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">integer factorization algorithm</span><br><span class="line">type the number you want to run the algorithm</span><br><span class="line">eg: 1</span><br><span class="line">then will run the Trial division</span><br><span class="line">1.Trial division</span><br><span class="line">2.Euler&#x27;s factorization method</span><br><span class="line">3.Fermat&#x27;s factorization method</span><br><span class="line">4.Pollard&#x27;s rho algorithm </span><br><span class="line">input the number:</span><br></pre></td></tr></table></figure><br>Then input the id of factorization method.</p>
-<p>for the 3rd and 4th, you also need to choose the id of the prime generate method.<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">runner.py </span><br><span class="line">  -+----1 &quot;Trial division&quot;----+---&quot;type number of testcases&quot;</span><br><span class="line">   |					      +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |						  </span><br><span class="line">   |</span><br><span class="line">   +----2 &quot;Euler&#x27;s factorization method&quot;---+---&quot;type number of testcases&quot;</span><br><span class="line">   |									   +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |</span><br><span class="line">   |</span><br><span class="line">   +----3 &quot;Fermat&#x27;s factorization method&quot;---+---&quot;type the prime generate method&quot;</span><br><span class="line">   |									    +---1 &quot;trivial prime&quot;</span><br><span class="line">   |										  +	   +---&quot;type number of testcases&quot;</span><br><span class="line">   |									    |    +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |									    |</span><br><span class="line">   |									    +---2 &quot;Miller-Rabin primality test&quot;</span><br><span class="line">   |											 +---&quot;type number of testcases&quot;</span><br><span class="line">   |									         +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |</span><br><span class="line">   |</span><br><span class="line">   +----4 &quot;Pollard&#x27;s rho algorithm&quot;---+---&quot;type the prime generate method&quot;</span><br><span class="line">    								  +---1 &quot;trivial prime&quot;</span><br><span class="line">    						  		|	    +---&quot;type number of testcases&quot;</span><br><span class="line">    								  |     +---&quot;input the number which needs factorization&quot;</span><br><span class="line">    						     	|</span><br><span class="line">    								  +---2 &quot;Miller-Rabin primality test&quot;</span><br><span class="line">    								  	 	+---&quot;type number of testcases&quot;</span><br><span class="line">    									    +---&quot;input the number which needs factorization&quot;</span><br></pre></td></tr></table></figure><br>Or </p>
+<p>Firstly, you will see this introduction format.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">integer factorization algorithm</span><br><span class="line">type the number you want to run the algorithm</span><br><span class="line">eg: 1</span><br><span class="line">then will run the Trial division</span><br><span class="line">1.Trial division</span><br><span class="line">2.Euler&#x27;s factorization method</span><br><span class="line">3.Fermat&#x27;s factorization method</span><br><span class="line">4.Pollard&#x27;s rho algorithm </span><br><span class="line">input the number:</span><br></pre></td></tr></table></figure>
+<p>Then input the id of factorization method.</p>
+<p>for the 3rd and 4th, you also need to choose the id of the prime generate method.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">runner.py </span><br><span class="line">  -+----1 &quot;Trial division&quot;----+---&quot;type number of testcases&quot;</span><br><span class="line">   |					      +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |						  </span><br><span class="line">   |</span><br><span class="line">   +----2 &quot;Euler&#x27;s factorization method&quot;---+---&quot;type number of testcases&quot;</span><br><span class="line">   |									   +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |</span><br><span class="line">   |</span><br><span class="line">   +----3 &quot;Fermat&#x27;s factorization method&quot;---+---&quot;type the prime generate method&quot;</span><br><span class="line">   |									    +---1 &quot;trivial prime&quot;</span><br><span class="line">   |										  +	   +---&quot;type number of testcases&quot;</span><br><span class="line">   |									    |    +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |									    |</span><br><span class="line">   |									    +---2 &quot;Miller-Rabin primality test&quot;</span><br><span class="line">   |											 +---&quot;type number of testcases&quot;</span><br><span class="line">   |									         +---&quot;input the number which needs factorization&quot;</span><br><span class="line">   |</span><br><span class="line">   |</span><br><span class="line">   +----4 &quot;Pollard&#x27;s rho algorithm&quot;---+---&quot;type the prime generate method&quot;</span><br><span class="line">    								  +---1 &quot;trivial prime&quot;</span><br><span class="line">    						  		|	    +---&quot;type number of testcases&quot;</span><br><span class="line">    								  |     +---&quot;input the number which needs factorization&quot;</span><br><span class="line">    						     	|</span><br><span class="line">    								  +---2 &quot;Miller-Rabin primality test&quot;</span><br><span class="line">    								  	 	+---&quot;type number of testcases&quot;</span><br><span class="line">    									    +---&quot;input the number which needs factorization&quot;</span><br></pre></td></tr></table></figure>
+<p>Or </p>
 <p>You can runner each single file<br>which has been listed:</p>
 <table>
 <thead>
 <tr>
 <th>Algorithm</th>
-<th style="text-align:center">trivial prime</th>
-<th style="text-align:right">Miller-Rabin primality test</th>
+<th align="center">trivial prime</th>
+<th align="right">Miller-Rabin primality test</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Trial division(baseline)</td>
-<td style="text-align:center">trial_division.py</td>
-<td style="text-align:right">note0</td>
+<td align="center">trial_division.py</td>
+<td align="right">note0</td>
 </tr>
 <tr>
 <td>Euler’s factorization method</td>
-<td style="text-align:center">euler_trivial.py note2</td>
-<td style="text-align:right">note1</td>
+<td align="center">euler_trivial.py note2</td>
+<td align="right">note1</td>
 </tr>
 <tr>
 <td>Fermat’s factorization method</td>
-<td style="text-align:center">fermatfactor_trivial.py</td>
-<td style="text-align:right">fermatfactor_improved_prime.py</td>
+<td align="center">fermatfactor_trivial.py</td>
+<td align="right">fermatfactor_improved_prime.py</td>
 </tr>
 <tr>
 <td>Pollard’s rho algorithm</td>
-<td style="text-align:center">Pollards_rho_trivial.py</td>
-<td style="text-align:right">Pollards_rho_improved_prime.py</td>
+<td align="center">Pollards_rho_trivial.py</td>
+<td align="right">Pollards_rho_improved_prime.py</td>
 </tr>
-</tbody>
-</table>
-<h2 id="Anything-else-you-deem-relevant"><a href="#Anything-else-you-deem-relevant" class="headerlink" title="Anything else you deem relevant."></a>Anything else you deem relevant.</h2><p>1 I used the trivial prime:<br>    which judge if a number is a prime.</p>
-<p>2 I used another prime test called Miller-Rabin primality test:<br>    which is much quicker and I have referenced in all my test cases. Prime test is correct.</p>
+</tbody></table>
+<h2 id="Anything-else-you-deem-relevant"><a href="#Anything-else-you-deem-relevant" class="headerlink" title="Anything else you deem relevant."></a>Anything else you deem relevant.</h2><p>1 I used the trivial prime:<br>	which judge if a number is a prime.</p>
+<p>2 I used another prime test called Miller-Rabin primality test:<br>	which is much quicker and I have referenced in all my test cases. Prime test is correct.</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.bigprimes.net/archive/prime/10/">http://www.bigprimes.net/archive/prime/10/</a></p>
-<p><a href="https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers">https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers</a></p>
+<p><a href="https://rosettacode.org/wiki/Miller%E2%80%93Rabin_primality_test#Python:_Probably_correct_answers">https://rosettacode.org/wiki/Miller–Rabin_primality_test#Python:_Probably_correct_answers</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Integer_factorization">https://en.wikipedia.org/wiki/Integer_factorization</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Trial_division">https://en.wikipedia.org/wiki/Trial_division</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Fermat%27s_factorization_method">https://en.wikipedia.org/wiki/Fermat%27s_factorization_method</a></p>
@@ -888,7 +1063,7 @@ Miller-Rabin is only judge the prime not find the factors.
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/18/HIV-project/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2016/07/18/HIV-project/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -908,7 +1083,7 @@ Miller-Rabin is only judge the prime not find the factors.
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -916,10 +1091,10 @@ Miller-Rabin is only judge the prime not find the factors.
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
+                  <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2016-07-19 17:37:49" itemprop="dateModified" datetime="2016-07-19T17:37:49-06:00">2016-07-19</time>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
               </span>
 
           
@@ -958,7 +1133,7 @@ Miller-Rabin is only judge the prime not find the factors.
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2016/07/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2016/07/15/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -978,12 +1153,19 @@ Miller-Rabin is only judge the prime not find the factors.
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
               <time title="Created: 2016-07-15 16:43:52" itemprop="dateCreated datePublished" datetime="2016-07-15T16:43:52-06:00">2016-07-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-09-07 17:11:42" itemprop="dateModified" datetime="2026-09-07T17:11:42-06:00">2026-09-07</time>
+              </span>
 
           
 
@@ -998,12 +1180,16 @@ Miller-Rabin is only judge the prime not find the factors.
       
           <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
 
       
@@ -1091,18 +1277,18 @@ Miller-Rabin is only judge the prime not find the factors.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1129,13 +1315,13 @@ Miller-Rabin is only judge the prime not find the factors.
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Weijie Sun</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
@@ -1175,7 +1361,7 @@ Miller-Rabin is only judge the prime not find the factors.
 
 
   
-<script src="/js/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/js/local-search.js"></script>
 
 
 
@@ -1192,9 +1378,6 @@ Miller-Rabin is only judge the prime not find the factors.
   
 
   
-
-  
-
 
 </body>
 </html>

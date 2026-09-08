@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.3.0">
@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -23,7 +23,7 @@
   <meta name="description" content="Partial Dependence Plots部分特征图 While feature importance shows what variables most affect predictions, partial dependence plots show how a feature affects predictions. 当特征重要性显示出哪一个特征对预测结果影响最大，部分特征图显示出一个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="partial-plots">
-<meta property="og:url" content="http://jeremykid.github.io/2019/03/14/partial-plots/index.html">
+<meta property="og:url" content="https://jeremykid.github.io/2019/03/14/partial-plots/index.html">
 <meta property="og:site_name" content="Weijie Sun Blog">
 <meta property="og:description" content="Partial Dependence Plots部分特征图 While feature importance shows what variables most affect predictions, partial dependence plots show how a feature affects predictions. 当特征重要性显示出哪一个特征对预测结果影响最大，部分特征图显示出一个">
 <meta property="og:locale" content="en_US">
@@ -33,12 +33,12 @@
 <meta property="og:image" content="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___11_0.png">
 <meta property="og:image" content="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___13_0.png">
 <meta property="article:published_time" content="2019-03-15T03:46:58.000Z">
-<meta property="article:modified_time" content="2019-03-15T03:47:28.775Z">
+<meta property="article:modified_time" content="2026-09-07T21:32:44.987Z">
 <meta property="article:author" content="Weijie Sun">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/jeremykid/DeepLearningCollection/blob/master/kaggleMachineLearningExplainability/kaggle-tree-model.PNG">
 
-<link rel="canonical" href="http://jeremykid.github.io/2019/03/14/partial-plots/">
+<link rel="canonical" href="https://jeremykid.github.io/2019/03/14/partial-plots/">
 
 
 <script id="page-configurations">
@@ -82,14 +82,122 @@
   </style>
 </noscript>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -123,30 +231,30 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-presentations">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Presentations</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-presentations">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Presentations</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -204,7 +312,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://jeremykid.github.io/2019/03/14/partial-plots/">
+    <link itemprop="mainEntityOfPage" href="https://jeremykid.github.io/2019/03/14/partial-plots/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -223,13 +331,19 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-03-14 21:46:58 / Modified: 21:47:28" itemprop="dateCreated datePublished" datetime="2019-03-14T21:46:58-06:00">2019-03-14</time>
+              <time title="Created: 2019-03-14 21:46:58" itemprop="dateCreated datePublished" datetime="2019-03-14T21:46:58-06:00">2019-03-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-09-07 15:32:44" itemprop="dateModified" datetime="2026-09-07T15:32:44-06:00">2026-09-07</time>
+              </span>
 
           
 
@@ -268,10 +382,12 @@
 <p>解释中我们只用了一条数据。得出来的结果并不是最典型的。所以我们重复这种思想实验并且更改原来的数据。我们可以画出预测结果的平均数在Y轴上。</p>
 <h2 id="Code-Example"><a href="#Code-Example" class="headerlink" title="Code Example"></a>Code Example</h2><p>Model building isn’t our focus, so we won’t focus on the data exploration or model building code.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;../input/fifa-2018-match-statistics/FIFA 2018 Statistics.csv&#x27;</span>)</span><br><span class="line">y = (data[<span class="string">&#x27;Man of the Match&#x27;</span>] == <span class="string">&quot;Yes&quot;</span>)  <span class="comment"># Convert from string &quot;Yes&quot;/&quot;No&quot; to binary</span></span><br><span class="line">feature_names = [i <span class="keyword">for</span> i <span class="keyword">in</span> data.columns <span class="keyword">if</span> data[i].dtype <span class="keyword">in</span> [np.int64]]</span><br><span class="line">X = data[feature_names]</span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line">tree_model = DecisionTreeClassifier(random_state=<span class="number">0</span>, max_depth=<span class="number">5</span>, min_samples_split=<span class="number">5</span>).fit(train_X, train_y)</span><br></pre></td></tr></table></figure>
+
 <p>For the sake of explanation, our first example uses a Decision Tree which you can see below. In practice, you’ll use more sophistated models for real-world applications.</p>
 <p>我们的第一个例子用了决策树。在现实中你会遇到更复杂的模型。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</span><br><span class="line"><span class="keyword">import</span> graphviz</span><br><span class="line"></span><br><span class="line">tree_graph = tree.export_graphviz(tree_model, out_file=<span class="literal">None</span>, feature_names=feature_names)</span><br><span class="line">graphviz.Source(tree_graph)</span><br></pre></td></tr></table></figure>
-<p><img src="https://github.com/jeremykid/DeepLearningCollection/blob/master/kaggleMachineLearningExplainability/kaggle-tree-model.PNG" alt=""></p>
+
+<p><img src="https://github.com/jeremykid/DeepLearningCollection/blob/master/kaggleMachineLearningExplainability/kaggle-tree-model.PNG"></p>
 <p>As guidance to read the tree:</p>
 <ul>
 <li>Leaves with children show their splitting criterion on the top</li>
@@ -284,9 +400,11 @@
 </ul>
 <p>Here is the code to create the Partial Dependence Plot using the <a href="https://pdpbox.readthedocs.io/en/latest/">PDPBox library</a>.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> pdpbox <span class="keyword">import</span> pdp, get_dataset, info_plots</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create the data that we will plot</span></span><br><span class="line">pdp_goals = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=<span class="string">&#x27;Goal Scored&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot it</span></span><br><span class="line">pdp.pdp_plot(pdp_goals, <span class="string">&#x27;Goal Scored&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___7_0.png" alt=""></p>
+
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___7_0.png"></p>
 <p>Here is another example plot:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">from pdpbox import pdp, get_dataset, info_plots</span><br><span class="line"></span><br><span class="line"># Create the data that we will plot</span><br><span class="line">pdp_goals = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=&#x27;Goal Scored&#x27;)</span><br><span class="line"></span><br><span class="line"># plot it</span><br><span class="line">pdp.pdp_plot(pdp_goals, &#x27;Goal Scored&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
 <p>A few items are worth pointing out as you interpret this plot</p>
 <ul>
 <li><p>The y axis is interpreted as <strong>change in the prediction</strong> from what it would be predicted at the baseline or leftmost value.</p>
@@ -305,13 +423,15 @@
 <p>从这一部分的图，我们不难发现进球得分基本上会增加你得本场比赛MVP的概率。但是多出来的进球反而对增加这个概率帮助并不是太大。</p>
 <p>Here is another example plot:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">feature_to_plot = &#x27;Distance Covered (Kms)&#x27;</span><br><span class="line">pdp_dist = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=feature_to_plot)</span><br><span class="line"></span><br><span class="line">pdp.pdp_plot(pdp_dist, feature_to_plot)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___9_0.png" alt=""></p>
+
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___9_0.png"></p>
 <p>This graph seems too simple to represent reality. But that’s because the model is so simple. You should be able to see from the decision tree above that this is representing exactly the model’s structure.</p>
 <p>You can easily compare the structure or implications of different models. Here is the same plot with a Random Forest model.</p>
 <p>这个图看起来吧现实解释得很简单。但是这是因为模型简单。你应该去关注这个是如何解释模型结构的而不局限在决策树。</p>
 <p>你可以很容易得比较不同模型。这里是随机森林模型的图。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Build Random Forest model</span><br><span class="line">rf_model = RandomForestClassifier(random_state=0).fit(train_X, train_y)</span><br><span class="line"></span><br><span class="line">pdp_dist = pdp.pdp_isolate(model=rf_model, dataset=val_X, model_features=feature_names, feature=feature_to_plot)</span><br><span class="line"></span><br><span class="line">pdp.pdp_plot(pdp_dist, feature_to_plot)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___11_0.png" alt=""></p>
+
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___11_0.png"></p>
 <p>This model thinks you are more likely to win Player of The Game if your players run a total of 100km over the course of the game. Though running much more causes lower predictions.</p>
 <p>In general, the smooth shape of this curve seems more plausible than the step function from the Decision Tree model. Though this dataset is small enough that we would be careful in how we interpret any model.</p>
 <p>在这个模型中，你会更倾向于整场比赛跑了超过100km的队员得MVP，其实这个是比较低准确率的预测。</p>
@@ -323,7 +443,8 @@
 <p>如果你对特征之间如何互相影响有兴趣的话，2维的部分特征图会非常有帮助。这里有一个例子可以解释这个。</p>
 <p>我们会重复使用决策树模型。它会创造一个简单的图形，虽然简单，但是足够我们去对比到决策树图形本身。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Similar to previous PDP plot except we use pdp_interact instead of pdp_isolate and pdp_interact_plot instead of pdp_isolate_plot</span><br><span class="line">features_to_plot = [&#x27;Goal Scored&#x27;, &#x27;Distance Covered (Kms)&#x27;]</span><br><span class="line">inter1  =  pdp.pdp_interact(model=tree_model, dataset=val_X, model_features=feature_names, features=features_to_plot)</span><br><span class="line"></span><br><span class="line">pdp.pdp_interact_plot(pdp_interact_out=inter1, feature_names=features_to_plot, plot_type=&#x27;contour&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___13_0.png" alt=""></p>
+
+<p><img src="https://www.kaggleusercontent.com/kf/11288908/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.._dosnOD29hmblI0rPpZ9Fg.5HDj6AQnNoxlE5PbQ9Mfivauaw1WrhDKjIDIjiT9-BBMs1QOzTXjive3fDbhBoNhekFCSk8AmOMYPNy-KxYfzMyy6tzSbfCdSDxq3RXZra9b_GMuVKLCpRaUldrx1XBgV30JslMOTVDj8_hqKtcNig.09rA0kMSSDQS8Fb-mOgw6Q/__results___files/__results___13_0.png"></p>
 <p>This graph shows predictions for any combination of Goals Scored and Distance covered.</p>
 <p>For example, we see the highest predictions when a team scores at least 1 goal and they run a total distance close to 100km. If they score 0 goals, distance covered doesn’t matter. Can you see this by tracing through the decision tree with 0 goals?</p>
 <p>But distance can impact predictions if they score goals. Make sure you can see this from the 2D partial dependence plot. Can you see this pattern in the decision tree too?</p>
@@ -365,13 +486,6 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -434,18 +548,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -472,13 +586,13 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Weijie Sun</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
@@ -535,29 +649,6 @@
   
 
   
-
-  
-
-<script>
-  var disqus_config = function() {
-    this.page.url = "http://jeremykid.github.io/2019/03/14/partial-plots/";
-    this.page.identifier = "2019/03/14/partial-plots/";
-    this.page.title = "partial-plots";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-jeremykid-github-io.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
